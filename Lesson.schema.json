@@ -1,0 +1,770 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SmoothLingua: контракт урока 1.0",
+  "type": "object",
+  "properties": {
+    "formatVersion": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Версия контракта данных. Эта схема описывает версию 1.0."
+    },
+    "document": {
+      "$ref": "#/$defs/Document"
+    }
+  },
+  "$defs": {
+    "Document": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Document-id исходного урока."
+        },
+        "version": {
+          "type": "integer",
+          "description": "Ревизия содержимого урока."
+        },
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "lineCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Число физических строк исходного DSL до компиляции, включая заголовки, теги, комментарии и пустые строки. Переносится без пересчёта из document.lineCount результата парсера; это не число строк итогового JSON."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
+          "description": "Дата и время формирования этой версии JSON-документа компилятором, UTC, RFC 3339: YYYY-MM-DDTHH:MM:SSZ. При новой сборке записывается время этой сборки. Валидатор должен проверять format: date-time."
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Page"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "title",
+        "lineCount",
+        "createdAt",
+        "pages"
+      ]
+    },
+    "Page": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Название страницы из заголовка третьего уровня; null, если названия нет."
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Node"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "nodes"
+      ]
+    },
+    "Node": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "task",
+            "step",
+            "variants",
+            "variant",
+            "heading",
+            "text",
+            "instruction",
+            "note",
+            "alt",
+            "script",
+            "hint",
+            "answerKey",
+            "example",
+            "wordList",
+            "table",
+            "media",
+            "question",
+            "multifill",
+            "singleChoice",
+            "multipleChoice",
+            "matching",
+            "ordering"
+          ]
+        },
+        "flags": {
+          "$ref": "#/$defs/NodeFlags",
+          "description": "Обязательный объект. У task допустимы speaking и stepped; у multifill, singleChoice, multipleChoice, ordering, matching и question — checkable. У остальных типов объект пустой. Каждый допустимый флаг необязателен; неприменимые и неизвестные флаги запрещены даже со значением false."
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Data",
+            "required": [
+              "role"
+            ],
+            "properties": {
+              "role": {
+                "not": {
+                  "enum": [
+                    "item",
+                    "option",
+                    "position"
+                  ]
+                }
+              }
+            }
+          },
+          "description": "Собственные данные узла в порядке следования. Основной медиафайл, его script и subtitles находятся отдельными элементами этого массива. Текст вопроса question хранится с ролью body. Самостоятельный @instr преобразуется в отдельную ноду instruction с текстом body. Инструкция из объявления @multifill или @ordering при наличии преобразуется в отдельную ноду instruction перед соответствующей интерактивной нодой на том же уровне; в data multifill и ordering роль instruction запрещена. Инструкция из объявления @choice, @multichoice или @matching при наличии сохраняется как один текстовый элемент data с ролью instruction в ноде singleChoice, multipleChoice или matching соответственно. Эта роль необязательна и разрешена только непосредственно в data этих трёх типов. У matching, singleChoice и multipleChoice обязательна ровно одна коллекция options. У ordering допустима не более одной коллекции positions. options и positions разрешены только непосредственно в data соответствующей ноды. Каждый элемент items имеет роль item, каждый элемент options — роль option, каждый элемент positions — роль position. Все три роли элементов обязательны внутри соответствующих коллекций, имеют type=text и запрещены непосредственно в Node.data или в чужой коллекции. У matching и ordering обязательна ровно одна коллекция items."
+        },
+        "nodes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Node"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "flags",
+        "data",
+        "nodes"
+      ],
+      "if": {
+        "properties": {
+          "type": {
+            "const": "task"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "flags": {
+            "properties": {
+              "checkable": false
+            }
+          }
+        }
+      },
+      "else": {
+        "if": {
+          "properties": {
+            "type": {
+              "enum": [
+                "multifill",
+                "multipleChoice",
+                "singleChoice",
+                "ordering",
+                "matching",
+                "question"
+              ]
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "flags": {
+              "properties": {
+                "speaking": false,
+                "stepped": false
+              }
+            }
+          }
+        },
+        "else": {
+          "properties": {
+            "flags": {
+              "maxProperties": 0
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "matching",
+                  "singleChoice",
+                  "multipleChoice"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "contains": {
+                  "properties": {
+                    "role": {
+                      "const": "options"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                },
+                "minContains": 1,
+                "maxContains": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "data": {
+                "not": {
+                  "contains": {
+                    "properties": {
+                      "role": {
+                        "const": "options"
+                      }
+                    },
+                    "required": [
+                      "role"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "ordering"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "contains": {
+                  "properties": {
+                    "role": {
+                      "const": "positions"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                },
+                "minContains": 0,
+                "maxContains": 1,
+                "items": {
+                  "if": {
+                    "properties": {
+                      "role": {
+                        "const": "items"
+                      }
+                    },
+                    "required": [
+                      "role"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "value": {
+                        "minItems": 2
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "data": {
+                "not": {
+                  "contains": {
+                    "properties": {
+                      "role": {
+                        "const": "positions"
+                      }
+                    },
+                    "required": [
+                      "role"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "matching",
+                  "ordering"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "contains": {
+                  "properties": {
+                    "role": {
+                      "const": "items"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                },
+                "minContains": 1,
+                "maxContains": 1,
+                "items": {
+                  "if": {
+                    "properties": {
+                      "role": {
+                        "const": "items"
+                      }
+                    },
+                    "required": [
+                      "role"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "value": {
+                        "minItems": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "singleChoice",
+                  "multipleChoice",
+                  "matching"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "contains": {
+                  "properties": {
+                    "role": {
+                      "const": "instruction"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                },
+                "minContains": 0,
+                "maxContains": 1
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "data": {
+                "not": {
+                  "contains": {
+                    "properties": {
+                      "role": {
+                        "const": "instruction"
+                      }
+                    },
+                    "required": [
+                      "role"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "NodeFlags": {
+      "type": "object",
+      "properties": {
+        "speaking": {
+          "type": "boolean",
+          "description": "Только для task. true — задание помечено @speaking; false — не помечено."
+        },
+        "stepped": {
+          "type": "boolean",
+          "description": "Только для task. true — задание содержит внутренние этапы step; false — не содержит."
+        },
+        "checkable": {
+          "type": "boolean",
+          "description": "Только для multifill, singleChoice, multipleChoice, ordering, matching и question. true — есть данные для автоматической проверки; false — автоматическая проверка не предусмотрена. Это свойство материала, не результат пользователя."
+        }
+      },
+      "additionalProperties": false
+    },
+    "Data": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "text",
+            "media",
+            "collection"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "enum": [
+            "title",
+            "body",
+            "instruction",
+            "before",
+            "after",
+            "items",
+            "item",
+            "options",
+            "option",
+            "positions",
+            "position",
+            "hint",
+            "script",
+            "subtitles"
+          ],
+          "description": "Роль обязательна у непосредственных элементов Node.data. instruction — необязательная локальная инструкция, только type=text и только в data singleChoice, multipleChoice или matching, не более одной. У multifill и ordering инструкция оформляется отдельной нодой instruction. items — сопоставляемые или упорядочиваемые элементы; options — обязательная коллекция вариантов только для matching, singleChoice и multipleChoice; positions — необязательная коллекция явно заданных позиций только для ordering. options и positions содержат не менее двух элементов и не вкладываются в другие коллекции. Каждый непосредственный элемент items обязан иметь роль item, каждый непосредственный элемент options — роль option, каждый непосредственный элемент positions — роль position; все три имеют type=text. Роли item, option и position вне соответствующей коллекции запрещены. У элементов прочих коллекций роль может отсутствовать. Отсутствие positions у ordering означает перестановку 1…N, наличие — распределение с несколькими элементами на одной позиции."
+        },
+        "value": {
+          "description": "text — строка; media — встроенный файл; collection — массив Data. Тела text, table и multifill сохраняются одной многострочной строкой. В multifill сохраняются и пустые строки. Исходные пустые строки в остальных текстовых блоках отбрасываются; явная разметка визуального разрыва сохраняется. Исходные байты встроенных файлов сохраняются полностью."
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Ответы принадлежат этому элементу данных; [] означает, что значений ответа у него нет. У question это допустимые ответы на текст body; у элементов items в matching и ordering — допустимые варианты или позиции. У правильного элемента options в singleChoice и multipleChoice массив содержит его собственное текстовое значение, у неправильного — []. В multipleChoice проверяется весь правильный набор вариантов. При checkable=false ответы не используются для оценки. Коллекции и прочие данные без собственных ответов содержат []."
+        },
+        "hint": {
+          "type": "string",
+          "description": "Подсказка этого элемента данных; пустая строка означает отсутствие подсказки. Общую подсказку нескольких вариантов компилятор копирует в hint каждого соответствующего варианта. Отдельная группировка и ссылки не нужны."
+        }
+      },
+      "required": [
+        "type",
+        "value",
+        "answers",
+        "hint"
+      ],
+      "oneOf": [
+        {
+          "properties": {
+            "type": {
+              "const": "text"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "media"
+            },
+            "value": {
+              "$ref": "#/$defs/EmbeddedFile"
+            }
+          }
+        },
+        {
+          "properties": {
+            "type": {
+              "const": "collection"
+            },
+            "value": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Data",
+                "properties": {
+                  "role": {
+                    "not": {
+                      "enum": [
+                        "instruction",
+                        "options",
+                        "positions"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "role": {
+                "enum": [
+                  "items",
+                  "options",
+                  "positions"
+                ]
+              }
+            },
+            "required": [
+              "role"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "collection"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "role": {
+                "enum": [
+                  "options",
+                  "positions"
+                ]
+              }
+            },
+            "required": [
+              "role"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "minItems": 2
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "role": {
+                "enum": [
+                  "instruction",
+                  "item",
+                  "option",
+                  "position"
+                ]
+              }
+            },
+            "required": [
+              "role"
+            ]
+          },
+          "then": {
+            "properties": {
+              "type": {
+                "const": "text"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "role": {
+                "const": "items"
+              }
+            },
+            "required": [
+              "role"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "items": {
+                  "properties": {
+                    "role": {
+                      "const": "item"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "value": {
+                "items": {
+                  "properties": {
+                    "role": {
+                      "not": {
+                        "const": "item"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "role": {
+                "const": "options"
+              }
+            },
+            "required": [
+              "role"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "items": {
+                  "properties": {
+                    "role": {
+                      "const": "option"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "value": {
+                "items": {
+                  "properties": {
+                    "role": {
+                      "not": {
+                        "const": "option"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "role": {
+                "const": "positions"
+              }
+            },
+            "required": [
+              "role"
+            ]
+          },
+          "then": {
+            "properties": {
+              "value": {
+                "items": {
+                  "properties": {
+                    "role": {
+                      "const": "position"
+                    }
+                  },
+                  "required": [
+                    "role"
+                  ]
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "value": {
+                "items": {
+                  "properties": {
+                    "role": {
+                      "not": {
+                        "const": "position"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "EmbeddedFile": {
+      "type": "object",
+      "properties": {
+        "fileName": {
+          "type": "string",
+          "description": "Имя сохраняемого файла без пути."
+        },
+        "mimeType": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string",
+          "description": "Полное содержимое исходного файла в Base64."
+        }
+      },
+      "required": [
+        "fileName",
+        "mimeType",
+        "content"
+      ]
+    }
+  },
+  "required": [
+    "formatVersion",
+    "document"
+  ]
+}
