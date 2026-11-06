@@ -1,0 +1,609 @@
+{
+  "formatVersion": "1.0",
+  "FORMATVERSION": "bad",
+  "extra": null,
+  "document": {
+    "id": "A:B",
+    "ID": "other",
+    "version": 123456789012345678901234567890.000e+2,
+    "title": "",
+    "TITLE": "затенение",
+    "lineCount": 0.0e+2,
+    "createdAt": "2024-02-29T23:59:59Z",
+    "pages": [
+      {
+        "id": "a:b-p001",
+        "title": null,
+        "TITLE": "затенение",
+        "nodes": [
+          {
+            "id": "a:b-n001",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [],
+            "nodes": [
+              {
+                "id": "a:b-n002",
+                "type": "step",
+                "flags": {},
+                "data": [],
+                "nodes": [
+                  {
+                    "id": "a:b-n003",
+                    "type": "variants",
+                    "flags": {},
+                    "data": [],
+                    "nodes": [
+                      {
+                        "id": "a:b-n004",
+                        "type": "variant",
+                        "flags": {},
+                        "data": [],
+                        "nodes": [],
+                        "TYPE": "не затеняет",
+                        "extra": {
+                          "x": true
+                        }
+                      }
+                    ],
+                    "TYPE": "не затеняет",
+                    "extra": {
+                      "x": true
+                    }
+                  }
+                ],
+                "TYPE": "не затеняет",
+                "extra": {
+                  "x": true
+                }
+              }
+            ],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n005",
+            "type": "heading",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n006",
+            "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+            "flags": {},
+            "data": [
+              {
+                "type": "collection",
+                "value": [
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "<b>Юникод</b>\n\n_____{ANSWER}",
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": ""
+                  },
+                  {
+                    "type": "collection",
+                    "value": [
+                      {
+                        "type": "collection",
+                        "value": [
+                          {
+                            "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                            "value": "",
+                            "answers": [],
+                  "ANSWERS": [9],
+                            "hint": "",
+                            "role": "item"
+                          }
+                        ],
+                        "answers": [],
+                  "ANSWERS": [9],
+                        "hint": "",
+                        "role": "items"
+                      }
+                    ],
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": ""
+                  }
+                ],
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "body"
+              }
+            ],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n007",
+            "type": "instruction",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n008",
+            "type": "note",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n009",
+            "type": "alt",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n010",
+            "type": "script",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n011",
+            "type": "hint",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n012",
+            "type": "answerKey",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n013",
+            "type": "example",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n014",
+            "type": "wordList",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n015",
+            "type": "table",
+            "flags": {},
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n016",
+            "type": "media",
+            "flags": {},
+            "data": [
+              {
+                "type": "media",
+                "role": "body",
+                "value": {
+                  "fileName": "файл 0",
+                  "mimeType": "",
+                  "MIMETYPE": "shadow",
+                  "content": "AAE=",
+                  "CONTENT": "затенение",
+                  "extra": null
+                },
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": ""
+              },
+              {
+                "type": "media",
+                "role": "script",
+                "value": {
+                  "fileName": "файл 1",
+                  "mimeType": "",
+                  "MIMETYPE": "shadow",
+                  "content": "",
+                  "CONTENT": "затенение",
+                  "extra": null
+                },
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": ""
+              },
+              {
+                "type": "media",
+                "role": "subtitles",
+                "value": {
+                  "fileName": "файл 2",
+                  "mimeType": "",
+                  "MIMETYPE": "shadow",
+                  "content": "0JQ=",
+                  "CONTENT": "затенение",
+                  "extra": null
+                },
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": ""
+              }
+            ],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n017",
+            "type": "question",
+            "flags": {
+              "checkable": false
+            },
+            "data": [],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n018",
+            "type": "multifill",
+            "flags": {
+              "checkable": false
+            },
+            "data": [
+              {
+                "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                "value": "<b>Юникод</b>\n\n_____{ANSWER}",
+                "answers": [
+                  "не вычислять"
+                ],
+                "hint": "",
+                "role": "body"
+              }
+            ],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n019",
+            "type": "singleChoice",
+            "flags": {
+              "checkable": false
+            },
+            "data": [
+              {
+                "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                "value": "",
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "instruction"
+              },
+              {
+                "type": "collection",
+                "value": [
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "вариант",
+                    "answers": [
+                      "не совпадает"
+                    ],
+                    "hint": "",
+                    "role": "option"
+                  },
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "",
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": "",
+                    "role": "option"
+                  }
+                ],
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "options"
+              }
+            ],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n020",
+            "type": "multipleChoice",
+            "flags": {
+              "checkable": false
+            },
+            "data": [
+              {
+                "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                "value": "",
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "instruction"
+              },
+              {
+                "type": "collection",
+                "value": [
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "вариант",
+                    "answers": [
+                      "не совпадает"
+                    ],
+                    "hint": "",
+                    "role": "option"
+                  },
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "",
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": "",
+                    "role": "option"
+                  }
+                ],
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "options"
+              }
+            ],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n021",
+            "type": "matching",
+            "flags": {
+              "checkable": false
+            },
+            "data": [
+              {
+                "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                "value": "",
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "instruction"
+              },
+              {
+                "type": "collection",
+                "value": [
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "вариант",
+                    "answers": [
+                      "не совпадает"
+                    ],
+                    "hint": "",
+                    "role": "option"
+                  },
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "",
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": "",
+                    "role": "option"
+                  }
+                ],
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "options"
+              },
+              {
+                "type": "collection",
+                "value": [
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "один",
+                    "answers": [
+                      "999"
+                    ],
+                    "hint": "",
+                    "role": "item"
+                  },
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "два",
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": "",
+                    "role": "item"
+                  }
+                ],
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "items"
+              }
+            ],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          },
+          {
+            "id": "a:b-n022",
+            "type": "ordering",
+            "flags": {
+              "checkable": false
+            },
+            "data": [
+              {
+                "type": "collection",
+                "value": [
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "один",
+                    "answers": [
+                      "999"
+                    ],
+                    "hint": "",
+                    "role": "item"
+                  },
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "два",
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": "",
+                    "role": "item"
+                  }
+                ],
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "items"
+              },
+              {
+                "type": "collection",
+                "value": [
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "",
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": "",
+                    "role": "position"
+                  },
+                  {
+                    "type": "text",
+                  "TYPE": "media",
+                  "VALUE": null,
+                    "value": "",
+                    "answers": [],
+                  "ANSWERS": [9],
+                    "hint": "",
+                    "role": "position"
+                  }
+                ],
+                "answers": [],
+                  "ANSWERS": [9],
+                "hint": "",
+                "role": "positions"
+              }
+            ],
+            "nodes": [],
+            "TYPE": "не затеняет",
+            "extra": {
+              "x": true
+            }
+          }
+        ],
+        "extra": false
+      },
+      {
+        "id": "a:b-p999",
+        "title": "",
+        "nodes": []
+      }
+    ],
+    "extra": []
+  }
+}

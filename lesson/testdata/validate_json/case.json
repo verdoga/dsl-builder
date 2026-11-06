@@ -1,0 +1,56 @@
+{
+  "formatVersion": "1.0",
+  "FORMATVERSION": false,
+  "document": {
+    "id": "Lesson",
+    "ID": "shadow",
+    "version": 1,
+    "VERSION": null,
+    "title": "",
+    "TITLE": false,
+    "subtitle": null,
+    "SUBTITLE": "shadow",
+    "lineCount": 0,
+    "LINECOUNT": "shadow",
+    "createdAt": "2026-01-02T03:04:05Z",
+    "CREATEDAT": false,
+    "pages": [
+      {
+        "id": "lesson-p001",
+        "ID": "shadow",
+        "title": null,
+        "TITLE": "shadow",
+        "nodes": [
+          {
+            "id": "lesson-n001",
+            "ID": "shadow",
+            "type": "text",
+            "TYPE": "task",
+            "flags": {},
+            "FLAGS": {"checkable": true},
+            "data": [
+              {
+                "type": "text",
+                "TYPE": "media",
+                "role": "body",
+                "ROLE": "item",
+                "value": "текст\n_____{Ответ}",
+                "VALUE": false,
+                "answers": [],
+                "ANSWERS": null,
+                "hint": "",
+                "HINT": false
+              }
+            ],
+            "DATA": null,
+            "nodes": [],
+            "NODES": false
+          }
+        ],
+        "NODES": null
+      }
+    ],
+    "PAGES": false
+  },
+  "DOCUMENT": null
+}

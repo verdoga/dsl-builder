@@ -1,0 +1,81 @@
+{
+  "formatVersion": "1.0",
+  "FORMATVERSION": "shadow",
+  "document": {
+    "id": "Abc-12",
+    "ID": "shadow",
+    "version": 1234567890123456789012345678901234567890.0,
+    "title": "Урок 🌍",
+    "TITLE": "shadow",
+    "subtitle": "Подзаголовок",
+    "SUBTITLE": "shadow",
+    "lineCount": 12e+3,
+    "LINECOUNT": 999,
+    "createdAt": "2026-11-06T12:34:56Z",
+    "CREATEDAT": "shadow",
+    "PAGES": null,
+    "pages": [
+      {
+        "id": "abc-12-p001",
+        "ID": "shadow",
+        "title": null,
+        "TITLE": "shadow",
+        "NODES": null,
+        "nodes": [
+          {
+            "id": "abc-12-n001",
+            "ID": "shadow",
+            "type": "task",
+            "TYPE": "shadow",
+            "flags": {"speaking": false, "stepped": true},
+            "FLAGS": null,
+            "data": [
+              {
+                "type": "collection", "TYPE": "shadow",
+                "role": "body", "ROLE": "shadow",
+                "answers": [], "ANSWERS": null,
+                "hint": "", "HINT": "shadow",
+                "value": [
+                  {
+                    "type": "text", "value": "<b>Строка</b>\n\n{a|б}",
+                    "VALUE": "shadow", "answers": ["β", "а"], "hint": "подсказка"
+                  },
+                  {
+                    "type": "collection", "value": [
+                      {
+                        "type": "media", "value": {
+                          "fileName": "звук.bin", "FILENAME": "shadow",
+                          "mimeType": "application/custom", "MIMETYPE": "shadow",
+                          "content": "AAE=", "CONTENT": "shadow", "extra": [1, null]
+                        }, "answers": [], "hint": ""
+                      },
+                      {"type": "collection", "value": [], "answers": [], "hint": ""}
+                    ], "answers": [], "hint": ""
+                  }
+                ],
+                "VALUE": null,
+                "extra": {"ignored": true}
+              }
+            ],
+            "DATA": null,
+            "nodes": [
+              {
+                "id": "abc-12-n002", "type": "question",
+                "flags": {"checkable": false},
+                "data": [{"type": "text", "role": "body", "value": "Вопрос?", "answers": [], "hint": ""}],
+                "nodes": []
+              },
+              {"id": "abc-12-n003", "type": "text", "flags": {}, "data": [], "nodes": []}
+            ],
+            "NODES": null
+          }
+        ],
+        "extra": false
+      },
+      {"id": "abc-12-p002", "title": "Вторая", "nodes": []}
+    ],
+    "extra": null
+  },
+  "DOCUMENT": null,
+  "extra": [false, {"unknown": "ignored"}]
+}
