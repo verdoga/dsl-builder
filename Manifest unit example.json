@@ -1,0 +1,138 @@
+{
+  "formatVersion": "1.0",
+  "createdAt": "2026-11-04T09:00:00Z",
+  "course": {
+    "title": "Empower A1",
+    "unit": {
+      "title": "Unit 1",
+      "lessons": [],
+      "sections": [
+        {
+          "title": "Studentbook",
+          "lessons": [
+            {
+              "id": "301J",
+              "fileName": "l001.json",
+              "order": "10",
+              "title": "1A I'M FROM MEXICO",
+              "subtitle": null,
+              "lineCount": 504,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            },
+            {
+              "id": "GZ6K",
+              "fileName": "l002.json",
+              "order": "20",
+              "title": "1B HE'S ITALIAN",
+              "subtitle": null,
+              "lineCount": 488,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            },
+            {
+              "id": "5YLE",
+              "fileName": "l003.json",
+              "order": "30",
+              "title": "1C EVERYDAY ENGLISH: NICE TO MEET YOU",
+              "subtitle": null,
+              "lineCount": 367,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            },
+            {
+              "id": "MQYC",
+              "fileName": "l004.json",
+              "order": "40",
+              "title": "REVIEW",
+              "subtitle": null,
+              "lineCount": 202,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            }
+          ]
+        },
+        {
+          "title": "Workbook",
+          "lessons": [
+            {
+              "id": "O6TT",
+              "fileName": "l005.json",
+              "order": "10",
+              "title": "1A I'M FROM MEXICO",
+              "subtitle": null,
+              "lineCount": 164,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            },
+            {
+              "id": "VRH0",
+              "fileName": "l006.json",
+              "order": "20",
+              "title": "1B HE'S ITALIAN",
+              "subtitle": null,
+              "lineCount": 78,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            },
+            {
+              "id": "N6PW",
+              "fileName": "l007.json",
+              "order": "30",
+              "title": "1C EVERYDAY ENGLISH: NICE TO MEET YOU",
+              "subtitle": null,
+              "lineCount": 194,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            },
+            {
+              "id": "AVJ9",
+              "fileName": "l008.json",
+              "order": "40",
+              "title": "READING AND LISTENING EXTENSION",
+              "subtitle": null,
+              "lineCount": 163,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            },
+            {
+              "id": "ZQ5W",
+              "fileName": "l009.json",
+              "order": "50",
+              "title": "REVIEW",
+              "subtitle": null,
+              "lineCount": 86,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            }
+          ]
+        },
+        {
+          "title": "Additional resources",
+          "lessons": [
+            {
+              "id": "4JT6",
+              "fileName": "l010.json",
+              "order": "10",
+              "title": "DOCUMENTARY VIDEO",
+              "subtitle": null,
+              "lineCount": 148,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            },
+            {
+              "id": "NRUO",
+              "fileName": "l011.json",
+              "order": "20",
+              "title": "VOX POP VIDEO",
+              "subtitle": null,
+              "lineCount": 155,
+              "createdAt": "2026-11-04T09:00:00Z",
+              "version": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
