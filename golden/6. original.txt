@@ -1,0 +1,45 @@
+@dsl-version 1.2
+@document-id BA86
+# TITLE
+
+@task 1
+@instr INSTRUCTION TEXT
+@multichoice {
+OPTION A
+OPTION B
+}
+@hint HINT TEXT
+
+@task 2
+@instr INSTRUCTION TEXT
+@multichoice INSTRUCTION TEXT {
+@answer ANSWER A
+@hint HINT TEXT A
+OPTION B
+@answer ANSWER C
+@hint HINT TEXT C
+}
+
+@task 3
+@instr INSTRUCTION TEXT
+@matching {
+ITEM A
+---
+OPTION A
+OPTION B
+}
+@hint {
+CONTENT A
+CONTENT B
+}
+
+@task 4
+@instr INSTRUCTION TEXT
+@matching INSTRUCTION TEXT {
+ITEM A
+@answer OPTION A
+@hint HINT TEXT A
+---
+OPTION A
+OPTION B
+}

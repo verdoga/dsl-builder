@@ -1,0 +1,27 @@
+@dsl-version 1.2
+@document-id BA84
+# TITLE
+
+### Title A
+@wordlist TITLE {
+ITEM A
+ITEM B
+ITEM C
+}
+
+### Title B
+
+@table TITLE {
+header | header
+---
+a | b
+c | d
+}
+
+### Title C
+
+@text TITLE {
+CONTENT A
+CONTENT b
+CONTENT C
+}

@@ -1,0 +1,396 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "id": "BA83",
+    "version": 1,
+    "title": "TITLE",
+    "subtitle": null,
+    "lineCount": 44,
+    "createdAt": "2026-11-03T17:36:18Z",
+    "pages": [
+      {
+        "id": "ba83-p001",
+        "title": null,
+        "nodes": [
+          {
+            "id": "ba83-n001",
+            "type": "heading",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "TITLE A",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "id": "ba83-n002",
+            "type": "task",
+            "flags": {
+              "speaking": true,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "1",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba83-n003",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT A\nINSTRUCTION TEXT B",
+                    "answers": [],
+                    "hint": "HINT TEXT"
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba83-n004",
+                "type": "example",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "title",
+                    "value": "TITLE",
+                    "answers": [],
+                    "hint": ""
+                  },
+                  {
+                    "type": "text",
+                    "role": "before",
+                    "value": "EXAMPLE A",
+                    "answers": [],
+                    "hint": ""
+                  },
+                  {
+                    "type": "text",
+                    "role": "after",
+                    "value": "EXAMPLE B",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba83-n005",
+                "type": "singleChoice",
+                "flags": {
+                  "checkable": true
+                },
+                "data": [
+                  {
+                    "type": "collection",
+                    "role": "options",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION A",
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "ANSWER B",
+                        "answers": [
+                          "ANSWER B"
+                        ],
+                        "hint": "HINT TEXT"
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba83-n006",
+                "type": "singleChoice",
+                "flags": {
+                  "checkable": true
+                },
+                "data": [
+                  {
+                    "type": "collection",
+                    "role": "options",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION A",
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "ANSWER B",
+                        "answers": [
+                          "ANSWER B"
+                        ],
+                        "hint": "HINT TEXT"
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba83-n007",
+                "type": "question",
+                "flags": {
+                  "checkable": false
+                },
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "TEXT A",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba83-n008",
+                "type": "question",
+                "flags": {
+                  "checkable": false
+                },
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "TEXT B",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ba83-p002",
+        "title": null,
+        "nodes": [
+          {
+            "id": "ba83-n009",
+            "type": "heading",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "TITLE B",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "id": "ba83-n010",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": true
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "2",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba83-n011",
+                "type": "step",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "title",
+                    "value": "A",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": [
+                  {
+                    "id": "ba83-n012",
+                    "type": "media",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "media",
+                        "role": "body",
+                        "value": {
+                          "fileName": "003.mp4",
+                          "mimeType": "video/mp4",
+                          "content": "AA=="
+                        },
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "media",
+                        "role": "script",
+                        "value": {
+                          "fileName": "003.txt",
+                          "mimeType": "text/plain",
+                          "content": "AA=="
+                        },
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "media",
+                        "role": "subtitles",
+                        "value": {
+                          "fileName": "003.vtt",
+                          "mimeType": "text/vtt",
+                          "content": "AA=="
+                        },
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "ba83-n013",
+                    "type": "script",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "title",
+                        "value": "TITLE",
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "CONTENT A\nCONTENT B",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "ba83-n014",
+                    "type": "instruction",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "INSTRUCTION TEXT",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  }
+                ]
+              },
+              {
+                "id": "ba83-n015",
+                "type": "step",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "title",
+                    "value": "B",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": [
+                  {
+                    "id": "ba83-n016",
+                    "type": "wordList",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "ITEM A; ITEM B; ITEM C.",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "ba83-n017",
+                    "type": "instruction",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "INSTRUCTION TEXT",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "ba83-n018",
+                    "type": "multifill",
+                    "flags": {
+                      "checkable": false
+                    },
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

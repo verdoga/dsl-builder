@@ -1,0 +1,333 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "id": "BA87",
+    "version": 1,
+    "title": "TITLE",
+    "subtitle": null,
+    "lineCount": 39,
+    "createdAt": "2026-11-03T18:11:31Z",
+    "pages": [
+      {
+        "id": "ba87-p001",
+        "title": null,
+        "nodes": [
+          {
+            "id": "ba87-n001",
+            "type": "variants",
+            "flags": {},
+            "data": [],
+            "nodes": [
+              {
+                "id": "ba87-n002",
+                "type": "variant",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "title",
+                    "value": "NAME A",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": [
+                  {
+                    "id": "ba87-n003",
+                    "type": "task",
+                    "flags": {
+                      "speaking": false,
+                      "stepped": false
+                    },
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "title",
+                        "value": "1",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": [
+                      {
+                        "id": "ba87-n004",
+                        "type": "instruction",
+                        "flags": {},
+                        "data": [
+                          {
+                            "type": "text",
+                            "role": "body",
+                            "value": "INSTRUCTION TEXT",
+                            "answers": [],
+                            "hint": ""
+                          }
+                        ],
+                        "nodes": []
+                      },
+                      {
+                        "id": "ba87-n005",
+                        "type": "instruction",
+                        "flags": {},
+                        "data": [
+                          {
+                            "type": "text",
+                            "role": "body",
+                            "value": "INSTRUCTION TEXT",
+                            "answers": [],
+                            "hint": ""
+                          }
+                        ],
+                        "nodes": []
+                      },
+                      {
+                        "id": "ba87-n006",
+                        "type": "ordering",
+                        "flags": {
+                          "checkable": false
+                        },
+                        "data": [
+                          {
+                            "type": "collection",
+                            "role": "items",
+                            "value": [
+                              {
+                                "type": "text",
+                                "role": "item",
+                                "value": "ITEM A",
+                                "answers": [],
+                                "hint": ""
+                              },
+                              {
+                                "type": "text",
+                                "role": "item",
+                                "value": "ITEM B",
+                                "answers": [],
+                                "hint": ""
+                              }
+                            ],
+                            "answers": [],
+                            "hint": ""
+                          }
+                        ],
+                        "nodes": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ba87-n007",
+                "type": "variant",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "title",
+                    "value": "NAME B",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": [
+                  {
+                    "id": "ba87-n008",
+                    "type": "task",
+                    "flags": {
+                      "speaking": false,
+                      "stepped": false
+                    },
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "title",
+                        "value": "1",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": [
+                      {
+                        "id": "ba87-n009",
+                        "type": "instruction",
+                        "flags": {},
+                        "data": [
+                          {
+                            "type": "text",
+                            "role": "body",
+                            "value": "INSTRUCTION TEXT",
+                            "answers": [],
+                            "hint": ""
+                          }
+                        ],
+                        "nodes": []
+                      },
+                      {
+                        "id": "ba87-n010",
+                        "type": "ordering",
+                        "flags": {
+                          "checkable": true
+                        },
+                        "data": [
+                          {
+                            "type": "collection",
+                            "role": "items",
+                            "value": [
+                              {
+                                "type": "text",
+                                "role": "item",
+                                "value": "ITEM A",
+                                "answers": [
+                                  "2"
+                                ],
+                                "hint": ""
+                              },
+                              {
+                                "type": "text",
+                                "role": "item",
+                                "value": "ITEM B",
+                                "answers": [
+                                  "1"
+                                ],
+                                "hint": "HINT TEXT"
+                              }
+                            ],
+                            "answers": [],
+                            "hint": ""
+                          }
+                        ],
+                        "nodes": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "ba87-n011",
+                "type": "variant",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "title",
+                    "value": "NAME C",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": [
+                  {
+                    "id": "ba87-n012",
+                    "type": "task",
+                    "flags": {
+                      "speaking": false,
+                      "stepped": false
+                    },
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "title",
+                        "value": "1",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": [
+                      {
+                        "id": "ba87-n013",
+                        "type": "instruction",
+                        "flags": {},
+                        "data": [
+                          {
+                            "type": "text",
+                            "role": "body",
+                            "value": "INSTRUCTION TEXT",
+                            "answers": [],
+                            "hint": ""
+                          }
+                        ],
+                        "nodes": []
+                      },
+                      {
+                        "id": "ba87-n014",
+                        "type": "instruction",
+                        "flags": {},
+                        "data": [
+                          {
+                            "type": "text",
+                            "role": "body",
+                            "value": "INSTRUCTION TEXT",
+                            "answers": [],
+                            "hint": ""
+                          }
+                        ],
+                        "nodes": []
+                      },
+                      {
+                        "id": "ba87-n015",
+                        "type": "ordering",
+                        "flags": {
+                          "checkable": true
+                        },
+                        "data": [
+                          {
+                            "type": "collection",
+                            "role": "items",
+                            "value": [
+                              {
+                                "type": "text",
+                                "role": "item",
+                                "value": "ITEM A",
+                                "answers": [
+                                  "POSITION A"
+                                ],
+                                "hint": "HINT TEXT A"
+                              },
+                              {
+                                "type": "text",
+                                "role": "item",
+                                "value": "ITEM B",
+                                "answers": [
+                                  "POSITION B"
+                                ],
+                                "hint": "HINT TEXT B"
+                              }
+                            ],
+                            "answers": [],
+                            "hint": ""
+                          },
+                          {
+                            "type": "collection",
+                            "role": "positions",
+                            "value": [
+                              {
+                                "type": "text",
+                                "role": "position",
+                                "value": "POSITION A",
+                                "answers": [],
+                                "hint": ""
+                              },
+                              {
+                                "type": "text",
+                                "role": "position",
+                                "value": "POSITION B",
+                                "answers": [],
+                                "hint": ""
+                              }
+                            ],
+                            "answers": [],
+                            "hint": ""
+                          }
+                        ],
+                        "nodes": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

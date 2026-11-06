@@ -1,0 +1,39 @@
+@dsl-version 1.2
+@document-id BA87
+# TITLE
+
+@variants {
+@variant NAME A
+@task 1
+@instr INSTRUCTION TEXT
+@ordering INSTRUCTION TEXT {
+ITEM A
+ITEM B
+}
+
+@variant NAME B
+@task 1
+@instr INSTRUCTION TEXT
+@ordering {
+ITEM A
+@answer 2
+ITEM B
+@answer 1
+@hint HINT TEXT
+}
+
+@variant NAME C
+@task 1
+@instr INSTRUCTION TEXT
+@ordering INSTRUCTION TEXT {
+ITEM A
+@answer POSITION A
+@hint HINT TEXT A
+ITEM B
+@answer POSITION B
+@hint HINT TEXT B
+---
+POSITION A
+POSITION B
+}
+}

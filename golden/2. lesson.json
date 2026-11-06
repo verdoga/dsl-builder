@@ -1,0 +1,144 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "id": "BA82",
+    "version": 1,
+    "title": "TITLE",
+    "subtitle": "Subtitle",
+    "lineCount": 23,
+    "createdAt": "2026-11-03T17:32:07Z",
+    "pages": [
+      {
+        "id": "ba82-p001",
+        "title": null,
+        "nodes": [
+          {
+            "id": "ba82-n001",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "1",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba82-n002",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT A\nINSTRUCTION TEXT B",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba82-n003",
+                "type": "example",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "EXAMPLE TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba82-n004",
+                "type": "alt",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "ALT TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba82-n005",
+                "type": "multifill",
+                "flags": {
+                  "checkable": false
+                },
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "id": "ba82-n006",
+            "type": "note",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "TITLE",
+                "answers": [],
+                "hint": ""
+              },
+              {
+                "type": "text",
+                "role": "body",
+                "value": "CONTENT A\nCONTENT B",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "id": "ba82-n007",
+            "type": "alt",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "TITLE",
+                "answers": [],
+                "hint": ""
+              },
+              {
+                "type": "text",
+                "role": "body",
+                "value": "CONTENT A\nCONTENT A",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      }
+    ]
+  }
+}

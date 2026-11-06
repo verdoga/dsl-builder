@@ -1,0 +1,29 @@
+@dsl-version 1.2
+@document-id BA85
+# TITLE
+## Subtitle
+
+### Title A
+
+@task 1
+@question TEXT
+@answer ANSWER TEXT
+
+### Title B
+
+@task 2
+@instr INSTRUCTION TEXT
+@multifill {
+CONTENT A
+CONTENT B
+}
+
+### Title C
+
+@task 3
+@instr INSTRUCTION TEXT
+@choice INSTRUCTION TEXT {
+OPTION A
+@answer ANSWER B
+@hint HINT TEXT
+}

@@ -1,0 +1,138 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "id": "EFX7",
+    "version": 1,
+    "title": "12A I'M GOING TO HAVE A LONG HOT BATH",
+    "subtitle": null,
+    "lineCount": 36,
+    "createdAt": "2026-11-03T08:34:59Z",
+    "pages": [
+      {
+        "id": "efx7-p001",
+        "title": "1 GRAMMAR: Be going to: positive and negative",
+        "nodes": [
+          {
+            "id": "efx7-n001",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "a",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "efx7-n002",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "Underline the correct words to complete the conversations.",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "efx7-n003",
+                "type": "multifill",
+                "flags": {
+                  "checkable": false
+                },
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "Conversation 1\nA: Is there an email from Stephen? He going to / He's going to / He's going write to you with information about the boat trip.\nB: I don't know. I'm going not to / I'm not going to / I'm not going check my emails today or tomorrow.\nA: Oh, OK. Well, I'm going to phone / phoning / phone him this evening, so I can ask him then.\n\nConversation 2\nA: It's the holidays! I go to / I'm going / I'm going to sleep for ten hours every night! I going / I'm going / I'm go to watch TV every day!\nB: Really? That's so boring! My brother and I am going / is going / are going to work on a farm near the mountains. The people there are going / is going / am going to teach us how to ride horses.\nA: Hmm, sounds quite interesting. What about your sister?\nB: She's going not / She not going / She isn't going to come with us. She wants to stay at home.",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "efx7-n004",
+                "type": "answerKey",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "Conversation 1\nA: Is there an email from Stephen? He's going to write to you with information about the boat trip.\nB: I don't know. I'm not going to check my emails today or tomorrow.\nA: Oh, OK. Well, I'm going to phone him this evening, so I can ask him then.\nConversation 2\nA: It's the holidays! I'm going to sleep for ten hours every night! I'm going to watch TV every day!\nB: Really? That's so boring! My brother and I are going to work on a farm near the mountains. The people there are going to teach us how to ride horses.\nA: Hmm, sounds quite interesting. What about your sister?\nB: She isn't going to come with us. She wants to stay at home.",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "id": "efx7-n005",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "b",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "efx7-n006",
+                "type": "media",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "media",
+                    "role": "body",
+                    "value": {
+                      "fileName": "12.01.mp3",
+                      "mimeType": "audio/mpeg",
+                      "content": "AA=="
+                    },
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "efx7-n007",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "Listen and check.",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

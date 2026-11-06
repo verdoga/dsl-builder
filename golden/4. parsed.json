@@ -1,0 +1,598 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": "4. original.txt",
+    "filePath": "f:\\English course\\Tools\\Sources\\Builder\\golden\\4. original.txt",
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 27,
+    "byteLength": 245,
+    "sha256": "9a3a5d5e66af7231b24badc2a596d0d2da98630f5b850f285b85a8124115c539",
+    "metadata": {
+      "documentId": "BA84",
+      "title": "TITLE",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [
+    {
+      "id": "p1",
+      "tool": "dsl-parser",
+      "version": "1.0.3",
+      "startedAt": "2026-11-03T17:27:39Z",
+      "durationMs": 1
+    }
+  ],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@dsl-version 1.2",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@dsl-version",
+          "value": "dsl-version",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "version",
+          "raw": "1.2",
+          "value": "1.2",
+          "start": 14,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@document-id BA84",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@document-id",
+          "value": "document-id",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "BA84",
+          "value": "BA84",
+          "start": 14,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "# TITLE",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "#",
+          "value": "1",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE",
+          "value": "TITLE",
+          "start": 3,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 5,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "### Title A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "###",
+          "value": "3",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Title A",
+          "value": "Title A",
+          "start": 5,
+          "end": 12,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@wordlist TITLE {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@wordlist",
+          "value": "wordlist",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE",
+          "value": "TITLE",
+          "start": 11,
+          "end": 16,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 17,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "ITEM A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "ITEM A",
+          "value": "ITEM A",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "ITEM B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "ITEM B",
+          "value": "ITEM B",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "ITEM C",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "ITEM C",
+          "value": "ITEM C",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 12,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "### Title B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "###",
+          "value": "3",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Title B",
+          "value": "Title B",
+          "start": 5,
+          "end": 12,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 14,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@table TITLE {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@table",
+          "value": "table",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE",
+          "value": "TITLE",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 14,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 14,
+      "raw": "header | header",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "header | header",
+          "value": "header | header",
+          "start": 1,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 16,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 14,
+      "raw": "---",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "---",
+          "value": "---",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 17,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 14,
+      "raw": "a | b",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "a | b",
+          "value": "a | b",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 18,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 14,
+      "raw": "c | d",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "c | d",
+          "value": "c | d",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 19,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 14,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 20,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 21,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "### Title C",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "###",
+          "value": "3",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Title C",
+          "value": "Title C",
+          "start": 5,
+          "end": 12,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 23,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@text TITLE {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@text",
+          "value": "text",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE",
+          "value": "TITLE",
+          "start": 7,
+          "end": 12,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 13,
+          "end": 14,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "CONTENT A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "CONTENT A",
+          "value": "CONTENT A",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 25,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "CONTENT b",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "CONTENT b",
+          "value": "CONTENT b",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 26,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "CONTENT C",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "CONTENT C",
+          "value": "CONTENT C",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 27,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "}",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

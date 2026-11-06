@@ -1,0 +1,97 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "id": "BA84",
+    "version": 1,
+    "title": "TITLE",
+    "subtitle": null,
+    "lineCount": 27,
+    "createdAt": "2026-11-03T17:54:17Z",
+    "pages": [
+      {
+        "id": "ba84-p001",
+        "title": "Title A",
+        "nodes": [
+          {
+            "id": "ba84-n001",
+            "type": "wordList",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "TITLE",
+                "answers": [],
+                "hint": ""
+              },
+              {
+                "type": "text",
+                "role": "body",
+                "value": "ITEM A\nITEM B\nITEM C",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "id": "ba84-p002",
+        "title": "Title B",
+        "nodes": [
+          {
+            "id": "ba84-n002",
+            "type": "table",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "TITLE",
+                "answers": [],
+                "hint": ""
+              },
+              {
+                "type": "text",
+                "role": "body",
+                "value": "header | header\n---\na | b\nc | d",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "id": "ba84-p003",
+        "title": "Title C",
+        "nodes": [
+          {
+            "id": "ba84-n003",
+            "type": "text",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "TITLE",
+                "answers": [],
+                "hint": ""
+              },
+              {
+                "type": "text",
+                "role": "body",
+                "value": "CONTENT A\nCONTENT b\nCONTENT C",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      }
+    ]
+  }
+}

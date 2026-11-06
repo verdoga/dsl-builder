@@ -1,0 +1,760 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": "1. original.txt",
+    "filePath": "c:\\English course\\Tools\\Sources\\Builder\\golden\\1. original.txt",
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 36,
+    "byteLength": 1809,
+    "sha256": "d723e117693362b534823b3b4645392605fa736df66fa46f55def6514bf0d22d",
+    "metadata": {
+      "documentId": "EFX7",
+      "title": "12A I'M GOING TO HAVE A LONG HOT BATH",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [
+    {
+      "id": "p1",
+      "tool": "dsl-parser",
+      "version": "1.0.3",
+      "startedAt": "2026-11-03T10:30:08Z",
+      "durationMs": 8
+    }
+  ],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@dsl-version 1.2",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@dsl-version",
+          "value": "dsl-version",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "version",
+          "raw": "1.2",
+          "value": "1.2",
+          "start": 14,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@document-id EFX7",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@document-id",
+          "value": "document-id",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "EFX7",
+          "value": "EFX7",
+          "start": 14,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "# 12A I'M GOING TO HAVE A LONG HOT BATH",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "#",
+          "value": "1",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "12A I'M GOING TO HAVE A LONG HOT BATH",
+          "value": "12A I'M GOING TO HAVE A LONG HOT BATH",
+          "start": 3,
+          "end": 40,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 5,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "### 1 GRAMMAR: Be going to: positive and negative",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "###",
+          "value": "3",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "1 GRAMMAR: Be going to: positive and negative",
+          "value": "1 GRAMMAR: Be going to: positive and negative",
+          "start": 5,
+          "end": 50,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 7,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@task a",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@task",
+          "value": "task",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "a",
+          "value": "a",
+          "start": 7,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 7,
+      "raw": "@multifill Underline the correct words to complete the conversations. {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@multifill",
+          "value": "multifill",
+          "start": 1,
+          "end": 11,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Underline the correct words to complete the conversations.",
+          "value": "Underline the correct words to complete the conversations.",
+          "start": 12,
+          "end": 70,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 71,
+          "end": 72,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "Conversation 1",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Conversation 1",
+          "value": "Conversation 1",
+          "start": 1,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "A: Is there an email from Stephen? He going to / He's going to / He's going write to you with information about the boat trip.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "A: Is there an email from Stephen? He going to / He's going to / He's going write to you with information about the boat trip.",
+          "value": "A: Is there an email from Stephen? He going to / He's going to / He's going write to you with information about the boat trip.",
+          "start": 1,
+          "end": 127,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "B: I don't know. I'm going not to / I'm not going to / I'm not going check my emails today or tomorrow.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "B: I don't know. I'm going not to / I'm not going to / I'm not going check my emails today or tomorrow.",
+          "value": "B: I don't know. I'm going not to / I'm not going to / I'm not going check my emails today or tomorrow.",
+          "start": 1,
+          "end": 104,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "A: Oh, OK. Well, I'm going to phone / phoning / phone him this evening, so I can ask him then.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "A: Oh, OK. Well, I'm going to phone / phoning / phone him this evening, so I can ask him then.",
+          "value": "A: Oh, OK. Well, I'm going to phone / phoning / phone him this evening, so I can ask him then.",
+          "start": 1,
+          "end": 95,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "type": "blank",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 14,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "Conversation 2",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Conversation 2",
+          "value": "Conversation 2",
+          "start": 1,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "A: It's the holidays! I go to / I'm going / I'm going to sleep for ten hours every night! I going / I'm going / I'm go to watch TV every day!",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "A: It's the holidays! I go to / I'm going / I'm going to sleep for ten hours every night! I going / I'm going / I'm go to watch TV every day!",
+          "value": "A: It's the holidays! I go to / I'm going / I'm going to sleep for ten hours every night! I going / I'm going / I'm go to watch TV every day!",
+          "start": 1,
+          "end": 142,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 16,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "B: Really? That's so boring! My brother and I am going / is going / are going to work on a farm near the mountains. The people there are going / is going / am going to teach us how to ride horses.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "B: Really? That's so boring! My brother and I am going / is going / are going to work on a farm near the mountains. The people there are going / is going / am going to teach us how to ride horses.",
+          "value": "B: Really? That's so boring! My brother and I am going / is going / are going to work on a farm near the mountains. The people there are going / is going / am going to teach us how to ride horses.",
+          "start": 1,
+          "end": 197,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 17,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "A: Hmm, sounds quite interesting. What about your sister?",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "A: Hmm, sounds quite interesting. What about your sister?",
+          "value": "A: Hmm, sounds quite interesting. What about your sister?",
+          "start": 1,
+          "end": 58,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 18,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "B: She's going not / She not going / She isn't going to come with us. She wants to stay at home.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "B: She's going not / She not going / She isn't going to come with us. She wants to stay at home.",
+          "value": "B: She's going not / She not going / She isn't going to come with us. She wants to stay at home.",
+          "start": 1,
+          "end": 97,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 19,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 20,
+      "type": "blank",
+      "nestingLevel": 1,
+      "parentLine": 7,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 21,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 7,
+      "raw": "@key {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@key",
+          "value": "key",
+          "start": 1,
+          "end": 5,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 6,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "Conversation 1",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Conversation 1",
+          "value": "Conversation 1",
+          "start": 1,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 23,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "A: Is there an email from Stephen? He's going to write to you with information about the boat trip.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "A: Is there an email from Stephen? He's going to write to you with information about the boat trip.",
+          "value": "A: Is there an email from Stephen? He's going to write to you with information about the boat trip.",
+          "start": 1,
+          "end": 100,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "B: I don't know. I'm not going to check my emails today or tomorrow.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "B: I don't know. I'm not going to check my emails today or tomorrow.",
+          "value": "B: I don't know. I'm not going to check my emails today or tomorrow.",
+          "start": 1,
+          "end": 69,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 25,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "A: Oh, OK. Well, I'm going to phone him this evening, so I can ask him then.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "A: Oh, OK. Well, I'm going to phone him this evening, so I can ask him then.",
+          "value": "A: Oh, OK. Well, I'm going to phone him this evening, so I can ask him then.",
+          "start": 1,
+          "end": 77,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 26,
+      "type": "blank",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 27,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "Conversation 2",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Conversation 2",
+          "value": "Conversation 2",
+          "start": 1,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 28,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "A: It's the holidays! I'm going to sleep for ten hours every night! I'm going to watch TV every day!",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "A: It's the holidays! I'm going to sleep for ten hours every night! I'm going to watch TV every day!",
+          "value": "A: It's the holidays! I'm going to sleep for ten hours every night! I'm going to watch TV every day!",
+          "start": 1,
+          "end": 101,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 29,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "B: Really? That's so boring! My brother and I are going to work on a farm near the mountains. The people there are going to teach us how to ride horses.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "B: Really? That's so boring! My brother and I are going to work on a farm near the mountains. The people there are going to teach us how to ride horses.",
+          "value": "B: Really? That's so boring! My brother and I are going to work on a farm near the mountains. The people there are going to teach us how to ride horses.",
+          "start": 1,
+          "end": 153,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 30,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "A: Hmm, sounds quite interesting. What about your sister?",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "A: Hmm, sounds quite interesting. What about your sister?",
+          "value": "A: Hmm, sounds quite interesting. What about your sister?",
+          "start": 1,
+          "end": 58,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 31,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "B: She isn't going to come with us. She wants to stay at home.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "B: She isn't going to come with us. She wants to stay at home.",
+          "value": "B: She isn't going to come with us. She wants to stay at home.",
+          "start": 1,
+          "end": 63,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 32,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 21,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 33,
+      "type": "blank",
+      "nestingLevel": 1,
+      "parentLine": 7,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 34,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@task b",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@task",
+          "value": "task",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "b",
+          "value": "b",
+          "start": 7,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 35,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@media audio 12.01",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@media",
+          "value": "media",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "media-type",
+          "raw": "audio",
+          "value": "audio",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "source",
+          "raw": "12.01",
+          "value": "12.01",
+          "start": 14,
+          "end": 19,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 36,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@instr Listen and check.",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@instr",
+          "value": "instr",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Listen and check.",
+          "value": "Listen and check.",
+          "start": 8,
+          "end": 25,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

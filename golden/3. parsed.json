@@ -1,0 +1,1067 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": "3. original.txt",
+    "filePath": "f:\\English course\\Tools\\Sources\\Builder\\golden\\3. original.txt",
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 44,
+    "byteLength": 562,
+    "sha256": "7c3eb4e275fe5075eee791ac31ee8a133e7d9f3fe3b8a5859b3c2eb7240b47f1",
+    "metadata": {
+      "documentId": "BA83",
+      "title": "TITLE",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [
+    {
+      "id": "p1",
+      "tool": "dsl-parser",
+      "version": "1.0.3",
+      "startedAt": "2026-11-03T17:27:25Z",
+      "durationMs": 1
+    }
+  ],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@dsl-version 1.2",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@dsl-version",
+          "value": "dsl-version",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "version",
+          "raw": "1.2",
+          "value": "1.2",
+          "start": 14,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@document-id BA83",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@document-id",
+          "value": "document-id",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "BA83",
+          "value": "BA83",
+          "start": 14,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "# TITLE",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "#",
+          "value": "1",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE",
+          "value": "TITLE",
+          "start": 3,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 5,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@header TITLE A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@header",
+          "value": "header",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE A",
+          "value": "TITLE A",
+          "start": 9,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@task 1",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@task",
+          "value": "task",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "1",
+          "value": "1",
+          "start": 7,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "@speaking",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@speaking",
+          "value": "speaking",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "@instr {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@instr",
+          "value": "instr",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 8,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "INSTRUCTION TEXT A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "INSTRUCTION TEXT A",
+          "value": "INSTRUCTION TEXT A",
+          "start": 1,
+          "end": 19,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "INSTRUCTION TEXT B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "INSTRUCTION TEXT B",
+          "value": "INSTRUCTION TEXT B",
+          "start": 1,
+          "end": 19,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "@hint HINT TEXT",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "HINT TEXT",
+          "value": "HINT TEXT",
+          "start": 7,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 8,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "@example TITLE {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@example",
+          "value": "example",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE",
+          "value": "TITLE",
+          "start": 10,
+          "end": 15,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 16,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 13,
+      "raw": "EXAMPLE A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "EXAMPLE A",
+          "value": "EXAMPLE A",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 13,
+      "raw": "---",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "---",
+          "value": "---",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 16,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 13,
+      "raw": "EXAMPLE B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "EXAMPLE B",
+          "value": "EXAMPLE B",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 17,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 13,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 18,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "@choice {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@choice",
+          "value": "choice",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 9,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 19,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 18,
+      "raw": "OPTION A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "OPTION A",
+          "value": "OPTION A",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 20,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 18,
+      "raw": "@answer ANSWER B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "ANSWER B",
+          "value": "ANSWER B",
+          "start": 9,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 21,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 18,
+      "raw": "@hint HINT TEXT",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "HINT TEXT",
+          "value": "HINT TEXT",
+          "start": 7,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 18,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 23,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "@choice {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@choice",
+          "value": "choice",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 9,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 23,
+      "raw": "OPTION A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "OPTION A",
+          "value": "OPTION A",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 25,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 23,
+      "raw": "@answer ANSWER B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "ANSWER B",
+          "value": "ANSWER B",
+          "start": 9,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 26,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 23,
+      "raw": "@hint HINT TEXT",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "HINT TEXT",
+          "value": "HINT TEXT",
+          "start": 7,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 27,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 23,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 28,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "@question TEXT A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "TEXT A",
+          "value": "TEXT A",
+          "start": 11,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 29,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "@question TEXT B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "TEXT B",
+          "value": "TEXT B",
+          "start": 11,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 30,
+      "type": "blank",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 31,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@newpage",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@newpage",
+          "value": "newpage",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 32,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@header TITLE B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@header",
+          "value": "header",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE B",
+          "value": "TITLE B",
+          "start": 9,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 33,
+      "type": "blank",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 34,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@task 2",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@task",
+          "value": "task",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "2",
+          "value": "2",
+          "start": 7,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 35,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@step A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@step",
+          "value": "step",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "A",
+          "value": "A",
+          "start": 7,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 36,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@media video 003",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@media",
+          "value": "media",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "media-type",
+          "raw": "video",
+          "value": "video",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "source",
+          "raw": "003",
+          "value": "003",
+          "start": 14,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 37,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@script TITLE {",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@script",
+          "value": "script",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "TITLE",
+          "value": "TITLE",
+          "start": 9,
+          "end": 14,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 15,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 38,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 37,
+      "raw": "CONTENT A",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "CONTENT A",
+          "value": "CONTENT A",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 39,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 37,
+      "raw": "CONTENT B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "CONTENT B",
+          "value": "CONTENT B",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 40,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 37,
+      "raw": "}",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 41,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@instr INSTRUCTION TEXT",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@instr",
+          "value": "instr",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "INSTRUCTION TEXT",
+          "value": "INSTRUCTION TEXT",
+          "start": 8,
+          "end": 24,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 42,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@step B",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@step",
+          "value": "step",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "B",
+          "value": "B",
+          "start": 7,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 43,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@wordlist ITEM A; ITEM B; ITEM C.",
+      "eol": "\r\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@wordlist",
+          "value": "wordlist",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "ITEM A; ITEM B; ITEM C.",
+          "value": "ITEM A; ITEM B; ITEM C.",
+          "start": 11,
+          "end": 34,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 44,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 34,
+      "raw": "@multifill INSTRUCTION TEXT",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@multifill",
+          "value": "multifill",
+          "start": 1,
+          "end": 11,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "INSTRUCTION TEXT",
+          "value": "INSTRUCTION TEXT",
+          "start": 12,
+          "end": 28,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

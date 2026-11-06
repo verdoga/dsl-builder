@@ -1,0 +1,44 @@
+@dsl-version 1.2
+@document-id BA83
+# TITLE
+
+@header TITLE A
+@task 1
+@speaking
+@instr {
+INSTRUCTION TEXT A
+INSTRUCTION TEXT B
+@hint HINT TEXT
+}
+@example TITLE {
+EXAMPLE A
+---
+EXAMPLE B
+}
+@choice {
+OPTION A
+@answer ANSWER B
+@hint HINT TEXT
+}
+@choice {
+OPTION A
+@answer ANSWER B
+@hint HINT TEXT
+}
+@question TEXT A
+@question TEXT B
+
+@newpage
+@header TITLE B
+
+@task 2
+@step A
+@media video 003
+@script TITLE {
+CONTENT A
+CONTENT B
+}
+@instr INSTRUCTION TEXT
+@step B
+@wordlist ITEM A; ITEM B; ITEM C.
+@multifill INSTRUCTION TEXT

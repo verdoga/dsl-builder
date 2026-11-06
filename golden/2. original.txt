@@ -1,0 +1,23 @@
+@dsl-version 1.2
+@document-id BA82
+# TITLE
+## Subtitle
+
+@task 1
+@instr {
+INSTRUCTION TEXT A
+INSTRUCTION TEXT B
+}
+@example EXAMPLE TEXT
+@alt ALT TEXT
+@multifill
+@endtask
+
+@note TITLE {
+CONTENT A
+CONTENT B
+}
+@alt TITLE {
+CONTENT A
+CONTENT A
+}

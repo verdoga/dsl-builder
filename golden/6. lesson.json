@@ -1,0 +1,370 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "id": "BA86",
+    "version": 1,
+    "title": "TITLE",
+    "subtitle": null,
+    "lineCount": 45,
+    "createdAt": "2026-11-03T18:07:54Z",
+    "pages": [
+      {
+        "id": "ba86-p001",
+        "title": null,
+        "nodes": [
+          {
+            "id": "ba86-n001",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "1",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba86-n002",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba86-n003",
+                "type": "multipleChoice",
+                "flags": {
+                  "checkable": false
+                },
+                "data": [
+                  {
+                    "type": "collection",
+                    "role": "options",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION A",
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION B",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba86-n004",
+                "type": "hint",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "HINT TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "id": "ba86-n005",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "2",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba86-n006",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba86-n007",
+                "type": "multipleChoice",
+                "flags": {
+                  "checkable": true
+                },
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "instruction",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  },
+                  {
+                    "type": "collection",
+                    "role": "options",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "ANSWER A",
+                        "answers": [
+                          "ANSWER A"
+                        ],
+                        "hint": "HINT TEXT A"
+                      },
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION B",
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "ANSWER C",
+                        "answers": [
+                          "ANSWER C"
+                        ],
+                        "hint": "HINT TEXT C"
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "id": "ba86-n008",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "3",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba86-n009",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba86-n010",
+                "type": "matching",
+                "flags": {
+                  "checkable": false
+                },
+                "data": [
+                  {
+                    "type": "collection",
+                    "role": "items",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "item",
+                        "value": "ITEM A",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  },
+                  {
+                    "type": "collection",
+                    "role": "options",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION A",
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION B",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba86-n011",
+                "type": "hint",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "CONTENT A\nCONTENT B",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          },
+          {
+            "id": "ba86-n012",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "4",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba86-n013",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba86-n014",
+                "type": "matching",
+                "flags": {
+                  "checkable": true
+                },
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "instruction",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  },
+                  {
+                    "type": "collection",
+                    "role": "items",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "item",
+                        "value": "ITEM A",
+                        "answers": [
+                          "OPTION A"
+                        ],
+                        "hint": "HINT TEXT A"
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  },
+                  {
+                    "type": "collection",
+                    "role": "options",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION A",
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION B",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
