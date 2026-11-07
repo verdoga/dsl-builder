@@ -1,0 +1,89 @@
+{
+    "producerExtension" : { "literal": "Не терять это неизвестное поле", "sequence": [3, 2, 1] },
+    "document" : {
+        "createdAt": "2026-10-01T02:03:04Z",
+        "id": "A:Б+",
+        "version": 9007199254740993,
+        "title": " Урок с Unicode и разметкой ",
+        "subtitle": " Подзаголовок\nбез нормализации ",
+        "lineCount": 9007199254740995,
+        "extraDocument": true,
+        "pages": [
+            {
+                "id": "a:б+-p001",
+                "title": " Страница ",
+                "nodes": [
+                    {
+                        "id": "a:б+-n001",
+                        "type": "task",
+                        "flags": {"speaking": true, "stepped": false},
+                        "data": [],
+                        "nodes": [
+                            {
+                                "id": "a:б+-n002",
+                                "type": "text",
+                                "flags": {},
+                                "data": [
+                                    {
+                                        "type": "collection", "role": "body",
+                                        "value": [
+                                            {
+                                                "type": "collection", "role": "hint",
+                                                "value": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "<b>Текст</b>\n\nБуквально _____{ответ}",
+                                                        "answers": ["Ответ", " Ещё "],
+                                                        "hint": " Подсказка\n "
+                                                    }
+                                                ],
+                                                "answers": [], "hint": "вложенная"
+                                            },
+                                            {"type": "collection", "value": [], "answers": [], "hint": ""}
+                                        ],
+                                        "answers": [], "hint": "коллекция"
+                                    }
+                                ],
+                                "nodes": []
+                            },
+                            {
+                                "id": "a:б+-n003",
+                                "type": "media", "flags": {},
+                                "data": [
+                                    {
+                                        "type": "media", "role": "body",
+                                        "value": {"fileName": "Видео 1.bin", "mimeType": "application/octet-stream", "content": "AAEC//4="},
+                                        "answers": [], "hint": "",
+                                        "extraData": ["поле остаётся в raw"]
+                                    },
+                                    {
+                                        "type": "media", "role": "script",
+                                        "value": {"fileName": "Расшифровка.txt", "mimeType": "text/plain", "content": "0KLQtdC60YHRggo="},
+                                        "answers": [], "hint": ""
+                                    },
+                                    {
+                                        "type": "media", "role": "subtitles",
+                                        "value": {"fileName": "Субтитры.vtt", "mimeType": "text/vtt", "content": "V0VCVlRUCg=="},
+                                        "answers": [], "hint": ""
+                                    }
+                                ],
+                                "nodes": []
+                            },
+                            {
+                                "id": "a:б+-n004", "type": "multifill",
+                                "flags": {"checkable": false},
+                                "data": [
+                                    {"type": "text", "role": "body", "value": "I _____{am} Camila.\n\nWe _____{are} from Spain.", "answers": [], "hint": ""}
+                                ],
+                                "nodes": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {"id": "a:б+-p002", "title": null, "nodes": []}
+        ]
+    },
+    "formatVersion" : "1.0"
+}
+
