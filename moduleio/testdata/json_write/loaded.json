@@ -1,0 +1,147 @@
+ 
+{
+	"document": {
+		"id": "JW7",
+		"version": 900719925474099312345678901234567890.0,
+		"title": "  Урок <&>  ",
+		"subtitle": "",
+		"lineCount": 7e1,
+		"createdAt": "2001-02-03T04:05:06Z",
+		"pages": [
+			{
+				"id": "jw7-p002",
+				"title": null,
+				"nodes": [
+					{
+						"id": "jw7-n009",
+						"type": "media",
+						"flags": {},
+						"data": [
+							{
+								"type": "media",
+								"role": "body",
+								"value": {
+									"fileName": "Ролик.mp4",
+									"mimeType": "video/mp4",
+									"content": "AP8BgAoN",
+									"extraEmbedded": "keep"
+								},
+								"answers": [],
+								"hint": "",
+								"extraData": "keep"
+							},
+							{
+								"type": "media",
+								"role": "script",
+								"value": {
+									"fileName": "Ролик.txt",
+									"mimeType": "text/plain",
+									"content": "77u/0KLQtdC60YHRgg0KCg=="
+								},
+								"answers": [],
+								"hint": ""
+							},
+							{
+								"type": "media",
+								"role": "subtitles",
+								"value": {
+									"fileName": "Ролик.vtt",
+									"mimeType": "text/vtt",
+									"content": "V0VCVlRUDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDEuMDAwDQpIaQ0K"
+								},
+								"answers": [],
+								"hint": ""
+							}
+						],
+						"nodes": [],
+						"extraNode": "keep"
+					},
+					{
+						"id": "jw7-n003",
+						"type": "multifill",
+						"flags": {},
+						"data": [
+							{
+								"type": "text",
+								"role": "body",
+								"value": "I _____{am}.\n\n<b>Я</b>\\t",
+								"answers": [],
+								"hint": ""
+							}
+						],
+						"nodes": []
+					},
+					{
+						"id": "jw7-n008",
+						"type": "text",
+						"flags": {},
+						"data": [
+							{
+								"type": "collection",
+								"role": "body",
+								"value": [
+									{
+										"type": "text",
+										"value": "второй",
+										"answers": [
+											"B",
+											"A",
+											""
+										],
+										"hint": "подсказка"
+									},
+									{
+										"type": "collection",
+										"value": [
+											{
+												"type": "text",
+												"value": "",
+												"answers": [],
+												"hint": ""
+											}
+										],
+										"answers": [],
+										"hint": ""
+									}
+								],
+								"answers": [],
+								"hint": ""
+							}
+						],
+						"nodes": []
+					},
+					{
+						"id": "jw7-n004",
+						"type": "task",
+						"flags": {},
+						"data": [],
+						"nodes": [
+							{
+								"id": "jw7-n005",
+								"type": "note",
+								"flags": {},
+								"data": [],
+								"nodes": []
+							}
+						]
+					}
+				],
+				"extraPage": "keep"
+			},
+			{
+				"id": "jw7-p001",
+				"title": "Страница",
+				"nodes": []
+			}
+		],
+		"unknownDocument": [
+			1,
+			null
+		]
+	},
+	"extraRoot": {
+		"arbitrary": true
+	},
+	"formatVersion": "1.0"
+}
+	  

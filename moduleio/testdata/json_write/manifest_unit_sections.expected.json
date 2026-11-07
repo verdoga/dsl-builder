@@ -1,0 +1,53 @@
+{
+  "formatVersion": "1.0",
+  "createdAt": "1999-12-31T23:59:59Z",
+  "course": {
+    "title": "  Курс \u003c\u0026\u003e  ",
+    "unit": {
+      "title": "  Юнит  ",
+      "lessons": [],
+      "sections": [
+        {
+          "title": "Z секция",
+          "lessons": [
+            {
+              "id": "JW8",
+              "fileName": "l003.json",
+              "order": "0002",
+              "title": "  Урок \u003c\u0026\u003e  ",
+              "subtitle": "",
+              "lineCount": 7e1,
+              "createdAt": "2001-02-03T04:05:06Z",
+              "version": 900719925474099312345678901234567890.0
+            },
+            {
+              "id": "JW7",
+              "fileName": "l020.json",
+              "order": "00010",
+              "title": "  Урок \u003c\u0026\u003e  ",
+              "subtitle": "",
+              "lineCount": 7e1,
+              "createdAt": "2001-02-03T04:05:06Z",
+              "version": 900719925474099312345678901234567890.0
+            }
+          ]
+        },
+        {
+          "title": "A секция",
+          "lessons": [
+            {
+              "id": "JW9",
+              "fileName": "l1000.json",
+              "order": "000184467440737095516161234567890",
+              "title": "  Урок \u003c\u0026\u003e  ",
+              "subtitle": "",
+              "lineCount": 7e1,
+              "createdAt": "2001-02-03T04:05:06Z",
+              "version": 900719925474099312345678901234567890.0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

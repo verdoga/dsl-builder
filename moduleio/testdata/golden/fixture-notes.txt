@@ -1,0 +1,6 @@
+Нормативная самостоятельная storage fixture по ТЗ §§6.2,7.6,12–13,17–19 и API moduleio. Исторические golden не меняются.
+GoLdEn: готовые версия 9007199254740993e0 и lineCount 9007199254740995.0 сохраняются дословно как json.Number; даты не назначаются moduleio. Порядок страниц/нод намеренно не совпадает с числовыми ID.
+Raw содержит CRLF, табы, неизвестные разрешённые schema свойства, точный title и отдельный TITLE. Неизменённый урок должен перенестись побайтово. NewFile/ReplaceFile сериализуются из typed Lesson и могут опустить неизвестные свойства.
+resources/pixel.png — маленький настоящий RGBA PNG 1×1; script.txt — явные UTF-8/CRLF/пустая строка/нулевой байт; captions.vtt — маленькие WEBVTT bytes. Модуль хранит их полностью; декодирование медиаформата не входит в moduleio.
+Исторический AA== проверяется исключительно как исторический storage payload; это не доказательство настоящего медиа или работы convert/resourceembed.
+Для Manifest unit example synthetic lessons содержат ровно подготовленные метаданные и пустой pages: []; это независимые нормативные уроки, не конвертация Unit example.ZIP. Flat example с order:null проходит схему, но не готов к storage до catalog.missing_weight.

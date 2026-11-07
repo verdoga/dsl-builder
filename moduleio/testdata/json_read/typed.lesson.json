@@ -1,0 +1,86 @@
+{
+   "formatVersion": "1.0",
+   "document": {
+      "id": "EFX7",
+      "version": 123456789012345678901234567890123456789,
+      "title": "  Урок  ",
+      "subtitle": "",
+      "lineCount": 10e2,
+      "createdAt": "2026-11-04T09:00:00Z",
+      "pages": [
+         {
+            "id": "efx7-p001",
+            "title": null,
+            "nodes": [
+               {
+                  "id": "efx7-n001",
+                  "type": "multifill",
+                  "flags": {},
+                  "data": [
+                     {
+                        "type": "text",
+                        "role": "body",
+                        "value": "I _____{am}.\n\n <b>текст</b>",
+                        "answers": [],
+                        "hint": "",
+                        "VALUE": "ignored"
+                     }
+                  ],
+                  "nodes": [],
+                  "TYPE": "ignored"
+               },
+               {
+                  "id": "efx7-n002",
+                  "type": "media",
+                  "flags": {},
+                  "data": [
+                     {
+                        "type": "media",
+                        "role": "body",
+                        "value": {
+                           "fileName": "звук.bin",
+                           "mimeType": "application/octet-stream",
+                           "content": "AAEC/w==",
+                           "CONTENT": "ignored"
+                        },
+                        "answers": [],
+                        "hint": ""
+                     }
+                  ],
+                  "nodes": []
+               },
+               {
+                  "id": "efx7-n003",
+                  "type": "text",
+                  "flags": {},
+                  "data": [
+                     {
+                        "type": "collection",
+                        "role": "body",
+                        "value": [
+                           {
+                              "type": "text",
+                              "role": "body",
+                              "value": "вложенный",
+                              "answers": [],
+                              "hint": ""
+                           }
+                        ],
+                        "answers": [],
+                        "hint": ""
+                     }
+                  ],
+                  "nodes": []
+               }
+            ],
+            "TITLE": "ignored"
+         }
+      ],
+      "TITLE": "ignored",
+      "VERSION": 5
+   },
+   "FORMATVERSION": "ignored",
+   "extra": {
+      "payload": "UNKNOWN_RAW_SENTINEL"
+   }
+}
