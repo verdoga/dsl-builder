@@ -1,0 +1,1922 @@
+{
+  "lesson": {
+    "formatVersion": "1.0",
+    "document": {
+      "id": "EFX7",
+      "version": 1,
+      "title": "Интеграция",
+      "subtitle": null,
+      "lineCount": 100,
+      "createdAt": "2026-11-06T00:00:00Z",
+      "pages": [
+        {
+          "id": "efx7-p001",
+          "title": null,
+          "nodes": []
+        }
+      ]
+    }
+  },
+  "cases": [
+    {
+      "name": "task identifier is display text",
+      "kind": "task",
+      "nodeID": "efx7-n001",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@task A-007",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@task",
+            "value": "task",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "identifier",
+            "raw": "A-007",
+            "value": "A-007",
+            "start": 7,
+            "end": 12,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "A-007",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "step title",
+      "kind": "step",
+      "nodeID": "efx7-n002",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@step  Этап ",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@step",
+            "value": "step",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "title",
+            "raw": " Этап ",
+            "value": " Этап ",
+            "start": 7,
+            "end": 13,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": " Этап ",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "variants has nonnull empty data",
+      "kind": "variants",
+      "nodeID": "efx7-n003",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@variants {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@variants",
+            "value": "variants",
+            "start": 1,
+            "end": 10,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 11,
+            "end": 12,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [],
+      "error": ""
+    },
+    {
+      "name": "variant name",
+      "kind": "variant",
+      "nodeID": "efx7-n004",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@variant Ветка А",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@variant",
+            "value": "variant",
+            "start": 1,
+            "end": 9,
+            "errorIds": []
+          },
+          {
+            "type": "name",
+            "raw": "Ветка А",
+            "value": "Ветка А",
+            "start": 10,
+            "end": 17,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "Ветка А",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "heading title",
+      "kind": "heading",
+      "nodeID": "efx7-n005",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@header Заголовок",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@header",
+            "value": "header",
+            "start": 1,
+            "end": 8,
+            "errorIds": []
+          },
+          {
+            "type": "title",
+            "raw": "Заголовок",
+            "value": "Заголовок",
+            "start": 9,
+            "end": 18,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "Заголовок",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "text caller order and no synthetic numbered gaps",
+      "kind": "text",
+      "nodeID": "efx7-n006",
+      "declaration": null,
+      "lines": [
+        {
+          "line": 71,
+          "type": "content",
+          "nestingLevel": 0,
+          "parentLine": null,
+          "raw": "<b>Первый</b>",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "<b>Первый</b>",
+              "value": "<b>Первый</b>",
+              "start": 1,
+              "end": 14,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 72,
+          "type": "blank",
+          "nestingLevel": 0,
+          "parentLine": null,
+          "raw": "",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": []
+        },
+        {
+          "line": 98,
+          "type": "content",
+          "nestingLevel": 0,
+          "parentLine": null,
+          "raw": "Второй",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Второй",
+              "value": "Второй",
+              "start": 1,
+              "end": 7,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "<b>Первый</b>\nВторой",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "standalone instruction",
+      "kind": "instruction",
+      "nodeID": "efx7-n007",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@instr Делайте.",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@instr",
+            "value": "instr",
+            "start": 1,
+            "end": 7,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Делайте.",
+            "value": "Делайте.",
+            "start": 8,
+            "end": 16,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Делайте.",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "note remains text",
+      "kind": "note",
+      "nodeID": "efx7-n008",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@note Сноска",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@note",
+            "value": "note",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Сноска",
+            "value": "Сноска",
+            "start": 7,
+            "end": 13,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Сноска",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "alt remains text",
+      "kind": "alt",
+      "nodeID": "efx7-n009",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@alt Другой текст",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@alt",
+            "value": "alt",
+            "start": 1,
+            "end": 5,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Другой текст",
+            "value": "Другой текст",
+            "start": 6,
+            "end": 18,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Другой текст",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "script remains text",
+      "kind": "script",
+      "nodeID": "efx7-n010",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@script A: Да.",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@script",
+            "value": "script",
+            "start": 1,
+            "end": 8,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "A: Да.",
+            "value": "A: Да.",
+            "start": 9,
+            "end": 15,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "A: Да.",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "hint remains text",
+      "kind": "hint",
+      "nodeID": "efx7-n011",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@hint Подсказка",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@hint",
+            "value": "hint",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Подсказка",
+            "value": "Подсказка",
+            "start": 7,
+            "end": 16,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Подсказка",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "answerKey remains text",
+      "kind": "answerKey",
+      "nodeID": "efx7-n012",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@key 1. a; 2. b",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@key",
+            "value": "key",
+            "start": 1,
+            "end": 5,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "1. a; 2. b",
+            "value": "1. a; 2. b",
+            "start": 6,
+            "end": 16,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "1. a; 2. b",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "example remains text",
+      "kind": "example",
+      "nodeID": "efx7-n013",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@example x -> y --- z",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@example",
+            "value": "example",
+            "start": 1,
+            "end": 9,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "x -> y --- z",
+            "value": "x -> y --- z",
+            "start": 10,
+            "end": 22,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "x -> y --- z",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "wordList remains text",
+      "kind": "wordList",
+      "nodeID": "efx7-n014",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@wordlist a; b; c.",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@wordlist",
+            "value": "wordlist",
+            "start": 1,
+            "end": 10,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "a; b; c.",
+            "value": "a; b; c.",
+            "start": 11,
+            "end": 19,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "a; b; c.",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "table retains separator and cells",
+      "kind": "table",
+      "nodeID": "efx7-n015",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@table Таблица {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@table",
+            "value": "table",
+            "start": 1,
+            "end": 7,
+            "errorIds": []
+          },
+          {
+            "type": "title",
+            "raw": "Таблица",
+            "value": "Таблица",
+            "start": 8,
+            "end": 15,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 16,
+            "end": 17,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "A | B",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "A | B",
+              "value": "A | B",
+              "start": 1,
+              "end": 6,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 12,
+          "type": "separator",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "---",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": []
+        },
+        {
+          "line": 15,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "я | ты",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "я | ты",
+              "value": "я | ты",
+              "start": 1,
+              "end": 7,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "Таблица",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "A | B\n---\nя | ты",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "multifill opaque markup placeholders blank lines",
+      "kind": "multifill",
+      "nodeID": "efx7-n016",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@multifill Инструкция {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@multifill",
+            "value": "multifill",
+            "start": 1,
+            "end": 11,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Инструкция",
+            "value": "Инструкция",
+            "start": 12,
+            "end": 22,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 23,
+            "end": 24,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "blank",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": []
+        },
+        {
+          "line": 12,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "Я\t_____{есть}",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Я",
+              "value": "Я",
+              "start": 1,
+              "end": 2,
+              "errorIds": []
+            },
+            {
+              "type": "placeholder",
+              "raw": "_____{есть}",
+              "value": "есть",
+              "start": 3,
+              "end": 14,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 13,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "",
+              "value": "",
+              "start": 1,
+              "end": 1,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 19,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "<br>",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "<br>",
+              "value": "<br>",
+              "start": 1,
+              "end": 5,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 20,
+          "type": "blank",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": []
+        }
+      ],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "\nЯ\t_____{есть}\n\n<br>\n",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "empty standalone text",
+      "kind": "text",
+      "nodeID": "efx7-n017",
+      "declaration": null,
+      "lines": [],
+      "want": [],
+      "error": ""
+    },
+    {
+      "name": "empty multifill still has body",
+      "kind": "multifill",
+      "nodeID": "efx7-n018",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@multifill",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@multifill",
+            "value": "multifill",
+            "start": 1,
+            "end": 11,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "named text title precedes body",
+      "kind": "text",
+      "nodeID": "efx7-n019",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@text  Имя  {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@text",
+            "value": "text",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "title",
+            "raw": " Имя ",
+            "value": " Имя ",
+            "start": 7,
+            "end": 12,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 13,
+            "end": 14,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "Тело",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Тело",
+              "value": "Тело",
+              "start": 1,
+              "end": 5,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": " Имя ",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Тело",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "example title before before and after",
+      "kind": "example",
+      "nodeID": "efx7-n020",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@example Пример {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@example",
+            "value": "example",
+            "start": 1,
+            "end": 9,
+            "errorIds": []
+          },
+          {
+            "type": "title",
+            "raw": "Пример",
+            "value": "Пример",
+            "start": 10,
+            "end": 16,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 17,
+            "end": 18,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "До",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "До",
+              "value": "До",
+              "start": 1,
+              "end": 3,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 12,
+          "type": "separator",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "---",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": []
+        },
+        {
+          "line": 13,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "После",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "После",
+              "value": "После",
+              "start": 1,
+              "end": 6,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "Пример",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "before",
+          "value": "До",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "after",
+          "value": "После",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "multifill declaration instruction separate",
+      "kind": "instruction",
+      "nodeID": "efx7-n021",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@multifill Инструкция {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@multifill",
+            "value": "multifill",
+            "start": 1,
+            "end": 11,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Инструкция",
+            "value": "Инструкция",
+            "start": 12,
+            "end": 22,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 23,
+            "end": 24,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Инструкция",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "ordering declaration instruction separate",
+      "kind": "instruction",
+      "nodeID": "efx7-n022",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@ordering Инструкция {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@ordering",
+            "value": "ordering",
+            "start": 1,
+            "end": 10,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Инструкция",
+            "value": "Инструкция",
+            "start": 11,
+            "end": 21,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 22,
+            "end": 23,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Инструкция",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "empty extracted instruction",
+      "kind": "instruction",
+      "nodeID": "efx7-n023",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@ordering {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@ordering",
+            "value": "ordering",
+            "start": 1,
+            "end": 10,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 11,
+            "end": 12,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [],
+      "error": ""
+    },
+    {
+      "name": "nested hint goes to Hint with surrounding body",
+      "kind": "instruction",
+      "nodeID": "efx7-n024",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@instr {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@instr",
+            "value": "instr",
+            "start": 1,
+            "end": 7,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 8,
+            "end": 9,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "До",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "До",
+              "value": "До",
+              "start": 1,
+              "end": 3,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 12,
+          "type": "block-start",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "@hint {",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "tag",
+              "raw": "@hint",
+              "value": "hint",
+              "start": 1,
+              "end": 6,
+              "errorIds": []
+            },
+            {
+              "type": "block-open",
+              "raw": "{",
+              "value": "{",
+              "start": 7,
+              "end": 8,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 13,
+          "type": "content",
+          "nestingLevel": 2,
+          "parentLine": 12,
+          "raw": "Подсказка",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Подсказка",
+              "value": "Подсказка",
+              "start": 1,
+              "end": 10,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 14,
+          "type": "block-end",
+          "nestingLevel": 2,
+          "parentLine": 12,
+          "raw": "}",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "block-close",
+              "raw": "}",
+              "value": "}",
+              "start": 1,
+              "end": 2,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 18,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "После",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "После",
+              "value": "После",
+              "start": 1,
+              "end": 6,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "До\nПосле",
+          "answers": [],
+          "hint": "Подсказка"
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "unsupported exercise does not build data",
+      "kind": "ordering",
+      "nodeID": "efx7-n025",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@ordering",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@ordering",
+            "value": "ordering",
+            "start": 1,
+            "end": 10,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [],
+      "error": "textdata.unsupported_type"
+    },
+    {
+      "name": "title only rejects body",
+      "kind": "task",
+      "nodeID": "efx7-n026",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@task a",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@task",
+            "value": "task",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "identifier",
+            "raw": "a",
+            "value": "a",
+            "start": 7,
+            "end": 8,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "нельзя",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "нельзя",
+              "value": "нельзя",
+              "start": 1,
+              "end": 7,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [],
+      "error": "textdata.input"
+    },
+    {
+      "name": "body error discards already available title",
+      "kind": "text",
+      "nodeID": "efx7-n027",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@text Имя {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@text",
+            "value": "text",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "title",
+            "raw": "Имя",
+            "value": "Имя",
+            "start": 7,
+            "end": 10,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 11,
+            "end": 12,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "Тело",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Тело",
+              "value": null,
+              "start": 1,
+              "end": 5,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [],
+      "error": "textdata.missing_value"
+    },
+    {
+      "name": "example error discards title and before",
+      "kind": "example",
+      "nodeID": "efx7-n028",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@example Имя {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@example",
+            "value": "example",
+            "start": 1,
+            "end": 9,
+            "errorIds": []
+          },
+          {
+            "type": "title",
+            "raw": "Имя",
+            "value": "Имя",
+            "start": 10,
+            "end": 13,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 14,
+            "end": 15,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "до",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "до",
+              "value": "до",
+              "start": 1,
+              "end": 3,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 12,
+          "type": "separator",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "---",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": []
+        }
+      ],
+      "want": [],
+      "error": "textdata.example_separator"
+    },
+    {
+      "name": "two local hints reject partial instruction",
+      "kind": "instruction",
+      "nodeID": "efx7-n029",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@instr {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@instr",
+            "value": "instr",
+            "start": 1,
+            "end": 7,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 8,
+            "end": 9,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "tag",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "@hint Один",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "tag",
+              "raw": "@hint",
+              "value": "hint",
+              "start": 1,
+              "end": 6,
+              "errorIds": []
+            },
+            {
+              "type": "content",
+              "raw": "Один",
+              "value": "Один",
+              "start": 7,
+              "end": 11,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 12,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "Тело",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Тело",
+              "value": "Тело",
+              "start": 1,
+              "end": 5,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 13,
+          "type": "tag",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "@hint Два",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "tag",
+              "raw": "@hint",
+              "value": "hint",
+              "start": 1,
+              "end": 6,
+              "errorIds": []
+            },
+            {
+              "type": "content",
+              "raw": "Два",
+              "value": "Два",
+              "start": 7,
+              "end": 10,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [],
+      "error": "textdata.instruction_hint"
+    },
+    {
+      "name": "second inclusion same source numbers",
+      "kind": "text",
+      "nodeID": "efx7-n030",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@text Второе имя {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@text",
+            "value": "text",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "title",
+            "raw": "Второе имя",
+            "value": "Второе имя",
+            "start": 7,
+            "end": 17,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 18,
+            "end": 19,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "Другое тело",
+          "eol": "\r\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Другое тело",
+              "value": "Другое тело",
+              "start": 1,
+              "end": 12,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "Второе имя",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Другое тело",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "multifill plain text body excludes declaration instruction",
+      "kind": "multifill",
+      "nodeID": "efx7-n031",
+      "declaration": {
+        "line": 10,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@multifill Инструкция {",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@multifill",
+            "value": "multifill",
+            "start": 1,
+            "end": 11,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Инструкция",
+            "value": "Инструкция",
+            "start": 12,
+            "end": 22,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 23,
+            "end": 24,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [
+        {
+          "line": 11,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 10,
+          "raw": "Только текст упражнения",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Только текст упражнения",
+              "value": "Только текст упражнения",
+              "start": 1,
+              "end": 24,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Только текст упражнения",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    },
+    {
+      "name": "separate instr duplicates declared exercise instruction",
+      "kind": "instruction",
+      "nodeID": "efx7-n032",
+      "declaration": {
+        "line": 10,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@instr Инструкция",
+        "eol": "\r\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@instr",
+            "value": "instr",
+            "start": 1,
+            "end": 7,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Инструкция",
+            "value": "Инструкция",
+            "start": 8,
+            "end": 18,
+            "errorIds": []
+          }
+        ]
+      },
+      "lines": [],
+      "want": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Инструкция",
+          "answers": [],
+          "hint": ""
+        }
+      ],
+      "error": ""
+    }
+  ]
+}

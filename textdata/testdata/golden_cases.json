@@ -1,0 +1,1731 @@
+{
+  "cases": [
+    {
+      "name": "g1_task_a",
+      "golden": 1,
+      "kind": "task",
+      "declaration": 7,
+      "ownLines": [],
+      "historical": [
+        0,
+        0
+      ],
+      "source": "golden/1. parsed.json line 7; golden/1. lesson.json explicit page/node indexes [0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "a",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g1_declared_instruction",
+      "golden": 1,
+      "kind": "instruction",
+      "declaration": 8,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        0
+      ],
+      "source": "golden/1. parsed.json line 8; golden/1. lesson.json explicit page/node indexes [0, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Underline the correct words to complete the conversations.",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g1_multifill_blank13",
+      "golden": 1,
+      "kind": "multifill",
+      "declaration": 8,
+      "ownLines": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "historical": [
+        0,
+        0,
+        1
+      ],
+      "source": "golden/1. parsed.json line 8; golden/1. lesson.json explicit page/node indexes [0, 0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Conversation 1\nA: Is there an email from Stephen? He going to / He's going to / He's going write to you with information about the boat trip.\nB: I don't know. I'm going not to / I'm not going to / I'm not going check my emails today or tomorrow.\nA: Oh, OK. Well, I'm going to phone / phoning / phone him this evening, so I can ask him then.\n\nConversation 2\nA: It's the holidays! I go to / I'm going / I'm going to sleep for ten hours every night! I going / I'm going / I'm go to watch TV every day!\nB: Really? That's so boring! My brother and I am going / is going / are going to work on a farm near the mountains. The people there are going / is going / am going to teach us how to ride horses.\nA: Hmm, sounds quite interesting. What about your sister?\nB: She's going not / She not going / She isn't going to come with us. She wants to stay at home.",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g1_key_omits_blank26",
+      "golden": 1,
+      "kind": "answerKey",
+      "declaration": 21,
+      "ownLines": [
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ],
+      "historical": [
+        0,
+        0,
+        2
+      ],
+      "source": "golden/1. parsed.json line 21; golden/1. lesson.json explicit page/node indexes [0, 0, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Conversation 1\nA: Is there an email from Stephen? He's going to write to you with information about the boat trip.\nB: I don't know. I'm not going to check my emails today or tomorrow.\nA: Oh, OK. Well, I'm going to phone him this evening, so I can ask him then.\nConversation 2\nA: It's the holidays! I'm going to sleep for ten hours every night! I'm going to watch TV every day!\nB: Really? That's so boring! My brother and I are going to work on a farm near the mountains. The people there are going to teach us how to ride horses.\nA: Hmm, sounds quite interesting. What about your sister?\nB: She isn't going to come with us. She wants to stay at home.",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g1_task_b",
+      "golden": 1,
+      "kind": "task",
+      "declaration": 34,
+      "ownLines": [],
+      "historical": [
+        0,
+        1
+      ],
+      "source": "golden/1. parsed.json line 34; golden/1. lesson.json explicit page/node indexes [0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "b",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g1_inline_instruction",
+      "golden": 1,
+      "kind": "instruction",
+      "declaration": 36,
+      "ownLines": [],
+      "historical": [
+        0,
+        1,
+        1
+      ],
+      "source": "golden/1. parsed.json line 36; golden/1. lesson.json explicit page/node indexes [0, 1, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Listen and check.",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g2_task",
+      "golden": 2,
+      "kind": "task",
+      "declaration": 6,
+      "ownLines": [],
+      "historical": [
+        0,
+        0
+      ],
+      "source": "golden/2. parsed.json line 6; golden/2. lesson.json explicit page/node indexes [0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "1",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g2_block_instruction",
+      "golden": 2,
+      "kind": "instruction",
+      "declaration": 7,
+      "ownLines": [
+        8,
+        9
+      ],
+      "historical": [
+        0,
+        0,
+        0
+      ],
+      "source": "golden/2. parsed.json line 7; golden/2. lesson.json explicit page/node indexes [0, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT A\nINSTRUCTION TEXT B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g2_inline_example",
+      "golden": 2,
+      "kind": "example",
+      "declaration": 11,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        1
+      ],
+      "source": "golden/2. parsed.json line 11; golden/2. lesson.json explicit page/node indexes [0, 0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "EXAMPLE TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g2_inline_alt",
+      "golden": 2,
+      "kind": "alt",
+      "declaration": 12,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        2
+      ],
+      "source": "golden/2. parsed.json line 12; golden/2. lesson.json explicit page/node indexes [0, 0, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "ALT TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g2_empty_multifill",
+      "golden": 2,
+      "kind": "multifill",
+      "declaration": 13,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        3
+      ],
+      "source": "golden/2. parsed.json line 13; golden/2. lesson.json explicit page/node indexes [0, 0, 3]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g2_named_note",
+      "golden": 2,
+      "kind": "note",
+      "declaration": 16,
+      "ownLines": [
+        17,
+        18
+      ],
+      "historical": [
+        0,
+        1
+      ],
+      "source": "golden/2. parsed.json line 16; golden/2. lesson.json explicit page/node indexes [0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "CONTENT A\nCONTENT B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g2_named_alt",
+      "golden": 2,
+      "kind": "alt",
+      "declaration": 20,
+      "ownLines": [
+        21,
+        22
+      ],
+      "historical": [
+        0,
+        2
+      ],
+      "source": "golden/2. parsed.json line 20; golden/2. lesson.json explicit page/node indexes [0, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "CONTENT A\nCONTENT A",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_heading_a",
+      "golden": 3,
+      "kind": "heading",
+      "declaration": 5,
+      "ownLines": [],
+      "historical": [
+        0,
+        0
+      ],
+      "source": "golden/3. parsed.json line 5; golden/3. lesson.json explicit page/node indexes [0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE A",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_task1",
+      "golden": 3,
+      "kind": "task",
+      "declaration": 6,
+      "ownLines": [],
+      "historical": [
+        0,
+        1
+      ],
+      "source": "golden/3. parsed.json line 6; golden/3. lesson.json explicit page/node indexes [0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "1",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_instruction_nested_hint",
+      "golden": 3,
+      "kind": "instruction",
+      "declaration": 8,
+      "ownLines": [
+        9,
+        10,
+        11
+      ],
+      "historical": [
+        0,
+        1,
+        0
+      ],
+      "source": "golden/3. parsed.json line 8; golden/3. lesson.json explicit page/node indexes [0, 1, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT A\nINSTRUCTION TEXT B",
+          "answers": [],
+          "hint": "HINT TEXT"
+        }
+      ]
+    },
+    {
+      "name": "g3_example_legacy_separator15",
+      "golden": 3,
+      "kind": "example",
+      "declaration": 13,
+      "ownLines": [
+        14,
+        15,
+        16
+      ],
+      "historical": [
+        0,
+        1,
+        1
+      ],
+      "source": "golden/3. parsed.json line 13; golden/3. lesson.json explicit page/node indexes [0, 1, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "before",
+          "value": "EXAMPLE A",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "after",
+          "value": "EXAMPLE B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_heading_b",
+      "golden": 3,
+      "kind": "heading",
+      "declaration": 32,
+      "ownLines": [],
+      "historical": [
+        1,
+        0
+      ],
+      "source": "golden/3. parsed.json line 32; golden/3. lesson.json explicit page/node indexes [1, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_task2",
+      "golden": 3,
+      "kind": "task",
+      "declaration": 34,
+      "ownLines": [],
+      "historical": [
+        1,
+        1
+      ],
+      "source": "golden/3. parsed.json line 34; golden/3. lesson.json explicit page/node indexes [1, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "2",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_step_a",
+      "golden": 3,
+      "kind": "step",
+      "declaration": 35,
+      "ownLines": [],
+      "historical": [
+        1,
+        1,
+        0
+      ],
+      "source": "golden/3. parsed.json line 35; golden/3. lesson.json explicit page/node indexes [1, 1, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "A",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_source_script",
+      "golden": 3,
+      "kind": "script",
+      "declaration": 37,
+      "ownLines": [
+        38,
+        39
+      ],
+      "historical": [
+        1,
+        1,
+        0,
+        1
+      ],
+      "source": "golden/3. parsed.json line 37; golden/3. lesson.json explicit page/node indexes [1, 1, 0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "CONTENT A\nCONTENT B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_separate_instruction",
+      "golden": 3,
+      "kind": "instruction",
+      "declaration": 41,
+      "ownLines": [],
+      "historical": [
+        1,
+        1,
+        0,
+        2
+      ],
+      "source": "golden/3. parsed.json line 41; golden/3. lesson.json explicit page/node indexes [1, 1, 0, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_step_b",
+      "golden": 3,
+      "kind": "step",
+      "declaration": 42,
+      "ownLines": [],
+      "historical": [
+        1,
+        1,
+        1
+      ],
+      "source": "golden/3. parsed.json line 42; golden/3. lesson.json explicit page/node indexes [1, 1, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_inline_wordlist",
+      "golden": 3,
+      "kind": "wordList",
+      "declaration": 43,
+      "ownLines": [],
+      "historical": [
+        1,
+        1,
+        1,
+        0
+      ],
+      "source": "golden/3. parsed.json line 43; golden/3. lesson.json explicit page/node indexes [1, 1, 1, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "ITEM A; ITEM B; ITEM C.",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_multifill_instruction",
+      "golden": 3,
+      "kind": "instruction",
+      "declaration": 44,
+      "ownLines": [],
+      "historical": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "source": "golden/3. parsed.json line 44; golden/3. lesson.json explicit page/node indexes [1, 1, 1, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g3_empty_multifill_with_instruction",
+      "golden": 3,
+      "kind": "multifill",
+      "declaration": 44,
+      "ownLines": [],
+      "historical": [
+        1,
+        1,
+        1,
+        2
+      ],
+      "source": "golden/3. parsed.json line 44; golden/3. lesson.json explicit page/node indexes [1, 1, 1, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g4_block_wordlist",
+      "golden": 4,
+      "kind": "wordList",
+      "declaration": 6,
+      "ownLines": [
+        7,
+        8,
+        9
+      ],
+      "historical": [
+        0,
+        0
+      ],
+      "source": "golden/4. parsed.json line 6; golden/4. lesson.json explicit page/node indexes [0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "ITEM A\nITEM B\nITEM C",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g4_table_keeps_separator16",
+      "golden": 4,
+      "kind": "table",
+      "declaration": 14,
+      "ownLines": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "historical": [
+        1,
+        0
+      ],
+      "source": "golden/4. parsed.json line 14; golden/4. lesson.json explicit page/node indexes [1, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "header | header\n---\na | b\nc | d",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g4_named_text",
+      "golden": 4,
+      "kind": "text",
+      "declaration": 23,
+      "ownLines": [
+        24,
+        25,
+        26
+      ],
+      "historical": [
+        2,
+        0
+      ],
+      "source": "golden/4. parsed.json line 23; golden/4. lesson.json explicit page/node indexes [2, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "TITLE",
+          "answers": [],
+          "hint": ""
+        },
+        {
+          "type": "text",
+          "role": "body",
+          "value": "CONTENT A\nCONTENT b\nCONTENT C",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g5_task1",
+      "golden": 5,
+      "kind": "task",
+      "declaration": 8,
+      "ownLines": [],
+      "historical": [
+        0,
+        0
+      ],
+      "source": "golden/5. parsed.json line 8; golden/5. lesson.json explicit page/node indexes [0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "1",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g5_task2",
+      "golden": 5,
+      "kind": "task",
+      "declaration": 14,
+      "ownLines": [],
+      "historical": [
+        1,
+        0
+      ],
+      "source": "golden/5. parsed.json line 14; golden/5. lesson.json explicit page/node indexes [1, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "2",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g5_instruction15",
+      "golden": 5,
+      "kind": "instruction",
+      "declaration": 15,
+      "ownLines": [],
+      "historical": [
+        1,
+        0,
+        0
+      ],
+      "source": "golden/5. parsed.json line 15; golden/5. lesson.json explicit page/node indexes [1, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g5_multifill_body",
+      "golden": 5,
+      "kind": "multifill",
+      "declaration": 16,
+      "ownLines": [
+        17,
+        18
+      ],
+      "historical": [
+        1,
+        0,
+        1
+      ],
+      "source": "golden/5. parsed.json line 16; golden/5. lesson.json explicit page/node indexes [1, 0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "CONTENT A\nCONTENT B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g5_task3",
+      "golden": 5,
+      "kind": "task",
+      "declaration": 23,
+      "ownLines": [],
+      "historical": [
+        2,
+        0
+      ],
+      "source": "golden/5. parsed.json line 23; golden/5. lesson.json explicit page/node indexes [2, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "3",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g5_instruction24",
+      "golden": 5,
+      "kind": "instruction",
+      "declaration": 24,
+      "ownLines": [],
+      "historical": [
+        2,
+        0,
+        0
+      ],
+      "source": "golden/5. parsed.json line 24; golden/5. lesson.json explicit page/node indexes [2, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_task1",
+      "golden": 6,
+      "kind": "task",
+      "declaration": 5,
+      "ownLines": [],
+      "historical": [
+        0,
+        0
+      ],
+      "source": "golden/6. parsed.json line 5; golden/6. lesson.json explicit page/node indexes [0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "1",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_instruction6",
+      "golden": 6,
+      "kind": "instruction",
+      "declaration": 6,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        0
+      ],
+      "source": "golden/6. parsed.json line 6; golden/6. lesson.json explicit page/node indexes [0, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_standalone_inline_hint",
+      "golden": 6,
+      "kind": "hint",
+      "declaration": 11,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        2
+      ],
+      "source": "golden/6. parsed.json line 11; golden/6. lesson.json explicit page/node indexes [0, 0, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "HINT TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_task2",
+      "golden": 6,
+      "kind": "task",
+      "declaration": 13,
+      "ownLines": [],
+      "historical": [
+        0,
+        1
+      ],
+      "source": "golden/6. parsed.json line 13; golden/6. lesson.json explicit page/node indexes [0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "2",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_instruction14",
+      "golden": 6,
+      "kind": "instruction",
+      "declaration": 14,
+      "ownLines": [],
+      "historical": [
+        0,
+        1,
+        0
+      ],
+      "source": "golden/6. parsed.json line 14; golden/6. lesson.json explicit page/node indexes [0, 1, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_task3",
+      "golden": 6,
+      "kind": "task",
+      "declaration": 23,
+      "ownLines": [],
+      "historical": [
+        0,
+        2
+      ],
+      "source": "golden/6. parsed.json line 23; golden/6. lesson.json explicit page/node indexes [0, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "3",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_instruction24",
+      "golden": 6,
+      "kind": "instruction",
+      "declaration": 24,
+      "ownLines": [],
+      "historical": [
+        0,
+        2,
+        0
+      ],
+      "source": "golden/6. parsed.json line 24; golden/6. lesson.json explicit page/node indexes [0, 2, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_standalone_block_hint",
+      "golden": 6,
+      "kind": "hint",
+      "declaration": 31,
+      "ownLines": [
+        32,
+        33
+      ],
+      "historical": [
+        0,
+        2,
+        2
+      ],
+      "source": "golden/6. parsed.json line 31; golden/6. lesson.json explicit page/node indexes [0, 2, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "CONTENT A\nCONTENT B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_task4",
+      "golden": 6,
+      "kind": "task",
+      "declaration": 36,
+      "ownLines": [],
+      "historical": [
+        0,
+        3
+      ],
+      "source": "golden/6. parsed.json line 36; golden/6. lesson.json explicit page/node indexes [0, 3]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "4",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g6_instruction37",
+      "golden": 6,
+      "kind": "instruction",
+      "declaration": 37,
+      "ownLines": [],
+      "historical": [
+        0,
+        3,
+        0
+      ],
+      "source": "golden/6. parsed.json line 37; golden/6. lesson.json explicit page/node indexes [0, 3, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_variants",
+      "golden": 7,
+      "kind": "variants",
+      "declaration": 5,
+      "ownLines": [],
+      "historical": [
+        0,
+        0
+      ],
+      "source": "golden/7. parsed.json line 5; golden/7. lesson.json explicit page/node indexes [0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": []
+    },
+    {
+      "name": "g7_variant_a",
+      "golden": 7,
+      "kind": "variant",
+      "declaration": 6,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        0
+      ],
+      "source": "golden/7. parsed.json line 6; golden/7. lesson.json explicit page/node indexes [0, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "NAME A",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_task_a",
+      "golden": 7,
+      "kind": "task",
+      "declaration": 7,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": "golden/7. parsed.json line 7; golden/7. lesson.json explicit page/node indexes [0, 0, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "1",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_instruction8",
+      "golden": 7,
+      "kind": "instruction",
+      "declaration": 8,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": "golden/7. parsed.json line 8; golden/7. lesson.json explicit page/node indexes [0, 0, 0, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_ordering_instruction9",
+      "golden": 7,
+      "kind": "instruction",
+      "declaration": 9,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "source": "golden/7. parsed.json line 9; golden/7. lesson.json explicit page/node indexes [0, 0, 0, 0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_variant_b",
+      "golden": 7,
+      "kind": "variant",
+      "declaration": 14,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        1
+      ],
+      "source": "golden/7. parsed.json line 14; golden/7. lesson.json explicit page/node indexes [0, 0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "NAME B",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_task_b",
+      "golden": 7,
+      "kind": "task",
+      "declaration": 15,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "source": "golden/7. parsed.json line 15; golden/7. lesson.json explicit page/node indexes [0, 0, 1, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "1",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_instruction16",
+      "golden": 7,
+      "kind": "instruction",
+      "declaration": 16,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "source": "golden/7. parsed.json line 16; golden/7. lesson.json explicit page/node indexes [0, 0, 1, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_variant_c",
+      "golden": 7,
+      "kind": "variant",
+      "declaration": 25,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        2
+      ],
+      "source": "golden/7. parsed.json line 25; golden/7. lesson.json explicit page/node indexes [0, 0, 2]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "NAME C",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_task_c",
+      "golden": 7,
+      "kind": "task",
+      "declaration": 26,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        2,
+        0
+      ],
+      "source": "golden/7. parsed.json line 26; golden/7. lesson.json explicit page/node indexes [0, 0, 2, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "title",
+          "value": "1",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_instruction27",
+      "golden": 7,
+      "kind": "instruction",
+      "declaration": 27,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "source": "golden/7. parsed.json line 27; golden/7. lesson.json explicit page/node indexes [0, 0, 2, 0, 0]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "g7_ordering_instruction28",
+      "golden": 7,
+      "kind": "instruction",
+      "declaration": 28,
+      "ownLines": [],
+      "historical": [
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "source": "golden/7. parsed.json line 28; golden/7. lesson.json explicit page/node indexes [0, 0, 2, 0, 1]; TZ §§10.6–10.9,19.3",
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "INSTRUCTION TEXT",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    }
+  ],
+  "normativeCases": [
+    {
+      "name": "normative_multifill_placeholder_raw",
+      "kind": "multifill",
+      "source": "TZ §§10.2,10.7,17.2,19.3; Contract.jsonc placeholder. Explicit model fixtures; no historical placeholder example.",
+      "directDeclaration": {
+        "line": 900,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@multifill {",
+        "eol": "\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@multifill",
+            "value": "multifill",
+            "start": 1,
+            "end": 11,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 12,
+            "end": 13,
+            "errorIds": []
+          }
+        ]
+      },
+      "directLines": [
+        {
+          "line": 901,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 900,
+          "raw": "I _____{am} Camila.",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "I ",
+              "value": "I ",
+              "start": 1,
+              "end": 3,
+              "errorIds": []
+            },
+            {
+              "type": "placeholder",
+              "raw": "_____{am}",
+              "value": "am",
+              "start": 3,
+              "end": 12,
+              "errorIds": []
+            },
+            {
+              "type": "content",
+              "raw": " Camila.",
+              "value": " Camila.",
+              "start": 12,
+              "end": 20,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 902,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 900,
+          "raw": "",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "",
+              "value": "",
+              "start": 1,
+              "end": 1,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 903,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 900,
+          "raw": "We _____{are} from Spain.",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "We ",
+              "value": "We ",
+              "start": 1,
+              "end": 4,
+              "errorIds": []
+            },
+            {
+              "type": "placeholder",
+              "raw": "_____{are}",
+              "value": "are",
+              "start": 4,
+              "end": 14,
+              "errorIds": []
+            },
+            {
+              "type": "content",
+              "raw": " from Spain.",
+              "value": " from Spain.",
+              "start": 14,
+              "end": 26,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "I _____{am} Camila.\n\nWe _____{are} from Spain.",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "normative_multifill_edge_and_repeated_empty",
+      "kind": "multifill",
+      "source": "TZ §§10.7,17.2; textdata/multifill.go and text.go exact contracts: leading/trailing/repeated empties and literal markup.",
+      "directDeclaration": {
+        "line": 900,
+        "type": "block-start",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@multifill {",
+        "eol": "\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@multifill",
+            "value": "multifill",
+            "start": 1,
+            "end": 11,
+            "errorIds": []
+          },
+          {
+            "type": "block-open",
+            "raw": "{",
+            "value": "{",
+            "start": 12,
+            "end": 13,
+            "errorIds": []
+          }
+        ]
+      },
+      "directLines": [
+        {
+          "line": 901,
+          "type": "blank",
+          "nestingLevel": 1,
+          "parentLine": 900,
+          "raw": "",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": []
+        },
+        {
+          "line": 902,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 900,
+          "raw": "",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "",
+              "value": "",
+              "start": 1,
+              "end": 1,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 903,
+          "type": "content",
+          "nestingLevel": 1,
+          "parentLine": 900,
+          "raw": "<br> @text _____",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "<br> @text ",
+              "value": "<br> @text ",
+              "start": 1,
+              "end": 12,
+              "errorIds": []
+            },
+            {
+              "type": "placeholder",
+              "raw": "_____",
+              "value": null,
+              "start": 12,
+              "end": 17,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 904,
+          "type": "blank",
+          "nestingLevel": 1,
+          "parentLine": 900,
+          "raw": "",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": []
+        }
+      ],
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "\n\n<br> @text _____\n",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "normative_ordering_without_instruction",
+      "golden": 7,
+      "kind": "instruction",
+      "declaration": 17,
+      "ownLines": [],
+      "source": "TZ §10.8; textdata/instruction.go exact contract: declaration without content produces non-null empty Data. No historical instruction node is created here.",
+      "expectedData": []
+    },
+    {
+      "name": "normative_inline_text_semantic_unicode_gap",
+      "kind": "text",
+      "source": "TZ §10.2 and Contract.jsonc content/placeholder: processed Value is not unescaped again, Unicode ranges preserve only the literal space/TAB gap; textdata/text.go composeElements contract.",
+      "directDeclaration": {
+        "line": 910,
+        "type": "tag",
+        "nestingLevel": 0,
+        "parentLine": null,
+        "raw": "@text Ё\\@x \t_____{да}",
+        "eol": "\n",
+        "hasErrors": false,
+        "elements": [
+          {
+            "type": "tag",
+            "raw": "@text",
+            "value": "text",
+            "start": 1,
+            "end": 6,
+            "errorIds": []
+          },
+          {
+            "type": "content",
+            "raw": "Ё\\@x",
+            "value": "Ё@x",
+            "start": 7,
+            "end": 11,
+            "errorIds": []
+          },
+          {
+            "type": "placeholder",
+            "raw": "_____{да}",
+            "value": "да",
+            "start": 13,
+            "end": 22,
+            "errorIds": []
+          }
+        ]
+      },
+      "directLines": [],
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "Ё@x \t_____{да}",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    },
+    {
+      "name": "normative_standalone_text_markup_nonadjacent",
+      "kind": "text",
+      "source": "TZ §§10.2,10.7; textdata/build.go and text.go: nil declaration text, supplied own lines alone; blank omitted, HTML literal, source number gaps do not add newlines.",
+      "directLines": [
+        {
+          "line": 920,
+          "type": "content",
+          "nestingLevel": 0,
+          "parentLine": null,
+          "raw": "<b>Привет</b>",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "<b>Привет</b>",
+              "value": "<b>Привет</b>",
+              "start": 1,
+              "end": 14,
+              "errorIds": []
+            }
+          ]
+        },
+        {
+          "line": 921,
+          "type": "blank",
+          "nestingLevel": 0,
+          "parentLine": null,
+          "raw": "",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": []
+        },
+        {
+          "line": 924,
+          "type": "content",
+          "nestingLevel": 0,
+          "parentLine": null,
+          "raw": "Fin",
+          "eol": "\n",
+          "hasErrors": false,
+          "elements": [
+            {
+              "type": "content",
+              "raw": "Fin",
+              "value": "Fin",
+              "start": 1,
+              "end": 4,
+              "errorIds": []
+            }
+          ]
+        }
+      ],
+      "expectedData": [
+        {
+          "type": "text",
+          "role": "body",
+          "value": "<b>Привет</b>\nFin",
+          "answers": [],
+          "hint": ""
+        }
+      ]
+    }
+  ]
+}
