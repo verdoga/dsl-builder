@@ -1,0 +1,205 @@
+{
+	"opaqueRoot": {
+		"order": [
+			"z",
+			"a"
+		],
+		"number": 123
+	},
+	"document": {
+		"pages": [
+			{
+				"nodes": [
+					{
+						"nodes": [
+							{
+								"nodes": [
+									{
+										"nodes": [],
+										"data": [
+											{
+												"type": "media",
+												"role": "body",
+												"value": {
+													"content": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGOQavj/HwAE6gKZ1s8jpgAAAABJRU5ErkJggg==",
+													"mimeType": "image/png",
+													"fileName": "pixel.png",
+													"opaqueEmbedded": [
+														2,
+														1
+													]
+												},
+												"answers": [],
+												"hint": ""
+											},
+											{
+												"type": "media",
+												"role": "script",
+												"value": {
+													"content": "0J/QtdGA0LLQsNGPINGB0YLRgNC+0LrQsA0KDQpMYXN0IGxpbmUA",
+													"mimeType": "text/plain",
+													"fileName": "script.txt",
+													"opaqueEmbedded": [
+														2,
+														1
+													]
+												},
+												"answers": [],
+												"hint": ""
+											},
+											{
+												"type": "media",
+												"role": "subtitles",
+												"value": {
+													"content": "V0VCVlRUDQoNCjAwOjAwLjAwMCAtLT4gMDA6MDEuMDAwDQpDYXB0aW9uDQo=",
+													"mimeType": "text/vtt",
+													"fileName": "captions.vtt",
+													"opaqueEmbedded": [
+														2,
+														1
+													]
+												},
+												"answers": [],
+												"hint": ""
+											}
+										],
+										"flags": {},
+										"type": "media",
+										"id": "golden-n1005"
+									},
+									{
+										"nodes": [],
+										"data": [
+											{
+												"hint": "",
+												"answers": [],
+												"value": "Исходная расшифровка\nБез рендеринга",
+												"role": "body",
+												"type": "text"
+											}
+										],
+										"flags": {},
+										"type": "script",
+										"id": "golden-n2000"
+									},
+									{
+										"nodes": [],
+										"data": [
+											{
+												"hint": "",
+												"answers": [],
+												"value": "I _____{am} Camila.\n\nWe _____{are} from Spain.",
+												"role": "body",
+												"type": "text",
+												"opaqueData": [
+													"z",
+													"a"
+												]
+											}
+										],
+										"flags": {},
+										"type": "multifill",
+										"id": "golden-n006"
+									},
+									{
+										"nodes": [],
+										"data": [
+											{
+												"hint": "",
+												"answers": [],
+												"value": "header | header\n---\nа | b\nc | d",
+												"role": "body",
+												"type": "text"
+											}
+										],
+										"flags": {},
+										"type": "table",
+										"id": "golden-n9000",
+										"opaqueNode": {
+											"kept": true
+										}
+									},
+									{
+										"nodes": [],
+										"data": [
+											{
+												"type": "collection",
+												"role": "body",
+												"value": [
+													{
+														"hint": "",
+														"answers": [
+															"b",
+															"a"
+														],
+														"value": "second",
+														"type": "text"
+													},
+													{
+														"type": "collection",
+														"value": [
+															{
+																"hint": "",
+																"answers": [],
+																"value": "",
+																"type": "text"
+															},
+															{
+																"hint": "",
+																"answers": [],
+																"value": "first",
+																"type": "text"
+															}
+														],
+														"answers": [],
+														"hint": ""
+													}
+												],
+												"answers": [],
+												"hint": "порядок"
+											}
+										],
+										"flags": {},
+										"type": "text",
+										"id": "golden-n010"
+									}
+								],
+								"data": [],
+								"flags": {},
+								"type": "step",
+								"id": "golden-n003"
+							}
+						],
+						"data": [],
+						"flags": {
+							"stepped": true,
+							"speaking": false
+						},
+						"type": "task",
+						"id": "golden-n1004"
+					}
+				],
+				"title": null,
+				"id": "golden-p1001",
+				"opaquePage": false
+			},
+			{
+				"id": "golden-p002",
+				"title": "",
+				"nodes": []
+			}
+		],
+		"createdAt": "2020-02-29T12:34:56Z",
+		"lineCount": 9007199254740995.0,
+		"subtitle": "",
+		"title": " Кириллица <b> & текст ",
+		"version": 9007199254740993e0,
+		"id": "GoLdEn",
+		"opaqueDocument": {
+			"kept": "raw"
+		},
+		"TITLE": "must not shadow exact title"
+	},
+	"formatVersion": "1.0"
+}
+	 

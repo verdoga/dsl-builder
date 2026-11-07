@@ -1,0 +1,12 @@
+ { "extra" : {"unknown":true}, "formatVersion":"1.0", "document": {
+ "id":"MiXeD+1", "version":9007199254740993.0, "title":"Урок Ω", "TITLE":"ignored",
+ "subtitle":"", "lineCount":1e30, "createdAt":"2026-11-03T17:54:17Z", "pages":[
+ {"id":"mixed+1-p001","title":null,"nodes":[
+ {"id":"mixed+1-n001","type":"media","flags":{},"data":[
+ {"type":"media","role":"body","value":{"fileName":"файл.bin","mimeType":"application/octet-stream","content":"AAEC/w=="},"answers":[],"hint":""}],"nodes":[]},
+ {"id":"mixed+1-n002","type":"multifill","flags":{"checkable":false},"data":[
+ {"type":"text","role":"body","value":"I _____{am}.\n\nWe _____{are}.","answers":[],"hint":""}],"nodes":[]},
+ {"id":"mixed+1-n003","type":"matching","flags":{},"data":[
+ {"type":"collection","role":"items","value":[{"type":"text","role":"item","value":"A","answers":["B"],"hint":""}],"answers":[],"hint":""},
+ {"type":"collection","role":"options","value":[{"type":"text","role":"option","value":"B","answers":[],"hint":""},{"type":"text","role":"option","value":"C","answers":[],"hint":""}],"answers":[],"hint":""}],"nodes":[]}
+ ]} ] } }

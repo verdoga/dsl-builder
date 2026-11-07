@@ -1,0 +1,9 @@
+{ "extra": {"preserve": true}, "document": {
+ "id": "WRAA", "version": 9007199254740993, "title": "Сохранённый урок",
+ "subtitle": null, "lineCount": 1e3, "createdAt": "2025-01-02T03:04:05Z",
+ "pages": [{"id":"wraa-p002","title":null,"nodes":[
+ {"id":"wraa-n003","type":"media","flags":{},"data":[
+ {"type":"media","role":"body","value":{"fileName":"точные байты.bin","mimeType":"application/octet-stream","content":"AAECA//+"},"answers":[],"hint":""}],"nodes":[]},
+ {"id":"wraa-n001","type":"multifill","flags":{},"data":[
+ {"type":"text","role":"body","value":"SECRET_BODY_WRITE I _____{am}.\n\n<b>Текст</b>","answers":[],"hint":""}],"nodes":[]}
+ ]},{"id":"wraa-p001","title":"","nodes":[]}]}, "formatVersion":"1.0" }

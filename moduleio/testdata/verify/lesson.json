@@ -1,0 +1,24 @@
+{
+ "formatVersion": "1.0",
+ "futureProperty": {"literal": "VERIFY-UNKNOWN-PROPERTY"},
+ "document": {
+  "id": "QA7",
+  "version": 9007199254740993,
+  "title": "Проверка архива",
+  "subtitle": null,
+  "lineCount": 42e0,
+  "createdAt": "2026-11-04T09:00:00Z",
+  "pages": [{
+   "id": "qa7-p001", "title": null,
+   "nodes": [{
+    "id": "qa7-n001", "type": "multifill", "flags": {"checkable": false},
+    "data": [{"type":"text","role":"body","value":"VERIFY-PRIVATE-TEXT\n\nI _____{am} here.","answers":[],"hint":""}],
+    "nodes": []
+   }, {
+    "id": "qa7-n002", "type": "media", "flags": {},
+    "data": [{"type":"media","role":"body","value":{"fileName":"точные байты.bin","mimeType":"application/octet-stream","content":"VkVSSUZZLVBSSVZBVEUtQllURVM="},"answers":[],"hint":""}],
+    "nodes": []
+   }]
+  }]
+ }
+}

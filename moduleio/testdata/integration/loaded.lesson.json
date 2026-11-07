@@ -1,0 +1,161 @@
+{
+ "unknownRoot": {
+  "kept": "✓"
+ },
+ "document": {
+  "pages": [
+   {
+    "title": null,
+    "id": "efx7-p001",
+    "nodes": [
+     {
+      "id": "efx7-n001",
+      "type": "media",
+      "flags": {},
+      "data": [
+       {
+        "type": "media",
+        "role": "body",
+        "value": {
+         "fileName": "Ресурс 日本語.bin",
+         "mimeType": "application/octet-stream",
+         "content": "AAECf4D+/woN"
+        },
+        "answers": [],
+        "hint": ""
+       },
+       {
+        "type": "media",
+        "role": "script",
+        "value": {
+         "fileName": "script.txt",
+         "mimeType": "text/plain",
+         "content": "0KLQtdC60YHRgg0K"
+        },
+        "answers": [],
+        "hint": ""
+       },
+       {
+        "type": "media",
+        "role": "subtitles",
+        "value": {
+         "fileName": "sub.vtt",
+         "mimeType": "text/vtt",
+         "content": "V0VCVlRUCgo="
+        },
+        "answers": [],
+        "hint": ""
+       }
+      ],
+      "nodes": []
+     },
+     {
+      "id": "efx7-n002",
+      "type": "multifill",
+      "flags": {
+       "checkable": false
+      },
+      "data": [
+       {
+        "type": "text",
+        "role": "body",
+        "value": "I _____{am} Camila.\n\nМы _____{are} <b>日本語</b>.",
+        "answers": [],
+        "hint": ""
+       }
+      ],
+      "nodes": []
+     },
+     {
+      "id": "efx7-n003",
+      "type": "matching",
+      "flags": {
+       "checkable": true
+      },
+      "data": [
+       {
+        "type": "collection",
+        "role": "items",
+        "value": [
+         {
+          "type": "text",
+          "role": "item",
+          "value": "Один",
+          "answers": [
+           "A"
+          ],
+          "hint": ""
+         }
+        ],
+        "answers": [],
+        "hint": ""
+       },
+       {
+        "type": "collection",
+        "role": "options",
+        "value": [
+         {
+          "type": "text",
+          "role": "option",
+          "value": "A",
+          "answers": [],
+          "hint": ""
+         },
+         {
+          "type": "text",
+          "role": "option",
+          "value": "B",
+          "answers": [],
+          "hint": ""
+         }
+        ],
+        "answers": [],
+        "hint": ""
+       }
+      ],
+      "nodes": []
+     },
+     {
+      "id": "efx7-n004",
+      "type": "text",
+      "flags": {},
+      "data": [
+       {
+        "type": "collection",
+        "role": "body",
+        "value": [
+         {
+          "type": "collection",
+          "value": [
+           {
+            "type": "text",
+            "value": "nested ✓",
+            "answers": [],
+            "hint": ""
+           }
+          ],
+          "answers": [],
+          "hint": ""
+         }
+        ],
+        "answers": [],
+        "hint": ""
+       }
+      ],
+      "nodes": []
+     }
+    ]
+   }
+  ],
+  "createdAt": "2026-11-01T01:02:03Z",
+  "lineCount": 900719925474099300000.0,
+  "subtitle": null,
+  "title": "Урок 日本語",
+  "version": 1e0,
+  "id": "EFX7",
+  "TITLE": "must not shadow",
+  "unknownDocument": true
+ },
+ "formatVersion": "1.0"
+}
+ 	
