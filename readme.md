@@ -38,7 +38,8 @@ cd dsl-builder
 
 ## Сборка и запуск
 
-Все команды сборки выполняются из корня репозитория.
+Точка входа находится в корне проекта. Все команды сборки выполняются
+из корня репозитория.
 Версию необходимо задать через `-ldflags="-X main.buildVersion=..."`.
 `v1.0.0` ниже — пример версии выпуска. Без заданной версии программа
 отклоняет запуск.
@@ -50,7 +51,7 @@ New-Item -ItemType Directory -Force dist | Out-Null
 $env:GOOS='windows'
 $env:GOARCH='amd64'
 $env:CGO_ENABLED='0'
-go build -ldflags="-X main.buildVersion=v1.0.0" -o dist/dsl-builder.exe ./cmd/dsl-builder
+go build -ldflags="-X main.buildVersion=v1.0.0" -o dist/dsl-builder.exe .
 .\dist\dsl-builder.exe
 ```
 
@@ -61,7 +62,7 @@ go build -ldflags="-X main.buildVersion=v1.0.0" -o dist/dsl-builder.exe ./cmd/ds
 
 ```bash
 mkdir -p dist
-GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-X main.buildVersion=v1.0.0" -o dist/dsl-builder ./cmd/dsl-builder
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-X main.buildVersion=v1.0.0" -o dist/dsl-builder .
 ./dist/dsl-builder
 ```
 
@@ -69,10 +70,20 @@ GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-X main.buildVersion=v1
 
 ```bash
 mkdir -p dist
-GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-X main.buildVersion=v1.0.0" -o dist/dsl-builder.exe ./cmd/dsl-builder
+GOOS=windows GOARCH=amd64 CGO_ENABLED=0 go build -ldflags="-X main.buildVersion=v1.0.0" -o dist/dsl-builder.exe .
 ```
 
 Полученный `dist/dsl-builder.exe` запускается в Windows.
+
+### Запуск из исходников
+
+При установленном Go можно запустить утилиту из корня проекта:
+
+```sh
+go run -ldflags="-X main.buildVersion=v1.0.0" .
+```
+
+Версия при таком запуске также обязательна.
 
 ## Работа с утилитой
 
@@ -98,7 +109,13 @@ ID, переход ревизии урока и изменения манифе�
 Пути с пробелами можно вставлять с внешней парой кавычек.
 Пути к JSON и ZIP и все параметры операции вводятся только в диалоге.
 Аргументы командной строки, флаги, конфигурационные файлы и переменные
-окружения не задают параметры работы утилиты.
+окружения не задают параметры работы утилиты. При переданных аргументах
+программа сообщает, что используется интерактивное меню.
+
+Код завершения `0` означает штатный числовой выход или EOF с отменой
+незаписанной операции. Код `1` означает ошибку подготовки запуска, потока
+либо вывода диагностики. Ошибки запуска выводятся через stderr.
+Скрытой паузы перед выходом нет.
 
 ## Входные данные и ресурсы
 
@@ -129,4 +146,3 @@ DFXP, ASS и SSA. Байты встраиваются в Base64 без пере�
 - [Техническое задание](TZ.md) — правила преобразования и сценарии работы.
 - [Схема урока](Lesson.schema.json) и [схема манифеста](Manifest.schema.json).
 - [Назначение пакетов](packages.md).
-- [Подробности сборки и запуска точки входа](cmd/dsl-builder/README.md).
