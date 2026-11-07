@@ -45,7 +45,7 @@ func (op *Operation) SetDestination(token ReviewToken, directory string, name st
 	if issue != nil {
 		return []*diagnostic.Error{issue}
 	}
-	resolved, issue := inputPath(op.baseDir, directory)
+	resolved, issue := filetree.Resolve(op.baseDir, directory)
 	if issue != nil {
 		return []*diagnostic.Error{issue}
 	}

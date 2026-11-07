@@ -1,0 +1,7 @@
+{
+  "formatVersion":"1.0",
+  "document":{"dslVersion":"1.2","fileName":null,"filePath":null,"encoding":"UTF-8","hasBom":false,"lineCount":1,"byteLength":null,"sha256":null,"metadata":{"documentId":"CT03","title":"Новый урок","subtitle":null,"section":null,"order":"30","resourceDirs":[]},"hasErrors":false},
+  "processing":[],
+  "lines":[{"line":1,"type":"content","nestingLevel":0,"parentLine":null,"raw":"Text","eol":"","hasErrors":false,"elements":[{"type":"content","raw":"Text","value":"Text","start":1,"end":5,"errorIds":[]}]}],
+  "diagnostics":[]
+}

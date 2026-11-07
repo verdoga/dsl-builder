@@ -1,0 +1,4 @@
+{
+  "formatVersion":"1.0",
+  "document":{"id":"CT02","version":5,"title":"Старый урок два","subtitle":null,"lineCount":51,"createdAt":"2026-11-02T11:00:00Z","pages":[{"id":"ct02-p003","title":null,"nodes":[{"id":"ct02-n009-v05","type":"singleChoice","flags":{"checkable":true},"data":[{"type":"collection","role":"options","value":[{"type":"text","role":"option","value":"Да","answers":["Да"],"hint":"Подсказка"},{"type":"text","role":"option","value":"Нет","answers":[],"hint":""}],"answers":[],"hint":""}],"nodes":[]}]}]}
+}

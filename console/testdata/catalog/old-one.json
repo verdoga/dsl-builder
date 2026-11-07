@@ -1,0 +1,4 @@
+{
+  "formatVersion":"1.0",
+  "document":{"id":"CT01","version":3,"title":"Старый урок один","subtitle":"Сохранить подзаголовок","lineCount":42,"createdAt":"2026-11-01T10:00:00Z","pages":[{"id":"ct01-p001","title":"Страница","nodes":[{"id":"ct01-n001","type":"task","flags":{"speaking":true},"data":[{"type":"text","role":"title","value":"1","answers":[],"hint":""}],"nodes":[{"id":"ct01-n002","type":"text","flags":{},"data":[{"type":"text","role":"body","value":"  Сохранить\nвсё  ","answers":[],"hint":""}],"nodes":[]}]}]}]}
+}

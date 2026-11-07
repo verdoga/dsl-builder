@@ -78,7 +78,7 @@ func TestIntegrationCreateSortedSnapshotEditsAndZIP(t *testing.T) {
 	edit, issues = op.ProposeUnitTitle(op.Snapshot().Token, "Unit")
 	integrationOK(t, issues)
 	integrationOK(t, op.AcceptEdit(edit.Token))
-	integrationOK(t, op.SetDestination(op.Snapshot().Token, `"."`, "Модуль.ZIP"))
+	integrationOK(t, op.SetDestination(op.Snapshot().Token, ".", "Модуль.ZIP"))
 	target := filepath.Join(base, "Модуль.ZIP")
 	integrationAbsent(t, target)
 	review, issues := op.ReviewSave(op.Snapshot().Token)
