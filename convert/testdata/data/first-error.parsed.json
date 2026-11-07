@@ -1,0 +1,361 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": null,
+    "filePath": null,
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 13,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "DATA-QA",
+      "title": "Data coordination",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "content",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "before root",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "before root",
+          "value": "before root",
+          "start": 1,
+          "end": 12,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@include outer",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "outer",
+          "value": "outer",
+          "start": 10,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@question",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@media audio \"absent.mp3\"",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@media",
+          "value": "media",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "media-type",
+          "raw": "audio",
+          "value": "audio",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "source",
+          "raw": "\"absent.mp3\"",
+          "value": "absent.mp3",
+          "start": 14,
+          "end": 26,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@fragment outer {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@fragment",
+          "value": "fragment",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "outer",
+          "value": "outer",
+          "start": 11,
+          "end": 16,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 17,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 5,
+      "raw": "@note before included",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@note",
+          "value": "note",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "before included",
+          "value": "before included",
+          "start": 7,
+          "end": 22,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 5,
+      "raw": "@include inner",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "inner",
+          "value": "inner",
+          "start": 10,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 5,
+      "raw": "@note after included",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@note",
+          "value": "note",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "after included",
+          "value": "after included",
+          "start": 7,
+          "end": 21,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 5,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@fragment inner {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@fragment",
+          "value": "fragment",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "inner",
+          "value": "inner",
+          "start": 11,
+          "end": 16,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 17,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 10,
+      "raw": "@question",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 10,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@note after root",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@note",
+          "value": "note",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "after root",
+          "value": "after root",
+          "start": 7,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

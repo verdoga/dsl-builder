@@ -1,0 +1,1861 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": null,
+    "filePath": null,
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 76,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "DATA-QA",
+      "title": "Data coordination",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "content",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "Opening",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Opening",
+          "value": "Opening",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@task Speaking",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@task",
+          "value": "task",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "Speaking",
+          "value": "Speaking",
+          "start": 7,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 2,
+      "raw": "@speaking",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@speaking",
+          "value": "speaking",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 2,
+      "raw": "@step First",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@step",
+          "value": "step",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "First",
+          "value": "First",
+          "start": 7,
+          "end": 12,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 2,
+      "raw": "@instr {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@instr",
+          "value": "instr",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 8,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 5,
+      "raw": "Instruction A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Instruction A",
+          "value": "Instruction A",
+          "start": 1,
+          "end": 14,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 5,
+      "raw": "@hint instruction hint",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "instruction hint",
+          "value": "instruction hint",
+          "start": 7,
+          "end": 23,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 5,
+      "raw": "Instruction B",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Instruction B",
+          "value": "Instruction B",
+          "start": 1,
+          "end": 14,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 5,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 2,
+      "raw": "@include shared",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "shared",
+          "value": "shared",
+          "start": 10,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 2,
+      "raw": "@step Second",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@step",
+          "value": "step",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Second",
+          "value": "Second",
+          "start": 7,
+          "end": 13,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 2,
+      "raw": "@include shared",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "shared",
+          "value": "shared",
+          "start": 10,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@endtask",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@endtask",
+          "value": "endtask",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@newpage",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@newpage",
+          "value": "newpage",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@variants {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@variants",
+          "value": "variants",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 11,
+          "end": 12,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 16,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 15,
+      "raw": "@variant One",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@variant",
+          "value": "variant",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "name",
+          "raw": "One",
+          "value": "One",
+          "start": 10,
+          "end": 13,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 17,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 15,
+      "raw": "@task same",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@task",
+          "value": "task",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "same",
+          "value": "same",
+          "start": 7,
+          "end": 11,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 18,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 17,
+      "raw": "@include shared",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "shared",
+          "value": "shared",
+          "start": 10,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 19,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 15,
+      "raw": "@variant Two",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@variant",
+          "value": "variant",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "name",
+          "raw": "Two",
+          "value": "Two",
+          "start": 10,
+          "end": 13,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 20,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 15,
+      "raw": "@task same",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@task",
+          "value": "task",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "same",
+          "value": "same",
+          "start": 7,
+          "end": 11,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 21,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 20,
+      "raw": "@question Unchecked",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Unchecked",
+          "value": "Unchecked",
+          "start": 11,
+          "end": 20,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 22,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 15,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 23,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@fragment shared {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@fragment",
+          "value": "fragment",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "shared",
+          "value": "shared",
+          "start": 11,
+          "end": 17,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 18,
+          "end": 19,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 24,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@text Block {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@text",
+          "value": "text",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Block",
+          "value": "Block",
+          "start": 7,
+          "end": 12,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 13,
+          "end": 14,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 25,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 24,
+      "raw": "Alpha <b>literal</b>",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Alpha <b>literal</b>",
+          "value": "Alpha <b>literal</b>",
+          "start": 1,
+          "end": 21,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 26,
+      "type": "blank",
+      "nestingLevel": 2,
+      "parentLine": 24,
+      "raw": "",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": []
+    },
+    {
+      "line": 27,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 24,
+      "raw": "Beta & literal",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Beta & literal",
+          "value": "Beta & literal",
+          "start": 1,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 28,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 24,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 29,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@include leaf",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "leaf",
+          "value": "leaf",
+          "start": 10,
+          "end": 14,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 30,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@question Checked",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Checked",
+          "value": "Checked",
+          "start": 11,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 31,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@answer {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 9,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 32,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 31,
+      "raw": "answer one",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "answer one",
+          "value": "answer one",
+          "start": 1,
+          "end": 11,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 33,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 31,
+      "raw": "answer two",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "answer two",
+          "value": "answer two",
+          "start": 1,
+          "end": 11,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 34,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 31,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 35,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@hint question hint",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "question hint",
+          "value": "question hint",
+          "start": 7,
+          "end": 20,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 36,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@choice Choose {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@choice",
+          "value": "choice",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Choose",
+          "value": "Choose",
+          "start": 9,
+          "end": 15,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 16,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 37,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 36,
+      "raw": "wrong",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "wrong",
+          "value": "wrong",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 38,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 36,
+      "raw": "@answer right",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "right",
+          "value": "right",
+          "start": 9,
+          "end": 14,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 39,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 36,
+      "raw": "@hint choice hint",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "choice hint",
+          "value": "choice hint",
+          "start": 7,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 40,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 36,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 41,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@multichoice Many {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@multichoice",
+          "value": "multichoice",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Many",
+          "value": "Many",
+          "start": 14,
+          "end": 18,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 19,
+          "end": 20,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 42,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 41,
+      "raw": "@answer first",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "first",
+          "value": "first",
+          "start": 9,
+          "end": 14,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 43,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 41,
+      "raw": "@hint common",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "common",
+          "value": "common",
+          "start": 7,
+          "end": 13,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 44,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 41,
+      "raw": "@answer second",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "second",
+          "value": "second",
+          "start": 9,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 45,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 41,
+      "raw": "other",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "other",
+          "value": "other",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 46,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 41,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 47,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@matching Match {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@matching",
+          "value": "matching",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Match",
+          "value": "Match",
+          "start": 11,
+          "end": 16,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 17,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 48,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 47,
+      "raw": "item one",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item one",
+          "value": "item one",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 49,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 47,
+      "raw": "@answer option A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "option A",
+          "value": "option A",
+          "start": 9,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 50,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 47,
+      "raw": "@hint match hint",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "match hint",
+          "value": "match hint",
+          "start": 7,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 51,
+      "type": "separator",
+      "nestingLevel": 2,
+      "parentLine": 47,
+      "raw": "---",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "---",
+          "value": "---",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 52,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 47,
+      "raw": "option A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "option A",
+          "value": "option A",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 53,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 47,
+      "raw": "option B",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "option B",
+          "value": "option B",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 54,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 47,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 55,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@ordering Order {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@ordering",
+          "value": "ordering",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Order",
+          "value": "Order",
+          "start": 11,
+          "end": 16,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 17,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 56,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 55,
+      "raw": "item A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item A",
+          "value": "item A",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 57,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 55,
+      "raw": "@answer 2",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "2",
+          "value": "2",
+          "start": 9,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 58,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 55,
+      "raw": "item B",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item B",
+          "value": "item B",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 59,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 55,
+      "raw": "@answer 1",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@answer",
+          "value": "answer",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "1",
+          "value": "1",
+          "start": 9,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 60,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 55,
+      "raw": "@hint order hint",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@hint",
+          "value": "hint",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "order hint",
+          "value": "order hint",
+          "start": 7,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 61,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 55,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 62,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@multifill Fill {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@multifill",
+          "value": "multifill",
+          "start": 1,
+          "end": 11,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Fill",
+          "value": "Fill",
+          "start": 12,
+          "end": 16,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 17,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 63,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 62,
+      "raw": "I _____{am} here.",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "I _____{am} here.",
+          "value": "I _____{am} here.",
+          "start": 1,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 64,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 62,
+      "raw": "",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "",
+          "value": "",
+          "start": 1,
+          "end": 1,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 65,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 62,
+      "raw": "We _____{are} ready.",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "We _____{are} ready.",
+          "value": "We _____{are} ready.",
+          "start": 1,
+          "end": 21,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 66,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 62,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 67,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@media audio \"track.mp3\"",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@media",
+          "value": "media",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "media-type",
+          "raw": "audio",
+          "value": "audio",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "source",
+          "raw": "\"track.mp3\"",
+          "value": "track.mp3",
+          "start": 14,
+          "end": 25,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 68,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "@script Source script {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@script",
+          "value": "script",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Source script",
+          "value": "Source script",
+          "start": 9,
+          "end": 22,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 23,
+          "end": 24,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 69,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 68,
+      "raw": "File and source remain separate",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "File and source remain separate",
+          "value": "File and source remain separate",
+          "start": 1,
+          "end": 32,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 70,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 68,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 71,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 23,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 72,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@fragment leaf {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@fragment",
+          "value": "fragment",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "leaf",
+          "value": "leaf",
+          "start": 11,
+          "end": 15,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 16,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 73,
+      "type": "block-start",
+      "nestingLevel": 1,
+      "parentLine": 72,
+      "raw": "@note Leaf {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@note",
+          "value": "note",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Leaf",
+          "value": "Leaf",
+          "start": 7,
+          "end": 11,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 12,
+          "end": 13,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 74,
+      "type": "content",
+      "nestingLevel": 2,
+      "parentLine": 73,
+      "raw": "Nested inclusion text",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Nested inclusion text",
+          "value": "Nested inclusion text",
+          "start": 1,
+          "end": 22,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 75,
+      "type": "block-end",
+      "nestingLevel": 2,
+      "parentLine": 73,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 76,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 72,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

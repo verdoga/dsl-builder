@@ -1,0 +1,126 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": null,
+    "fileName": "old.txt",
+    "filePath": "C:\\unrelated\\old.txt",
+    "encoding": null,
+    "hasBom": null,
+    "lineCount": 4,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "BuIlD16",
+      "title": "Build contract",
+      "subtitle": "Sub",
+      "section": "MiXeD Section",
+      "order": "000123456789012345678901234567890",
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@example {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@example",
+          "value": "example",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 10,
+          "end": 11,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "separator",
+      "nestingLevel": 1,
+      "parentLine": 1,
+      "raw": "---",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "---",
+          "value": "---",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 1,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@media audio missing",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@media",
+          "value": "media",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "media-type",
+          "raw": "audio",
+          "value": "audio",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "source",
+          "raw": "missing",
+          "value": "missing",
+          "start": 14,
+          "end": 21,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

@@ -1,0 +1,53 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": null,
+    "fileName": "old.txt",
+    "filePath": "C:\\unrelated\\old.txt",
+    "encoding": null,
+    "hasBom": null,
+    "lineCount": 1,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "BuIlD16",
+      "title": "Build contract",
+      "subtitle": "Sub",
+      "section": "MiXeD Section",
+      "order": "000123456789012345678901234567890",
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@question Question?",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Question?",
+          "value": "Question?",
+          "start": 11,
+          "end": 20,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

@@ -1,0 +1,55 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": null,
+    "fileName": "old.txt",
+    "filePath": "C:\\unrelated\\old.txt",
+    "encoding": null,
+    "hasBom": null,
+    "lineCount": 1,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "BuIlD16",
+      "title": null,
+      "subtitle": "Sub",
+      "section": "MiXeD Section",
+      "order": "000123456789012345678901234567890",
+      "resourceDirs": [
+        "absent"
+      ]
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@include missing",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "missing",
+          "value": "missing",
+          "start": 10,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

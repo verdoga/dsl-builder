@@ -1,0 +1,454 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": null,
+    "filePath": null,
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 20,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "DATA-QA",
+      "title": "Data coordination",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@question Unchecked one",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Unchecked one",
+          "value": "Unchecked one",
+          "start": 11,
+          "end": 24,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@question Unchecked two",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "Unchecked two",
+          "value": "Unchecked two",
+          "start": 11,
+          "end": 24,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@choice {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@choice",
+          "value": "choice",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 9,
+          "end": 10,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 3,
+      "raw": "item A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item A",
+          "value": "item A",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 3,
+      "raw": "item B",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item B",
+          "value": "item B",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 3,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@multichoice {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@multichoice",
+          "value": "multichoice",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 14,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 7,
+      "raw": "item A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item A",
+          "value": "item A",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 7,
+      "raw": "item B",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item B",
+          "value": "item B",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 7,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@matching {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@matching",
+          "value": "matching",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 11,
+          "end": 12,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 11,
+      "raw": "item A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item A",
+          "value": "item A",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "type": "separator",
+      "nestingLevel": 1,
+      "parentLine": 11,
+      "raw": "---",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "---",
+          "value": "---",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 11,
+      "raw": "option A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "option A",
+          "value": "option A",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 11,
+      "raw": "option B",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "option B",
+          "value": "option B",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 16,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 11,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 17,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@ordering {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@ordering",
+          "value": "ordering",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 11,
+          "end": 12,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 18,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 17,
+      "raw": "item A",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item A",
+          "value": "item A",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 19,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 17,
+      "raw": "item B",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "item B",
+          "value": "item B",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 20,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 17,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

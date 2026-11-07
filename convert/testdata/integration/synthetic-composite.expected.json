@@ -1,0 +1,340 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "id": "Mix-A9",
+    "version": 1,
+    "title": "Контроль",
+    "subtitle": "",
+    "lineCount": 26,
+    "createdAt": "2026-11-07T09:30:45Z",
+    "pages": [
+      {
+        "id": "mix-a9-p001",
+        "title": "Первая",
+        "nodes": [
+          {
+            "id": "mix-a9-n001",
+            "type": "task",
+            "flags": {
+              "speaking": true,
+              "stepped": true
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "7",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "mix-a9-n002",
+                "type": "step",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "title",
+                    "value": "Start",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": [
+                  {
+                    "id": "mix-a9-n003",
+                    "type": "media",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "media",
+                        "role": "body",
+                        "value": {
+                          "fileName": "Tone 003.MP4",
+                          "mimeType": "video/mp4",
+                          "content": "AP9tb3ZpZQ0K"
+                        },
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "media",
+                        "role": "script",
+                        "value": {
+                          "fileName": "Tone 003.txt",
+                          "mimeType": "text/plain",
+                          "content": "77u/VFhUDQr/"
+                        },
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "media",
+                        "role": "subtitles",
+                        "value": {
+                          "fileName": "Tone 003.vtt",
+                          "mimeType": "text/vtt",
+                          "content": "V0VCVlRUDQo="
+                        },
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "media",
+                        "role": "subtitles",
+                        "value": {
+                          "fileName": "Tone 003.srt",
+                          "mimeType": "application/x-subrip",
+                          "content": "MQ0KMDA6MDANCg=="
+                        },
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "mix-a9-n004",
+                    "type": "script",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "Исходная расшифровка",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "mix-a9-n005",
+                    "type": "instruction",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "Fill the gaps.",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "mix-a9-n006",
+                    "type": "multifill",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "I _____{am} here.\n\nWe _____{are} ready.",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  }
+                ]
+              },
+              {
+                "id": "mix-a9-n007",
+                "type": "step",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "title",
+                    "value": "Practice",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": [
+                  {
+                    "id": "mix-a9-n008",
+                    "type": "instruction",
+                    "flags": {},
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "Same.",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "mix-a9-n009",
+                    "type": "question",
+                    "flags": {
+                      "checkable": true
+                    },
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "Prompt?",
+                        "answers": [
+                          "Answer"
+                        ],
+                        "hint": "Hint"
+                      }
+                    ],
+                    "nodes": []
+                  },
+                  {
+                    "id": "mix-a9-n010",
+                    "type": "question",
+                    "flags": {
+                      "checkable": false
+                    },
+                    "data": [
+                      {
+                        "type": "text",
+                        "role": "body",
+                        "value": "Open?",
+                        "answers": [],
+                        "hint": ""
+                      }
+                    ],
+                    "nodes": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "mix-a9-n011",
+            "type": "media",
+            "flags": {},
+            "data": [
+              {
+                "type": "media",
+                "role": "body",
+                "value": {
+                  "fileName": "карта.png",
+                  "mimeType": "image/png",
+                  "content": "iVBORwD/"
+                },
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      },
+      {
+        "id": "mix-a9-p002",
+        "title": "Вторая",
+        "nodes": [
+          {
+            "id": "mix-a9-n012",
+            "type": "media",
+            "flags": {},
+            "data": [
+              {
+                "type": "media",
+                "role": "body",
+                "value": {
+                  "fileName": "Tone 003.MP4",
+                  "mimeType": "video/mp4",
+                  "content": "AP9tb3ZpZQ0K"
+                },
+                "answers": [],
+                "hint": ""
+              },
+              {
+                "type": "media",
+                "role": "script",
+                "value": {
+                  "fileName": "Tone 003.txt",
+                  "mimeType": "text/plain",
+                  "content": "77u/VFhUDQr/"
+                },
+                "answers": [],
+                "hint": ""
+              },
+              {
+                "type": "media",
+                "role": "subtitles",
+                "value": {
+                  "fileName": "Tone 003.vtt",
+                  "mimeType": "text/vtt",
+                  "content": "V0VCVlRUDQo="
+                },
+                "answers": [],
+                "hint": ""
+              },
+              {
+                "type": "media",
+                "role": "subtitles",
+                "value": {
+                  "fileName": "Tone 003.srt",
+                  "mimeType": "application/x-subrip",
+                  "content": "MQ0KMDA6MDANCg=="
+                },
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "id": "mix-a9-n013",
+            "type": "script",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "body",
+                "value": "Исходная расшифровка",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "id": "mix-a9-n014",
+            "type": "instruction",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "body",
+                "value": "Fill the gaps.",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "id": "mix-a9-n015",
+            "type": "multifill",
+            "flags": {},
+            "data": [
+              {
+                "type": "text",
+                "role": "body",
+                "value": "I _____{am} here.\n\nWe _____{are} ready.",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": []
+          }
+        ]
+      }
+    ]
+  }
+}
