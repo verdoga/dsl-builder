@@ -1,0 +1,27 @@
+{
+ "ignoredRoot" : {"keep" : [1,2,3]},
+ "document": {
+  "id":"Снимок+A:B", "version":1.0, "title":"Снимок — Ёж", "subtitle":"",
+  "lineCount":1e0, "createdAt":"2026-11-03T08:00:00Z", "ignoredDocument":true,
+  "pages":[{"id":"снимок+a:b-p001", "title":"  Страница  ", "ignoredPage":null,
+   "nodes":[
+    {"id":"снимок+a:b-n001","type":"task","flags":{"speaking":false,"stepped":false},
+     "data":[{"type":"text","role":"title","value":" a ","answers":[],"hint":""}],
+     "nodes":[
+      {"id":"снимок+a:b-n002","type":"singleChoice","flags":{"checkable":true},"ignoredNode":"keep",
+       "data":[{"type":"collection","role":"options","answers":[],"hint":"","value":[
+        {"type":"text","role":"option","value":"Да","answers":["Да"],"hint":"  Подсказка\nЁ ","ignoredData":42},
+        {"type":"text","role":"option","value":"Нет","answers":[],"hint":""}
+       ]}],"nodes":[]},
+      {"id":"снимок+a:b-n003","type":"media","flags":{},"data":[
+       {"type":"media","role":"body","value":{"fileName":"Звук 01.bin","mimeType":"application/octet-stream","content":"AAEC/w==","ignoredEmbedded":"keep"},"answers":[],"hint":""}
+      ],"nodes":[]},
+      {"id":"снимок+a:b-n004","type":"multifill","flags":{},"data":[
+       {"type":"text","role":"body","value":"<b>I</b> _____{am}.\n\nМы _____{are}.","answers":[],"hint":""}
+      ],"nodes":[]}
+     ]}
+   ]}
+  ]
+ }, "formatVersion" : "1.0"
+}
+
