@@ -63,7 +63,7 @@ func TestDestinationSetPublishesNewReviewAndNeverWrites(t *testing.T) {
 		t.Fatal(err)
 	}
 	before := op.Snapshot()
-	if problems := op.SetDestination(before.Token, `"`+dir+`"`, "Курс.ZiP"); len(problems) != 0 {
+	if problems := op.SetDestination(before.Token, dir, "Курс.ZiP"); len(problems) != 0 {
 		t.Fatalf("SetDestination: %v", problems)
 	}
 	after := op.Snapshot()

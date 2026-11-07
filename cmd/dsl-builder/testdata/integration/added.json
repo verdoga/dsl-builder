@@ -1,0 +1,226 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": null,
+    "filePath": null,
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 8,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "C803",
+      "title": "Третий урок",
+      "subtitle": "Новый материал",
+      "section": null,
+      "order": "3",
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@dsl-version 1.2",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@dsl-version",
+          "value": "dsl-version",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "version",
+          "raw": "1.2",
+          "value": "1.2",
+          "start": 14,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@document-id C803",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@document-id",
+          "value": "document-id",
+          "start": 1,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "C803",
+          "value": "C803",
+          "start": 14,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "# Третий урок",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "#",
+          "value": "1",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Третий урок",
+          "value": "Третий урок",
+          "start": 3,
+          "end": 14,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "## Новый материал",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "##",
+          "value": "2",
+          "start": 1,
+          "end": 3,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Новый материал",
+          "value": "Новый материал",
+          "start": 4,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "type": "heading",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "### Страница три",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "heading-level",
+          "raw": "###",
+          "value": "3",
+          "start": 1,
+          "end": 4,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "Страница три",
+          "value": "Страница три",
+          "start": 5,
+          "end": 17,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@text {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@text",
+          "value": "text",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 7,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "Добавленный текст",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Добавленный текст",
+          "value": "Добавленный текст",
+          "start": 1,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 6,
+      "raw": "}",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

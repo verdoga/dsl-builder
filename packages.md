@@ -29,7 +29,7 @@
 
 | Пакет           | Прямые зависимости внутри проекта                                                                                                                                    |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `main`          | `app`, `console`                                                                                                                                                     |
+| `main`          | `console`                                                                                                                                                            |
 | `app`           | `diagnostic`, `filetree`, `parsed`, `convert`, `resourceusage`, `catalog`, `compare`, `revision`, `module`, `moduleio`, `safewrite`                                  |
 | `console`       | `app`, `preview`, `diagnostic`                                                                                                                                       |
 | `preview`       | `module`, `catalog`, `compare`, `resourceusage`                                                                                                                      |
