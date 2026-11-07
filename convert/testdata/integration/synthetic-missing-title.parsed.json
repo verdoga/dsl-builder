@@ -1,0 +1,82 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": "old.txt",
+    "filePath": "C:\\old\\wrong-resource-base\\old.txt",
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 2,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "Mix-A9",
+      "title": null,
+      "subtitle": "",
+      "section": "StudentBOOK",
+      "order": "00017",
+      "resourceDirs": [
+        "missing"
+      ]
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@include absent-a",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "absent-a",
+          "value": "absent-a",
+          "start": 10,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@include absent-b",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "absent-b",
+          "value": "absent-b",
+          "start": 10,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

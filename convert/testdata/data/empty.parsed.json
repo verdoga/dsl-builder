@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": null,
+    "filePath": null,
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 0,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "DATA-QA",
+      "title": "Data coordination",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [],
+  "diagnostics": []
+}

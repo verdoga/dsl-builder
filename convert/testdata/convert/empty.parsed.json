@@ -1,0 +1,25 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": null,
+    "fileName": "old.txt",
+    "filePath": "C:\\unrelated\\old.txt",
+    "encoding": null,
+    "hasBom": null,
+    "lineCount": 0,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "BuIlD16",
+      "title": "",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": null
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [],
+  "diagnostics": []
+}

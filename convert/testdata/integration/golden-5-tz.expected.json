@@ -1,0 +1,193 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "id": "BA85",
+    "version": 1,
+    "title": "TITLE",
+    "subtitle": "Subtitle",
+    "lineCount": 29,
+    "createdAt": "2026-11-07T09:30:45Z",
+    "pages": [
+      {
+        "id": "ba85-p001",
+        "title": "Title A",
+        "nodes": [
+          {
+            "id": "ba85-n001",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "1",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba85-n002",
+                "type": "question",
+                "flags": {
+                  "checkable": true
+                },
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "TEXT",
+                    "answers": [
+                      "ANSWER TEXT"
+                    ],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ba85-p002",
+        "title": "Title B",
+        "nodes": [
+          {
+            "id": "ba85-n003",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "2",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba85-n004",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba85-n005",
+                "type": "multifill",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "CONTENT A\nCONTENT B",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ba85-p003",
+        "title": "Title C",
+        "nodes": [
+          {
+            "id": "ba85-n006",
+            "type": "task",
+            "flags": {
+              "speaking": false,
+              "stepped": false
+            },
+            "data": [
+              {
+                "type": "text",
+                "role": "title",
+                "value": "3",
+                "answers": [],
+                "hint": ""
+              }
+            ],
+            "nodes": [
+              {
+                "id": "ba85-n007",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba85-n008",
+                "type": "singleChoice",
+                "flags": {
+                  "checkable": true
+                },
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "instruction",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  },
+                  {
+                    "type": "collection",
+                    "role": "options",
+                    "value": [
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "OPTION A",
+                        "answers": [],
+                        "hint": ""
+                      },
+                      {
+                        "type": "text",
+                        "role": "option",
+                        "value": "ANSWER B",
+                        "answers": [
+                          "ANSWER B"
+                        ],
+                        "hint": "HINT TEXT"
+                      }
+                    ],
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

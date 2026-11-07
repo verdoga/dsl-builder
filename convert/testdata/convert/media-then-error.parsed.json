@@ -1,0 +1,161 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": null,
+    "fileName": "old.txt",
+    "filePath": "C:\\unrelated\\old.txt",
+    "encoding": null,
+    "hasBom": null,
+    "lineCount": 4,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "BuIlD16",
+      "title": "Build contract",
+      "subtitle": "Sub",
+      "section": "MiXeD Section",
+      "order": "000123456789012345678901234567890",
+      "resourceDirs": [
+        "assets",
+        "assets"
+      ]
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@media video Clip 003",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@media",
+          "value": "media",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "media-type",
+          "raw": "video",
+          "value": "video",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "source",
+          "raw": "Clip 003",
+          "value": "Clip 003",
+          "start": 14,
+          "end": 22,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@script source script",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@script",
+          "value": "script",
+          "start": 1,
+          "end": 8,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "source script",
+          "value": "source script",
+          "start": 9,
+          "end": 22,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@media video Clip 003",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@media",
+          "value": "media",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "media-type",
+          "raw": "video",
+          "value": "video",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "source",
+          "raw": "Clip 003",
+          "value": "Clip 003",
+          "start": 14,
+          "end": 22,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@media audio unavailable",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@media",
+          "value": "media",
+          "start": 1,
+          "end": 7,
+          "errorIds": []
+        },
+        {
+          "type": "media-type",
+          "raw": "audio",
+          "value": "audio",
+          "start": 8,
+          "end": 13,
+          "errorIds": []
+        },
+        {
+          "type": "source",
+          "raw": "unavailable",
+          "value": "unavailable",
+          "start": 14,
+          "end": 25,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

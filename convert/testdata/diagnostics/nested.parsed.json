@@ -1,0 +1,288 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": null,
+    "fileName": "source.txt",
+    "filePath": "C:\\old\\source.txt",
+    "encoding": null,
+    "hasBom": null,
+    "lineCount": 10,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "MiXeD-7",
+      "title": "Диагностика",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@include outer",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "outer",
+          "value": "outer",
+          "start": 10,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@newpage",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@newpage",
+          "value": "newpage",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "tag",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@include outer",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "outer",
+          "value": "outer",
+          "start": 10,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@fragment outer {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@fragment",
+          "value": "fragment",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "outer",
+          "value": "outer",
+          "start": 11,
+          "end": 16,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 17,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 4,
+      "raw": "@task x",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@task",
+          "value": "task",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "x",
+          "value": "x",
+          "start": 7,
+          "end": 8,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "type": "tag",
+      "nestingLevel": 2,
+      "parentLine": 5,
+      "raw": "@include inner",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@include",
+          "value": "include",
+          "start": 1,
+          "end": 9,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "inner",
+          "value": "inner",
+          "start": 10,
+          "end": 15,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 4,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@fragment inner {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@fragment",
+          "value": "fragment",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "identifier",
+          "raw": "inner",
+          "value": "inner",
+          "start": 11,
+          "end": 16,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 17,
+          "end": 18,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "type": "tag",
+      "nestingLevel": 1,
+      "parentLine": 8,
+      "raw": "@question FULL_NODE_TEXT_не_включать_в_диагностику",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@question",
+          "value": "question",
+          "start": 1,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "content",
+          "raw": "FULL_NODE_TEXT_не_включать_в_диагностику",
+          "value": "FULL_NODE_TEXT_не_включать_в_диагностику",
+          "start": 11,
+          "end": 51,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 8,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

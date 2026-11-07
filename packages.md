@@ -44,7 +44,7 @@
 | `resourcefind`  | `filetree`, `diagnostic`                                                                                                                                             |
 | `resourceembed` | `resourcefind`, `lesson`, `diagnostic`                                                                                                                               |
 | `resourceusage` | —                                                                                                                                                                    |
-| `convert`       | `parsed`, `parsed/model`, `fragments`, `structure`, `textdata`, `exercisedata`, `resourcefind`, `resourceembed`, `resourceusage`, `revision`, `lesson`, `diagnostic` |
+| `convert`       | `parsed`, `parsed/model`, `fragments`, `structure`, `textdata`, `exercisedata`, `resourcefind`, `resourceembed`, `resourceusage`, `revision`, `lesson`, `diagnostic`, `filetree` |
 | `lesson`        | `identity`, `diagnostic`                                                                                                                                             |
 | `manifest`      | `identity`, `order`, `diagnostic`                                                                                                                                    |
 | `catalog`       | `lesson`, `manifest`, `order`, `diagnostic`                                                                                                                          |

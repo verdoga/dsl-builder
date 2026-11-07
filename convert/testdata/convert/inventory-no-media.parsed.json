@@ -1,0 +1,47 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": null,
+    "fileName": "old.txt",
+    "filePath": "C:\\unrelated\\old.txt",
+    "encoding": null,
+    "hasBom": null,
+    "lineCount": 1,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "BuIlD16",
+      "title": "Build contract",
+      "subtitle": "Sub",
+      "section": "MiXeD Section",
+      "order": "000123456789012345678901234567890",
+      "resourceDirs": [
+        "assets"
+      ]
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "content",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "Текст <b>literal</b>",
+      "eol": "",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "Текст <b>literal</b>",
+          "value": "Текст <b>literal</b>",
+          "start": 1,
+          "end": 21,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}

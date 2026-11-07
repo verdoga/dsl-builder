@@ -1,0 +1,107 @@
+{
+  "formatVersion": "1.0",
+  "document": {
+    "dslVersion": "1.2",
+    "fileName": null,
+    "filePath": null,
+    "encoding": "UTF-8",
+    "hasBom": false,
+    "lineCount": 3,
+    "byteLength": null,
+    "sha256": null,
+    "metadata": {
+      "documentId": "DATA-QA",
+      "title": "Data coordination",
+      "subtitle": null,
+      "section": null,
+      "order": null,
+      "resourceDirs": []
+    },
+    "hasErrors": false
+  },
+  "processing": [],
+  "lines": [
+    {
+      "line": 1,
+      "type": "block-start",
+      "nestingLevel": 0,
+      "parentLine": null,
+      "raw": "@text one two {",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "tag",
+          "raw": "@text",
+          "value": "text",
+          "start": 1,
+          "end": 6,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "one",
+          "value": "one",
+          "start": 7,
+          "end": 10,
+          "errorIds": []
+        },
+        {
+          "type": "title",
+          "raw": "two",
+          "value": "two",
+          "start": 11,
+          "end": 14,
+          "errorIds": []
+        },
+        {
+          "type": "block-open",
+          "raw": "{",
+          "value": "{",
+          "start": 15,
+          "end": 16,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "type": "content",
+      "nestingLevel": 1,
+      "parentLine": 1,
+      "raw": "body",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "content",
+          "raw": "body",
+          "value": "body",
+          "start": 1,
+          "end": 5,
+          "errorIds": []
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "type": "block-end",
+      "nestingLevel": 1,
+      "parentLine": 1,
+      "raw": "}",
+      "eol": "\n",
+      "hasErrors": false,
+      "elements": [
+        {
+          "type": "block-close",
+          "raw": "}",
+          "value": "}",
+          "start": 1,
+          "end": 2,
+          "errorIds": []
+        }
+      ]
+    }
+  ],
+  "diagnostics": []
+}
