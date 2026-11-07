@@ -1,0 +1,11 @@
+# Integration fixtures and normative expectations
+
+The tests construct technical JSON with the existing `parsed/model` types before `parsed.Load`; they never change a loaded `parsed.Input`. Their source lines are explicit `heading → task → instruction` models, with exact Unicode columns and stable physical line counts. The media scenario adds a typed `@media audio clip` line and explicit resourceDirs before Load. Media bytes are small literal byte sequences, not encoded placeholders or decoder input.
+
+`integrationArchive` builds a valid original module using real parsed, convert, catalog, module and moduleio APIs. Its lesson names are l001.json and l003.json (deliberate numbering gap). It repacks the actual ZIP with leading/trailing JSON whitespace, then requires moduleio.Read success. The returned raw lesson contents are the preservation oracle for Update/Add/manifest-only operations. No owner is mocked or stubbed.
+
+Expected behavior comes from TZ 5.1, 6.1–6.2, 7.1–7.6, 8.1–8.5, 9.1–9.6, 11–15, 18.1–18.6 and the exact app contracts. Initial revision is 1. A single Update increments OLD1 to revision 2; repeated PrepareRevision remains 2. Node replacement retains n002 and adds -v02, page replacement starts after old maximum n003, and full lesson replacement starts after old p001/n003. KEEP2 always retains exact old raw JSON bytes. Add starts at l004.json and new revision 1, requires explicit missing weights and complete distribution when sections are introduced.
+
+All times are external fixed values. Analyze uses 2026-11-04T12:30:00+03:00; Save uses that instant plus 24 hours. Save may only update the manifest root date. `golden/2,4,5,6,7` are consumed unchanged. Their expected lesson models change only the fixed createdAt and remove obsolete multifill.checkable under TZ10.7. Original golden 1/3 resourceDirs are empty; their unquoted sources must fail resourcefind.not_found even beside media files (TZ9.1), and are not modified to pass. Synthetic media success is separate.
+
+Large static duplicates are unnecessary: the existing seven golden triplets are repository-owned input/expected fixtures; runtime JSON/ZIP/media fixtures live only under testing.T.TempDir. Tests verify original technical JSON and resource bytes remain unchanged.
