@@ -33,9 +33,10 @@ import (
 // Каждый выходной Data имеет обязательные Answers (не nil), Hint и Role;
 // Value содержит string либо ненулевой []lesson.Data. Ресурсных данных нет.
 //
-// Объявленная инструкция choice/multichoice/matching входит первой в data.
-// Инструкция ordering в data не попадает: structure размещает отдельную
-// instruction перед упражнением, textdata формирует её данные из объявления.
+// Объявленная инструкция входит первой в data только для choice/multichoice.
+// Текст объявления matching и ordering в data не попадает: structure размещает
+// отдельную instruction перед упражнением, textdata формирует её данные
+// из объявления.
 // Самостоятельные instr/hint и hint внутри instr обрабатывает textdata;
 // пакет связывает только hint, следующий за answer этого упражнения.
 //

@@ -23,7 +23,7 @@ func checkNodeKind(kind lesson.NodeType, context diagnostic.Context) *diagnostic
 
 // checkDeclaration проверяет наличие декларации и её соответствие kind
 // по единственному tag.Value, без разбора Raw. Допускает nil только для text;
-// для instruction ожидает instr либо объявление multifill или ordering.
+// для instruction ожидает instr либо объявление multifill, ordering или matching.
 // Для heading ожидает header, для answerKey — key, для wordList — wordlist;
 // остальные поддерживаемые имена соответствуют исходным тегам.
 // Не выбирает выходной тип, не проверяет существование исходного родителя.
@@ -67,10 +67,10 @@ func checkDeclaration(kind lesson.NodeType, declaration *model.Line, context dia
 	case lesson.NodeWordList:
 		expected = "wordlist"
 	case lesson.NodeInstruction:
-		if *tag.Value == "instr" || *tag.Value == "multifill" || *tag.Value == "ordering" {
+		if *tag.Value == "instr" || *tag.Value == "multifill" || *tag.Value == "ordering" || *tag.Value == "matching" {
 			return nil
 		}
-		expected = "instr, multifill или ordering"
+		expected = "instr, multifill, ordering или matching"
 	}
 	if *tag.Value != expected {
 		return dataError(CodeInput, "Тег декларации не соответствует типу ноды; ожидается "+expected, declaration, tag, context)
@@ -79,7 +79,7 @@ func checkDeclaration(kind lesson.NodeType, declaration *model.Line, context dia
 }
 
 // checkOwnLines проверяет только разрешённую форму собственного среза:
-// пустой у title-only нод и выделенной инструкции multifill/ordering;
+// пустой у title-only нод и выделенной инструкции multifill/ordering/matching;
 // content/blank у текстовых тел, separator дополнительно у example/table.
 // У блочного instr допускает строки вложенного hint и его границы;
 // точное отделение единственной подсказки делегировано splitInstructionHint.
@@ -106,7 +106,7 @@ func checkOwnLines(kind lesson.NodeType, declaration *model.Line, lines []model.
 				if tag.ElementType != model.ElementTypeTag || tag.Value == nil {
 					continue
 				}
-				if *tag.Value == "multifill" || *tag.Value == "ordering" {
+				if *tag.Value == "multifill" || *tag.Value == "ordering" || *tag.Value == "matching" {
 					return dataError(CodeInput, "Выделенная инструкция не принимает строки упражнения", &lines[0], nil, context)
 				}
 				blockInstruction = declaration.LineType == model.LineTypeBlockStart && *tag.Value == "instr"

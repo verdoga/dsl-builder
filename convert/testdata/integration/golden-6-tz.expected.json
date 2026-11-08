@@ -307,18 +307,26 @@
               },
               {
                 "id": "ba86-n014",
+                "type": "instruction",
+                "flags": {},
+                "data": [
+                  {
+                    "type": "text",
+                    "role": "body",
+                    "value": "INSTRUCTION TEXT",
+                    "answers": [],
+                    "hint": ""
+                  }
+                ],
+                "nodes": []
+              },
+              {
+                "id": "ba86-n015",
                 "type": "matching",
                 "flags": {
                   "checkable": true
                 },
                 "data": [
-                  {
-                    "type": "text",
-                    "role": "instruction",
-                    "value": "INSTRUCTION TEXT",
-                    "answers": [],
-                    "hint": ""
-                  },
                   {
                     "type": "collection",
                     "role": "items",

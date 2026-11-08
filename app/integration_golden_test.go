@@ -31,8 +31,13 @@ func TestIntegrationCreateUnmodifiedNonMediaGoldenToActualZIP(t *testing.T) {
 			integrationOK(t, op.SetDestination(op.Snapshot().Token, base, "golden"))
 			value := integrationSave(t, op, false)
 			actual := integrationFile(t, value, "l001.json").Lesson()
+			expectedPath := filepath.Join("..", "golden", fmt.Sprintf("%d. lesson.json", number))
+			if number == 6 {
+				// Независимый эталон учитывает инструкцию перед matching и порядок выдачи ID.
+				expectedPath = filepath.Join("..", "convert", "testdata", "integration", "golden-6-tz.expected.json")
+			}
 			var expected lesson.Lesson
-			if err := json.Unmarshal(integrationRead(t, filepath.Join("..", "golden", fmt.Sprintf("%d. lesson.json", number))), &expected); err != nil {
+			if err := json.Unmarshal(integrationRead(t, expectedPath), &expected); err != nil {
 				t.Fatal(err)
 			}
 			expected.Document.CreatedAt = integrationAt().UTC().Format("2006-01-02T15:04:05Z")

@@ -154,7 +154,7 @@ func TestBuildQAInputBoundary(t *testing.T) {
 			}
 		})
 	}
-	for _, tag := range []string{"instr", "multifill", "ordering"} {
+	for _, tag := range []string{"instr", "multifill", "ordering", "matching"} {
 		t.Run("instruction/"+tag, func(t *testing.T) {
 			dec := buildQADeclaration(tag, model.LineTypeTag, buildQAElement(model.ElementTypeContent, "Делай"))
 			if err := checkInput(lesson.NodeInstruction, &dec, nil, ctx); err != nil {
@@ -174,6 +174,7 @@ func TestBuildQARejectsLocalShape(t *testing.T) {
 	task := buildQADeclaration("task", model.LineTypeTag, buildQAElement(model.ElementTypeIdentifier, "1"))
 	inline := buildQADeclaration("text", model.LineTypeTag, buildQAElement(model.ElementTypeContent, "inline"))
 	ordering := buildQADeclaration("ordering", model.LineTypeBlockStart)
+	matching := buildQADeclaration("matching", model.LineTypeBlockStart)
 	body := buildQALine(77, model.LineTypeContent, buildQAElement(model.ElementTypeContent, "body"))
 	foreign := buildQADeclaration("question", model.LineTypeTag)
 	for _, tc := range []struct {
@@ -187,6 +188,7 @@ func TestBuildQARejectsLocalShape(t *testing.T) {
 		{"foreign own tag", lesson.NodeText, &text, []model.Line{foreign}},
 		{"inline body", lesson.NodeText, &inline, []model.Line{body}},
 		{"ordering instruction body", lesson.NodeInstruction, &ordering, []model.Line{body}},
+		{"matching instruction body", lesson.NodeInstruction, &matching, []model.Line{body}},
 		{"nil text foreign tag", lesson.NodeText, nil, []model.Line{foreign}},
 	} {
 		t.Run(tc.name, func(t *testing.T) {
@@ -233,7 +235,7 @@ func TestBuildQASeparateInstructionAndMultifill(t *testing.T) {
 		t.Fatal(err)
 	}
 	buildQAData(t, got, []lesson.DataRole{lesson.RoleBody}, []string{""})
-	for _, tag := range []string{"multifill", "ordering"} {
+	for _, tag := range []string{"multifill", "ordering", "matching"} {
 		dec = buildQADeclaration(tag, model.LineTypeBlockStart)
 		got, err = Build(lesson.NodeInstruction, &dec, nil, diagnostic.Context{})
 		if err != nil {

@@ -114,21 +114,45 @@ func TestInstructionQAGoldenOwnSlices(t *testing.T) {
 }
 
 func TestInstructionQAInlineSemanticText(t *testing.T) {
-	for _, tag := range []string{"instr", "multifill", "ordering"} {
-		t.Run(tag, func(t *testing.T) {
-			declaration := instructionQADeclaration(10, tag, tag != "instr", instructionQAString(`Текст \{x\}`))
-			declaration.Elements[1].Value = instructionQAString("Текст {x}")
-			got, err := buildInstruction(declaration, nil, diagnostic.Context{})
-			if err != nil {
-				t.Fatal(err)
-			}
-			instructionQAAssertBody(t, got, "Текст {x}", "")
-		})
+	for _, tag := range []string{"instr", "multifill", "ordering", "matching"} {
+		for _, tc := range []struct{ name, raw, value string }{
+			{"exact", " \t<b>Я😀|ты;он</b>  ", " \t<b>Я😀|ты;он</b>  "},
+			{"escaped", `Текст \{x\} \\@hint`, `Текст {x} \@hint`},
+			{"placeholders", `Я\@ _____{ответ} _____!`, `Я@ _____{ответ} _____!`},
+		} {
+			t.Run(tag+"/"+tc.name, func(t *testing.T) {
+				declaration := instructionQADeclaration(10, tag, tag != "instr", instructionQAString(tc.raw))
+				declaration.Elements[1].Value = instructionQAString(tc.value)
+				if tc.name == "placeholders" {
+					start := len(tag) + 3
+					text := []model.Element{
+						instructionQAElement(model.ElementTypeContent, `Я\@`, "Я@", start),
+						instructionQAElement(model.ElementTypePlaceholder, "_____{ответ}", "ответ", start+4),
+						instructionQAElement(model.ElementTypePlaceholder, "_____", "", start+17),
+						instructionQAElement(model.ElementTypeContent, "!", "!", start+22),
+					}
+					text[2].Value = nil
+					boundaries := declaration.Elements
+					declaration.Elements = append([]model.Element{boundaries[0]}, text...)
+					declaration.Elements = append(declaration.Elements, boundaries[2:]...)
+				}
+				before, _ := json.Marshal(declaration)
+				got, err := buildInstruction(declaration, nil, diagnostic.Context{})
+				if err != nil {
+					t.Fatal(err)
+				}
+				instructionQAAssertBody(t, got, tc.value, "")
+				after, _ := json.Marshal(declaration)
+				if !reflect.DeepEqual(before, after) {
+					t.Fatal("input mutated")
+				}
+			})
+		}
 	}
 }
 
 func TestInstructionQAEmptyForms(t *testing.T) {
-	for _, tag := range []string{"instr", "multifill", "ordering"} {
+	for _, tag := range []string{"instr", "multifill", "ordering", "matching"} {
 		for _, block := range []bool{false, true} {
 			t.Run(tag+map[bool]string{false: "/inline", true: "/block"}[block], func(t *testing.T) {
 				declaration := instructionQADeclaration(10, tag, block, nil)
@@ -139,18 +163,22 @@ func TestInstructionQAEmptyForms(t *testing.T) {
 			})
 		}
 	}
-	for _, tag := range []string{"multifill", "ordering"} {
-		declaration := instructionQADeclaration(10, tag, false, instructionQAString(""))
-		got, err := buildInstruction(declaration, nil, diagnostic.Context{})
-		if err != nil || got == nil || len(got) != 0 {
-			t.Errorf("empty extracted %s = %#v, %v", tag, got, err)
+	for _, tag := range []string{"multifill", "ordering", "matching"} {
+		for _, block := range []bool{false, true} {
+			t.Run(tag+"/present-empty/block="+strconv.FormatBool(block), func(t *testing.T) {
+				declaration := instructionQADeclaration(10, tag, block, instructionQAString(""))
+				got, err := buildInstruction(declaration, nil, diagnostic.Context{})
+				if err != nil || got == nil || len(got) != 0 {
+					t.Fatalf("empty extracted instruction = %#v, %v", got, err)
+				}
+			})
 		}
 	}
 }
 
 func TestInstructionQAExplicitEmptyStandaloneContent(t *testing.T) {
 	// Присутствующий пустой content отличается от отсутствия content;
-	// исключение о пустой выделенной инструкции касается multifill/ordering.
+	// исключение о пустой выделенной инструкции касается multifill/ordering/matching.
 	declaration := instructionQADeclaration(10, "instr", false, instructionQAString(""))
 	got, err := buildInstruction(declaration, nil, diagnostic.Context{})
 	if err != nil {
@@ -160,15 +188,27 @@ func TestInstructionQAExplicitEmptyStandaloneContent(t *testing.T) {
 }
 
 func TestInstructionQAMissingInstructionValue(t *testing.T) {
-	for _, tag := range []string{"instr", "multifill", "ordering"} {
-		t.Run(tag, func(t *testing.T) {
-			declaration := instructionQADeclaration(10, tag, false, instructionQAString("Текст"))
-			declaration.Elements[1].Value = nil
-			got, err := buildInstruction(declaration, nil, diagnostic.Context{Path: "instruction.json"})
-			if got != nil || err == nil || err.Code != CodeMissingValue || err.Context.Path != "instruction.json" || err.Context.Line != 10 || err.Context.Column != len(tag)+3 {
-				t.Fatalf("missing %s value = %#v, %#v", tag, got, err)
+	for _, tag := range []string{"instr", "multifill", "ordering", "matching"} {
+		for _, block := range []bool{false, true} {
+			if tag == "instr" && block {
+				continue // Блочный instr читает строки тела, а не content декларации.
 			}
-		})
+			t.Run(tag+"/block="+strconv.FormatBool(block), func(t *testing.T) {
+				declaration := instructionQADeclaration(10, tag, block, instructionQAString("Текст"))
+				declaration.Elements[1].Value = nil
+				context := diagnostic.Context{Path: "instruction.json", FileName: "урок.json", LessonID: "AB12", PageID: "ab12-p001", Line: 3, Column: 4}
+				before, _ := json.Marshal(declaration)
+				got, err := buildInstruction(declaration, nil, context)
+				context.Line, context.Column = 10, len(tag)+3
+				if got != nil || err == nil || err.Code != CodeMissingValue || err.Reason == "" || err.Context != context {
+					t.Fatalf("missing %s value = %#v, %#v", tag, got, err)
+				}
+				after, _ := json.Marshal(declaration)
+				if !reflect.DeepEqual(before, after) {
+					t.Fatal("input mutated")
+				}
+			})
+		}
 	}
 }
 

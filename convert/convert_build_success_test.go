@@ -47,8 +47,12 @@ func TestConvertBuildGoldenStructureAndPrimaryIDs(t *testing.T) {
 				t.Fatal(err)
 			}
 			input := convertBuildLoad(t, path, tree)
+			expectedPath := filepath.Join("..", "golden", n+". lesson.json")
+			if n == "6" {
+				expectedPath = filepath.Join("testdata", "integration", "golden-6-tz.expected.json")
+			}
 			var expected lesson.Lesson
-			if err := json.Unmarshal(convertBuildRead(t, filepath.Join("..", "golden", n+". lesson.json")), &expected); err != nil {
+			if err := json.Unmarshal(convertBuildRead(t, expectedPath), &expected); err != nil {
 				t.Fatal(err)
 			}
 			expected.Document.CreatedAt = "2024-02-28T18:45:16Z"

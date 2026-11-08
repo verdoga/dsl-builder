@@ -11,7 +11,7 @@ import (
 func TestDataFillDataDelegatesAndPreservesBindings(t *testing.T) {
 	input, pages, bindings := dataLoad(t, "testdata/data/composite.parsed.json")
 	finder, usage := dataResources(t, input)
-	if len(pages) != 2 || len(bindings) != 47 {
+	if len(pages) != 2 || len(bindings) != 50 {
 		t.Fatalf("pages/bindings = %d/%d", len(pages), len(bindings))
 	}
 	source := dataJSON(t, input)
@@ -56,10 +56,10 @@ func TestDataFillDataDelegatesAndPreservesBindings(t *testing.T) {
 		}
 	}
 	// Одинаковые физические строки трёх включений адресуют разные ноды.
-	for _, i := range []int{4, 17, 32} {
+	for _, i := range []int{4, 18, 34} {
 		dataText(t, dataRole(t, nodes[i].Data, lesson.RoleBody), "Alpha <b>literal</b>\nBeta & literal", []string{}, "")
 	}
-	if bindings[4].Entries[0] == bindings[17].Entries[0] || nodes[4] == nodes[17] || nodes[17] == nodes[32] {
+	if bindings[4].Entries[0] == bindings[18].Entries[0] || nodes[4] == nodes[18] || nodes[18] == nodes[34] {
 		t.Fatal("repeated inclusions share identity")
 	}
 	dataText(t, dataRole(t, nodes[5].Data, lesson.RoleBody), "Nested inclusion text", []string{}, "")
@@ -69,34 +69,64 @@ func TestDataFillDataDelegatesAndPreservesBindings(t *testing.T) {
 		t.Fatalf("task flags lost: %s", dataJSON(t, task.Flags))
 	}
 	dataText(t, dataRole(t, nodes[6].Data, lesson.RoleBody), "Checked", []string{"answer one", "answer two"}, "question hint")
-	dataText(t, dataRole(t, nodes[46].Data, lesson.RoleBody), "Unchecked", []string{}, "")
-	if nodes[46].Flags.Checkable == nil || *nodes[46].Flags.Checkable {
+	dataText(t, dataRole(t, nodes[49].Data, lesson.RoleBody), "Unchecked", []string{}, "")
+	if nodes[49].Flags.Checkable == nil || *nodes[49].Flags.Checkable {
 		t.Fatal("false must be an explicit Checkable pointer")
 	}
 	choice := dataCollection(t, dataRole(t, nodes[7].Data, lesson.RoleOptions), lesson.RoleOption)
 	dataText(t, choice[0], "wrong", []string{}, "")
 	dataText(t, choice[1], "right", []string{"right"}, "choice hint")
-	matching := dataCollection(t, dataRole(t, nodes[9].Data, lesson.RoleItems), lesson.RoleItem)
+	matching := dataCollection(t, dataRole(t, nodes[10].Data, lesson.RoleItems), lesson.RoleItem)
 	dataText(t, matching[0], "item one", []string{"option A"}, "match hint")
-	ordering := dataCollection(t, dataRole(t, nodes[11].Data, lesson.RoleItems), lesson.RoleItem)
+	ordering := dataCollection(t, dataRole(t, nodes[12].Data, lesson.RoleItems), lesson.RoleItem)
 	dataText(t, ordering[0], "item A", []string{"2"}, "")
 	dataText(t, ordering[1], "item B", []string{"1"}, "order hint")
 	for _, pair := range []struct {
 		index int
 		want  string
-	}{{7, "Choose"}, {8, "Many"}, {9, "Match"}} {
+	}{{7, "Choose"}, {8, "Many"}} {
 		dataText(t, dataRole(t, nodes[pair.index].Data, lesson.RoleInstruction), pair.want, []string{}, "")
 	}
-	for _, i := range []int{13, 26, 41} {
+	for _, pair := range []struct {
+		instruction, matching int
+		page                  int
+		instructionPath       []int
+		matchingPath          []int
+	}{
+		{9, 10, 0, []int{1, 0, 6}, []int{1, 0, 7}},
+		{23, 24, 0, []int{1, 1, 5}, []int{1, 1, 6}},
+		{39, 40, 1, []int{0, 0, 0, 5}, []int{0, 0, 0, 6}},
+	} {
+		instruction, matching := bindings[pair.instruction], bindings[pair.matching]
+		if instruction.Page != pair.page || matching.Page != pair.page ||
+			nodes[pair.instruction].Type != lesson.NodeInstruction || nodes[pair.matching].Type != lesson.NodeMatching {
+			t.Fatalf("instruction/matching bindings %d/%d: wrong page or type", pair.instruction, pair.matching)
+		}
+		dataEqual(t, instruction.NodePath, pair.instructionPath)
+		dataEqual(t, matching.NodePath, pair.matchingPath)
+		if len(instruction.Entries) != 1 || instruction.Entries[0] != matching.Entries[0] || instruction.Entries[0].Source.Number != 47 {
+			t.Fatalf("instruction %d lost its matching declaration binding", pair.instruction)
+		}
+		dataText(t, dataRole(t, nodes[pair.instruction].Data, lesson.RoleBody), "Match", []string{}, "")
+		for _, datum := range nodes[pair.matching].Data {
+			if datum.Role != nil && *datum.Role == lesson.RoleInstruction {
+				t.Fatalf("matching %d retained a local instruction", pair.matching)
+			}
+		}
+	}
+	if bindings[9].Entries[0] == bindings[23].Entries[0] || bindings[23].Entries[0] == bindings[39].Entries[0] {
+		t.Fatal("repeated matching declarations share identity")
+	}
+	for _, i := range []int{14, 28, 44} {
 		dataEqual(t, nodes[i].Flags, lesson.NodeFlags{})
 		dataText(t, dataRole(t, nodes[i].Data, lesson.RoleBody), "I _____{am} here.\n\nWe _____{are} ready.", []string{}, "")
 	}
-	for _, i := range []int{10, 12, 23, 25, 38, 40} {
+	for _, i := range []int{11, 13, 25, 27, 41, 43} {
 		if nodes[i].Type != lesson.NodeInstruction {
 			t.Fatalf("binding %d: %s", i, nodes[i].Type)
 		}
 	}
-	for _, i := range []int{14, 27, 42} {
+	for _, i := range []int{15, 29, 45} {
 		node := nodes[i]
 		if node.Type != lesson.NodeMedia || len(node.Data) != 3 {
 			t.Fatalf("media %d: %s", i, dataJSON(t, node))
@@ -150,9 +180,9 @@ func dataIndependentChecks(t *testing.T, nodes []*lesson.Node, expected []*bool)
 		}
 	}
 	// Изменение одного результата не изменяет другой экземпляр включения.
-	before := *nodes[19].Flags.Checkable
+	before := *nodes[20].Flags.Checkable
 	*nodes[6].Flags.Checkable = !*nodes[6].Flags.Checkable
-	if *nodes[19].Flags.Checkable != before {
+	if *nodes[20].Flags.Checkable != before {
 		t.Fatal("Checkable aliases another node")
 	}
 }

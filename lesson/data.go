@@ -59,7 +59,7 @@ const (
 	RoleTitle DataRole = "title"
 	// RoleBody — основное содержимое.
 	RoleBody DataRole = "body"
-	// RoleInstruction — локальная инструкция трёх типов упражнений.
+	// RoleInstruction — локальная инструкция упражнений singleChoice и multipleChoice.
 	RoleInstruction DataRole = "instruction"
 	// RoleBefore — часть примера до разделителя.
 	RoleBefore DataRole = "before"

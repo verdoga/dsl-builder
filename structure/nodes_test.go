@@ -202,7 +202,7 @@ func TestTask21AppendContentStandaloneOrdering(t *testing.T) {
 
 func TestTask21AppendContentInstructionPairSameNearestParent(t *testing.T) {
 	for _, area := range []string{"step", "variant"} {
-		for _, tag := range []string{"multifill", "ordering"} {
+		for _, tag := range []string{"multifill", "ordering", "matching"} {
 			t.Run(fmt.Sprint(area, "/", tag), func(t *testing.T) {
 				state := task21State()
 				outerTag := "task"
@@ -222,11 +222,22 @@ func TestTask21AppendContentInstructionPairSameNearestParent(t *testing.T) {
 				task21Content(instr, "совпадает")
 				decl := task21Entry(4, model.LineTypeBlockStart, tag, outer)
 				task21Content(decl, "совпадает")
-				entries := []*fragments.Entry{instr, decl, task21Entry(5, model.LineTypeContent, "", decl), task21Entry(6, model.LineTypeBlockEnd, "", decl)}
+				hint := task21Entry(7, model.LineTypeBlockStart, "hint", decl)
+				entries := []*fragments.Entry{
+					instr, decl,
+					task21Entry(5, model.LineTypeContent, "", decl),
+					task21Entry(6, model.LineTypeTag, "answer", decl),
+					hint,
+					task21Entry(8, model.LineTypeContent, "", hint),
+					task21Entry(9, model.LineTypeBlockEnd, "", hint),
+					task21Entry(10, model.LineTypeBlockEnd, "", decl),
+					task21Entry(11, model.LineTypeTag, "hint", outer),
+				}
+				stop := len(entries) - 1
 				if next, errs := appendContent(state, entries, 0); next != 1 || len(errs) != 0 {
 					t.Fatalf("instr: %d %v", next, errs)
 				}
-				if next, errs := appendContent(state, entries, 1); next != len(entries) || len(errs) != 0 {
+				if next, errs := appendContent(state, entries, 1); next != stop || len(errs) != 0 {
 					t.Fatalf("pair: %d %v", next, errs)
 				}
 				want := []lesson.NodeType{lesson.NodeInstruction, lesson.NodeInstruction, lesson.NodeType(tag)}
@@ -239,8 +250,17 @@ func TestTask21AppendContentInstructionPairSameNearestParent(t *testing.T) {
 						t.Fatalf("неверный родитель/тип пары %d", i)
 					}
 				}
+				task21Entries(t, state.bindings[2].Entries, entries[:1])
 				task21Entries(t, state.bindings[3].Entries, entries[1:2])
-				task21Entries(t, state.bindings[4].Entries, entries[1:])
+				task21Entries(t, state.bindings[4].Entries, entries[1:stop])
+				if next, errs := appendContent(state, entries, stop); next != len(entries) || len(errs) != 0 {
+					t.Fatalf("следующая конструкция: %d %v", next, errs)
+				}
+				children = state.pages[0].Nodes[0].Nodes[0].Nodes
+				if len(children) != 4 || children[3].Type != lesson.NodeHint || len(state.bindings) != 6 || !slices.Equal(state.bindings[5].NodePath, []int{0, 0, 3}) {
+					t.Fatalf("следующая конструкция потеряна или сменила родителя: children=%v bindings=%v", children, state.bindings)
+				}
+				task21Entries(t, state.bindings[5].Entries, entries[stop:])
 			})
 		}
 	}

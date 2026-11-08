@@ -8,7 +8,7 @@ import (
 )
 
 // splitInstruction определяет необходимость отдельной ноды только для
-// multifill/ordering по наличию content/placeholder элементов объявления.
+// multifill/ordering/matching по наличию content/placeholder элементов объявления.
 // Только пустые content.Value без placeholder не создают инструкцию;
 // null у content даёт CodeSource, а null у обычного placeholder допустим.
 // Не собирает строку, не интерпретирует разметку и не меняет исходный Entry.
@@ -16,13 +16,13 @@ import (
 // перед упражнением с тем же родителем и Binding только на его объявление.
 // Binding.TextSource передаёт исходную декларацию и пустое тело принятому
 // textdata.Build(NodeInstruction, declaration, lines, context).
-// Для multifill/ordering основной владелец данных игнорирует инструкцию
+// Для multifill/ordering/matching основной владелец данных игнорирует инструкцию
 // объявления: она уже адресована отдельной ноде и не входит в их data.
-// У choice/multichoice/matching возвращает false: инструкция остаётся в исходном
+// У choice/multichoice возвращает false: инструкция остаётся в исходном
 // объявлении и позднее превращается в один data.instruction внутри упражнения.
 // Отдельный instr сохраняется независимо от наличия и совпадения инструкции.
 func splitInstruction(entry *fragments.Entry, kind lesson.NodeType, state *builder) (bool, *diagnostic.Error) {
-	if kind != lesson.NodeMultifill && kind != lesson.NodeOrdering {
+	if kind != lesson.NodeMultifill && kind != lesson.NodeOrdering && kind != lesson.NodeMatching {
 		return false, nil
 	}
 

@@ -111,8 +111,9 @@ func validateNodeData(kind NodeType, data []Data, pointer string, context diagno
 }
 
 // validateDirectRole требует известную непустую роль; item, option, position
-// запрещены. instruction и options разрешены только для singleChoice,
-// multipleChoice, matching; positions — только для ordering.
+// запрещены. instruction разрешена только для singleChoice и multipleChoice,
+// options — для singleChoice, multipleChoice и matching; positions — только
+// для ordering.
 // Другие роли не ограничиваются по типу ноды сверх фиксированной схемы.
 func validateDirectRole(kind NodeType, role *DataRole, pointer string, context diagnostic.Context) *diagnostic.Error {
 	if role == nil {
@@ -121,11 +122,16 @@ func validateDirectRole(kind NodeType, role *DataRole, pointer string, context d
 	switch *role {
 	case RoleTitle, RoleBody, RoleBefore, RoleAfter, RoleItems, RoleHint, RoleScript, RoleSubtitles:
 		return nil
-	case RoleInstruction, RoleOptions:
+	case RoleInstruction:
+		if kind == NodeSingleChoice || kind == NodeMultipleChoice {
+			return nil
+		}
+		return contractError(CodeContract, "Роль instruction допустима только непосредственно у singleChoice или multipleChoice", pointer, context, nil)
+	case RoleOptions:
 		if kind == NodeSingleChoice || kind == NodeMultipleChoice || kind == NodeMatching {
 			return nil
 		}
-		return contractError(CodeContract, "Эта роль допустима только непосредственно у singleChoice, multipleChoice или matching", pointer, context, nil)
+		return contractError(CodeContract, "Роль options допустима только непосредственно у singleChoice, multipleChoice или matching", pointer, context, nil)
 	case RolePositions:
 		if kind == NodeOrdering {
 			return nil
@@ -140,7 +146,7 @@ func validateDirectRole(kind NodeType, role *DataRole, pointer string, context d
 
 // validateCollectionCounts требует ровно одну options у singleChoice,
 // multipleChoice и matching, ровно одну items у matching и ordering,
-// не более одной positions у ordering и instruction у трёх разрешённых типов.
+// не более одной positions у ordering и instruction у singleChoice и multipleChoice.
 // Минимум элементов прямой items: matching — один, ordering — два.
 // На items других типов нод дополнительных ограничений схема не накладывает.
 // Общий минимум options и positions проверяет validateDataRole.
@@ -165,8 +171,8 @@ func validateCollectionCounts(kind NodeType, data []Data, pointer string, contex
 		}
 	}
 	var problems []*diagnostic.Error
-	choice := kind == NodeSingleChoice || kind == NodeMultipleChoice || kind == NodeMatching
-	if choice && options != 1 {
+	choice := kind == NodeSingleChoice || kind == NodeMultipleChoice
+	if (choice || kind == NodeMatching) && options != 1 {
 		problems = append(problems, contractError(CodeContract, "Нода должна содержать ровно одну коллекцию options", pointer, context, nil))
 	}
 	if kind == NodeOrdering && positions > 1 {

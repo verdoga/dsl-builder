@@ -89,7 +89,7 @@ func exBuildFixture(kind lesson.NodeType, answered bool) ([]model.Line, []lesson
 	tag := map[lesson.NodeType]string{lesson.NodeSingleChoice: "choice", lesson.NodeMultipleChoice: "multichoice", lesson.NodeMatching: "matching", lesson.NodeOrdering: "ordering"}[kind]
 	ls := []model.Line{line(101, 77, model.LineTypeBlockStart, tag, instruction)}
 	var want []lesson.Data
-	if kind != lesson.NodeOrdering {
+	if kind == lesson.NodeSingleChoice || kind == lesson.NodeMultipleChoice {
 		want = append(want, exBuildText(lesson.RoleInstruction, instruction, nil, ""))
 	}
 	if kind == lesson.NodeSingleChoice || kind == lesson.NodeMultipleChoice {
@@ -144,6 +144,13 @@ func TestBuildDispatchPreservesSemanticProjection(t *testing.T) {
 					t.Fatalf("checkable=%v, err=%v", checkable, err)
 				}
 				exBuildEqual(t, got, want)
+				if kind == lesson.NodeMatching || kind == lesson.NodeOrdering {
+					for _, data := range got {
+						if data.Role != nil && *data.Role == lesson.RoleInstruction {
+							t.Fatal("текст объявления не должен становиться локальной инструкцией")
+						}
+					}
+				}
 				if !bytes.Equal(before, exBuildJSON(t, lines)) {
 					t.Fatal("Build изменил исходную проекцию")
 				}

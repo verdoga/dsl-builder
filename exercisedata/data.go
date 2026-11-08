@@ -64,18 +64,18 @@ func collectionData(role lesson.DataRole, entries []entry) lesson.Data {
 }
 
 // localInstruction извлекает необязательный content объявления
-// choice/multichoice/matching в DataText/RoleInstruction с пустыми ответами
+// choice/multichoice в DataText/RoleInstruction с пустыми ответами
 // и подсказкой. Отсутствие даёт nil; чужие теги не принимаются.
-// ordering обслуживается внешней самостоятельной instruction по контракту Build.
+// matching и ordering обслуживаются внешней самостоятельной instruction по контракту Build.
 func localInstruction(line model.Line, context diagnostic.Context) (*lesson.Data, *diagnostic.Error) {
 	tag, err := tagValue(line, context)
 	if err != nil {
 		return nil, err
 	}
 	switch tag {
-	case "choice", "multichoice", "matching":
+	case "choice", "multichoice":
 	default:
-		return nil, dataError(CodeSource, "Локальная инструкция допустима только у choice, multichoice и matching", sourceContext(context, line, nil), nil, nil)
+		return nil, dataError(CodeSource, "Локальная инструкция допустима только у choice и multichoice", sourceContext(context, line, nil), nil, nil)
 	}
 	value, found, _, err := contentValue(line, context)
 	if err != nil {

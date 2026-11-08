@@ -439,11 +439,9 @@
             }
           },
           {
-            "id": "a:b-n021",
-            "type": "matching",
-            "flags": {
-              "checkable": false
-            },
+            "id": "a:b-n023",
+            "type": "instruction",
+            "flags": {},
             "data": [
               {
                 "type": "text",
@@ -453,8 +451,18 @@
                 "answers": [],
                   "ANSWERS": [9],
                 "hint": "",
-                "role": "instruction"
-              },
+                "role": "body"
+              }
+            ],
+            "nodes": []
+          },
+          {
+            "id": "a:b-n021",
+            "type": "matching",
+            "flags": {
+              "checkable": false
+            },
+            "data": [
               {
                 "type": "collection",
                 "value": [

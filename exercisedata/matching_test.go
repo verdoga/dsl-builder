@@ -92,18 +92,16 @@ func TestExMatchingDataShapeAndOwnership(t *testing.T) {
 			if err != nil || !checkable {
 				t.Fatalf("matchingData = %#v, %v, %v", got, checkable, err)
 			}
-			offset := 0
-			if instruction != "" {
-				offset = 1
-				if got[0].Type != lesson.DataText || got[0].Role == nil || *got[0].Role != lesson.RoleInstruction || got[0].Value != instruction || got[0].Answers == nil || len(got[0].Answers) != 0 || got[0].Hint != "" {
-					t.Fatalf("instruction = %#v", got[0])
+			if len(got) != 2 {
+				t.Fatalf("data length = %d, want 2", len(got))
+			}
+			for _, value := range got {
+				if value.Role != nil && *value.Role == lesson.RoleInstruction {
+					t.Fatalf("unexpected instruction = %#v", value)
 				}
 			}
-			if len(got) != offset+2 {
-				t.Fatalf("data length = %d", len(got))
-			}
-			items := exMatchingLeaves(t, got[offset], lesson.RoleItems, lesson.RoleItem, 2)
-			options := exMatchingLeaves(t, got[offset+1], lesson.RoleOptions, lesson.RoleOption, 2)
+			items := exMatchingLeaves(t, got[0], lesson.RoleItems, lesson.RoleItem, 2)
+			options := exMatchingLeaves(t, got[1], lesson.RoleOptions, lesson.RoleOption, 2)
 			if items[0].Value != " <i>Один</i>! " || items[0].Answers[0] != "ВаРиАнТ" || items[0].Hint != "  <b>Подсказка</b>\\!  " || items[1].Value != "Второй" || items[1].Answers[0] != "вариант" || items[1].Hint != "" {
 				t.Fatalf("items = %#v", items)
 			}

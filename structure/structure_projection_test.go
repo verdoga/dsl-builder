@@ -158,7 +158,7 @@ func TestTask3LinesFeedRealExerciseConsumers(t *testing.T) {
 					task3Line(model.LineTypeTag, 1, task3Tag("answer"), task3Text("B")),
 					task3Line(model.LineTypeTag, 1, task3Tag("hint"), task3Text("H")), task3Close(1)}
 			case "matching":
-				lines = []model.Line{task3Open(tc.tag, 0, task3Text("Инструкция")),
+				lines = []model.Line{task3Open(tc.tag, 0, task3Text("  Инструкция <b>сопоставь</b>!  ")),
 					task3Line(model.LineTypeContent, 1, task3Text("Элемент")),
 					task3Line(model.LineTypeTag, 1, task3Tag("answer"), task3Text("A")),
 					task3Line(model.LineTypeTag, 1, task3Tag("hint"), task3Text("H")),
@@ -176,11 +176,35 @@ func TestTask3LinesFeedRealExerciseConsumers(t *testing.T) {
 			input, entries := task3Load(t, lines...)
 			pages, bindings := task3Build(t, input, entries)
 			found := false
-			for _, binding := range bindings {
+			for index, binding := range bindings {
 				if binding.Node(pages).Type != tc.kind {
 					continue
 				}
 				found = true
+				if tc.tag == "matching" {
+					if len(bindings) != 2 || index != 1 {
+						t.Fatalf("Ожидались инструкция непосредственно перед matching: %+v", bindings)
+					}
+					instruction := bindings[index-1]
+					if instruction.Node(pages).Type != lesson.NodeInstruction || instruction.Page != binding.Page ||
+						!slices.Equal(instruction.NodePath[:len(instruction.NodePath)-1], binding.NodePath[:len(binding.NodePath)-1]) ||
+						instruction.NodePath[len(instruction.NodePath)-1]+1 != binding.NodePath[len(binding.NodePath)-1] {
+						t.Fatalf("Инструкция и matching не соседствуют у одного родителя: %+v", bindings)
+					}
+					if len(instruction.Entries) != 1 || instruction.Entries[0] != entries[0] ||
+						!bytes.Equal(task3JSON(t, instruction.Lines()), task3JSON(t, input.Result.Lines[:1])) {
+						t.Fatal("Инструкция matching получила строки за пределами объявления")
+					}
+					declaration, ownLines := instruction.TextSource()
+					if declaration == nil || !bytes.Equal(task3JSON(t, declaration), task3JSON(t, entries[0].Source)) || len(ownLines) != 0 {
+						t.Fatalf("TextSource инструкции matching: %+v %+v", declaration, ownLines)
+					}
+					body, problem := textdata.Build(lesson.NodeInstruction, declaration, ownLines, diagnostic.Context{Path: input.Path})
+					if problem != nil || len(body) != 1 || body[0].Type != lesson.DataText || body[0].Role == nil || *body[0].Role != lesson.RoleBody ||
+						body[0].Value != "  Инструкция <b>сопоставь</b>!  " || len(body[0].Answers) != 0 || body[0].Hint != "" {
+						t.Fatalf("textdata инструкции matching: %+v %v", body, problem)
+					}
+				}
 				projected := binding.Lines()
 				if len(projected) != len(lines) || !bytes.Equal(task3JSON(t, projected), task3JSON(t, input.Result.Lines)) {
 					t.Fatalf("Упражнение получило неполную проекцию: %+v", projected)
@@ -195,6 +219,24 @@ func TestTask3LinesFeedRealExerciseConsumers(t *testing.T) {
 				}
 				if tc.tag == "question" && (data[0].Value != "Вопрос" || !slices.Equal(data[0].Answers, []string{"A"}) || data[0].Hint != "H") {
 					t.Fatalf("Вопрос потерял answer/hint: %+v", data)
+				}
+				if tc.tag == "matching" {
+					if len(data) != 2 || data[0].Type != lesson.DataCollection || data[0].Role == nil || *data[0].Role != lesson.RoleItems ||
+						data[1].Type != lesson.DataCollection || data[1].Role == nil || *data[1].Role != lesson.RoleOptions {
+						t.Fatalf("matching потерял items/options: %+v", data)
+					}
+					items, itemsOK := data[0].Value.([]lesson.Data)
+					options, optionsOK := data[1].Value.([]lesson.Data)
+					if !itemsOK || len(items) != 1 || items[0].Type != lesson.DataText || items[0].Role == nil || *items[0].Role != lesson.RoleItem ||
+						items[0].Value != "Элемент" || !slices.Equal(items[0].Answers, []string{"A"}) || items[0].Hint != "H" || !optionsOK || len(options) != 2 {
+						t.Fatalf("matching потерял элементы/ответы/подсказки: %+v", data)
+					}
+					for i, want := range []string{"A", "B"} {
+						if options[i].Type != lesson.DataText || options[i].Role == nil || *options[i].Role != lesson.RoleOption ||
+							options[i].Value != want || len(options[i].Answers) != 0 || options[i].Hint != "" {
+							t.Fatalf("matching option[%d]=%+v", i, options[i])
+						}
+					}
 				}
 			}
 			if !found {
