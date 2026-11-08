@@ -68,6 +68,21 @@ func TestExIntegrationGoldenExerciseProjections(t *testing.T) {
 					if err != nil {
 						t.Fatalf("Build: %+v", err)
 					}
+					if tc.kind == lesson.NodeMatching {
+						for _, field := range data {
+							if field.Role != nil && *field.Role == lesson.RoleInstruction {
+								t.Fatal("matching содержит локальную instruction")
+							}
+						}
+						if len(data) != 2 {
+							t.Fatalf("matching содержит %d полей, ожидаются только items и options", len(data))
+						}
+						for i, role := range []lesson.DataRole{lesson.RoleItems, lesson.RoleOptions} {
+							if data[i].Type != lesson.DataCollection || data[i].Role == nil || *data[i].Role != role {
+								t.Fatalf("matching data[%d]=%+v, ожидается коллекция %s", i, data[i], role)
+							}
+						}
+					}
 					exIntegrationEqual(t, data, want.Data)
 					if checkable != *want.Flags.Checkable {
 						t.Fatalf("checkable=%v, ожидается %v", checkable, *want.Flags.Checkable)

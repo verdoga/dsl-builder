@@ -28,7 +28,7 @@ func TestTask26GoldenStructuralProjectionsAndConsumerCompatibility(t *testing.T)
 		{3, "[heading,task(instruction,example,singleChoice,singleChoice,question,question)]|[heading,task(step(media,script,instruction),step(wordList,instruction,multifill))]", []int{5, 6, 8, 13, 18, 23, 28, 29, 32, 34, 35, 36, 37, 41, 42, 43, 44, 44}, []*string{nil, nil}},
 		{4, "[wordList]|[table]|[text]", []int{6, 14, 23}, []*string{task26String("Title A"), task26String("Title B"), task26String("Title C")}},
 		{5, "[task(question)]|[task(instruction,multifill)]|[task(instruction,singleChoice)]", []int{8, 9, 14, 15, 16, 23, 24, 25}, []*string{task26String("Title A"), task26String("Title B"), task26String("Title C")}},
-		{6, "[task(instruction,multipleChoice,hint),task(instruction,multipleChoice),task(instruction,matching,hint),task(instruction,matching)]", []int{5, 6, 7, 11, 13, 14, 15, 23, 24, 25, 31, 36, 37, 38}, []*string{nil}},
+		{6, "[task(instruction,multipleChoice,hint),task(instruction,multipleChoice),task(instruction,matching,hint),task(instruction,instruction,matching)]", []int{5, 6, 7, 11, 13, 14, 15, 23, 24, 25, 31, 36, 37, 38, 38}, []*string{nil}},
 		{7, "[variants(variant(task(instruction,instruction,ordering)),variant(task(instruction,ordering)),variant(task(instruction,instruction,ordering)))]", []int{5, 6, 7, 8, 9, 9, 14, 15, 16, 17, 25, 26, 27, 28, 28}, []*string{nil}},
 	}
 	for _, tc := range cases {

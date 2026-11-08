@@ -6,20 +6,16 @@ import (
 	"github.com/verdoga/dsl-builder/parsed/model"
 )
 
-// matchingData координирует localInstruction, splitLists, listItems,
+// matchingData координирует splitLists, listItems,
 // listLabels, requireCount, answerCoverage и checkLabelReferences.
-// Минимум: один item и два option. Результат: необязательная instruction,
-// ровно одна items, затем ровно одна options; их листья строго текстовые.
+// Минимум: один item и два option. Результат: ровно одна items,
+// затем ровно одна options; их листья строго текстовые.
 // Ответы/подсказки принадлежат конкретным item, нижние options ответов не имеют.
 // Полное отсутствие ответов даёт checkable=false; полная корректная привязка
 // даёт true; частичная, отсутствующая или неоднозначная ссылка — ошибка.
 func matchingData(lines []model.Line, context diagnostic.Context) ([]lesson.Data, bool, *diagnostic.Error) {
 	if len(lines) == 0 {
 		return nil, false, dataError(CodeSource, "Не задано объявление сопоставления", context, nil, nil)
-	}
-	instruction, err := localInstruction(lines[0], context)
-	if err != nil {
-		return nil, false, err
 	}
 	separator, err := splitLists(lesson.NodeMatching, lines, context)
 	if err != nil {
@@ -53,10 +49,6 @@ func matchingData(lines []model.Line, context diagnostic.Context) ([]lesson.Data
 			return nil, false, err
 		}
 	}
-	data := make([]lesson.Data, 0, 3)
-	if instruction != nil {
-		data = append(data, *instruction)
-	}
-	data = append(data, collectionData(lesson.RoleItems, items), collectionData(lesson.RoleOptions, options))
+	data := []lesson.Data{collectionData(lesson.RoleItems, items), collectionData(lesson.RoleOptions, options)}
 	return data, checkable, nil
 }

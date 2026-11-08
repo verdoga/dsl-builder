@@ -106,6 +106,12 @@ func TestInstructionRegressionQABuildContentPresence(t *testing.T) {
 		{"ordering/block-absent", "ordering", true, nil, false, ""},
 		{"ordering/block-empty", "ordering", true, instructionRegressionQAString(""), false, ""},
 		{"ordering/present-text", "ordering", true, instructionRegressionQAString("Текст"), true, "Текст"},
+		{"matching/inline-absent", "matching", false, nil, false, ""},
+		{"matching/inline-empty", "matching", false, instructionRegressionQAString(""), false, ""},
+		{"matching/inline-nonempty", "matching", false, instructionRegressionQAString("Текст"), true, "Текст"},
+		{"matching/block-absent", "matching", true, nil, false, ""},
+		{"matching/block-empty", "matching", true, instructionRegressionQAString(""), false, ""},
+		{"matching/block-nonempty", "matching", true, instructionRegressionQAString("Текст"), true, "Текст"},
 	} {
 		t.Run(tc.name, func(t *testing.T) {
 			declaration := instructionRegressionQADeclaration(tc.tag, tc.block, tc.content)

@@ -31,7 +31,7 @@ type Binding struct {
 	// У листового блока — объявление, полное тело и его block-end, включая
 	// blank, separator, внутренние answer/hint и их границы. У question также
 	// содержит внешний связанный answer и следующий связанный hint целиком.
-	// У синтетической instruction содержит только объявление упражнения.
+	// У выделенной instruction содержит только объявление multifill/ordering/matching.
 	// Записи доступны лишь для чтения; *Entry различает экземпляры включений.
 	Entries []*fragments.Entry
 }
@@ -93,7 +93,7 @@ func (binding Binding) Lines() []model.Line {
 // исключает только собственную декларацию и её последний block-end, сохраняя
 // вложенный hint инструкции целиком. Для однострочных и структурных нод тело пусто.
 // Для выделенной instruction Entries содержит только исходное объявление
-// multifill/ordering: оно передаётся как declaration, а lines остаётся пустым.
+// multifill/ordering/matching: оно передаётся как declaration, а lines остаётся пустым.
 // convert вызывает textdata.Build с фактическим NodeInstruction; извлечение
 // текста content/placeholder выполняет textdata, не structure и не convert.
 // Возвращаемые model.Line исходные и доступны только для чтения; title/body,

@@ -121,8 +121,8 @@ func exDataDeclaration(t *testing.T, tag string, content *string) model.Line {
 	return line
 }
 
-func TestExDataLocalInstructionThreeKinds(t *testing.T) {
-	for _, tag := range []string{"choice", "multichoice", "matching"} {
+func TestExDataLocalInstructionChoiceKinds(t *testing.T) {
+	for _, tag := range []string{"choice", "multichoice"} {
 		t.Run(tag, func(t *testing.T) {
 			value := `  <b>Выбери\n!</b>  `
 			line := exDataDeclaration(t, tag, &value)
@@ -152,6 +152,36 @@ func TestExDataLocalInstructionThreeKinds(t *testing.T) {
 			absent, problem := localInstruction(exDataDeclaration(t, tag, nil), diagnostic.Context{})
 			if problem != nil || absent != nil {
 				t.Fatalf("отсутствующая инструкция: %#v, %v", absent, problem)
+			}
+		})
+	}
+}
+
+func TestExDataLocalInstructionRejectsMatchingWithoutChangingInput(t *testing.T) {
+	value := `  <b>Сопоставь\n!</b>  `
+	for _, tc := range []struct {
+		name    string
+		content *string
+	}{{"with content", &value}, {"without content", nil}} {
+		t.Run(tc.name, func(t *testing.T) {
+			line := exDataDeclaration(t, "matching", tc.content)
+			before, err := json.Marshal(line)
+			if err != nil {
+				t.Fatal(err)
+			}
+			context := diagnostic.Context{Path: "русский/parsed.json", FileName: "урок.json", LessonID: "lesson", PageID: "page", Line: 9, Column: 5}
+			got, problem := localInstruction(line, context)
+			if got != nil || problem == nil || problem.Code != CodeSource {
+				t.Fatalf("matching принят как локальная инструкция: %#v, %v", got, problem)
+			}
+			wantContext := context
+			wantContext.Line, wantContext.Column = line.Number, 0
+			if problem.Context != wantContext || problem.Reason == "" {
+				t.Fatalf("утрачен контекст ошибки matching: %#v", problem)
+			}
+			after, err := json.Marshal(line)
+			if err != nil || string(before) != string(after) {
+				t.Fatal("отклонение matching изменило вход")
 			}
 		})
 	}

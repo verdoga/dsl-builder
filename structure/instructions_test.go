@@ -41,7 +41,7 @@ func TestTask15SplitInstructionPresence(t *testing.T) {
 		{"later_content", []model.Element{task15Element("content", "", task15String("")), task15Element("content", "x", task15String("x"))}, true},
 		{"title_is_not_instruction", []model.Element{task15Element("title", "Название", task15String("Название"))}, false},
 	}
-	for _, kind := range []lesson.NodeType{lesson.NodeMultifill, lesson.NodeOrdering} {
+	for _, kind := range []lesson.NodeType{lesson.NodeMultifill, lesson.NodeOrdering, lesson.NodeMatching} {
 		for _, tc := range cases {
 			t.Run(string(kind)+"/"+tc.name, func(t *testing.T) {
 				state, entries := task15Source(t, kind, tc.elements)
@@ -64,7 +64,7 @@ func TestTask15SplitInstructionOtherNodeTypes(t *testing.T) {
 		lesson.NodeHeading, lesson.NodeText, lesson.NodeInstruction, lesson.NodeNote,
 		lesson.NodeAlt, lesson.NodeScript, lesson.NodeHint, lesson.NodeAnswerKey,
 		lesson.NodeExample, lesson.NodeWordList, lesson.NodeTable, lesson.NodeMedia,
-		lesson.NodeQuestion, lesson.NodeSingleChoice, lesson.NodeMultipleChoice, lesson.NodeMatching,
+		lesson.NodeQuestion, lesson.NodeSingleChoice, lesson.NodeMultipleChoice,
 	}
 	for _, kind := range kinds {
 		t.Run(string(kind), func(t *testing.T) {
@@ -97,7 +97,7 @@ func TestTask15SplitInstructionUnknownContent(t *testing.T) {
 		{"after_placeholder", []model.Element{task15Element("placeholder", "_____", nil), task15Element("content", "нет", task15String("нет"))}, 1},
 		{"before_placeholder", []model.Element{task15Element("content", "нет", task15String("нет")), task15Element("placeholder", "_____", nil)}, 0},
 	}
-	for _, kind := range []lesson.NodeType{lesson.NodeMultifill, lesson.NodeOrdering} {
+	for _, kind := range []lesson.NodeType{lesson.NodeMultifill, lesson.NodeOrdering, lesson.NodeMatching} {
 		for _, tc := range cases {
 			t.Run(string(kind)+"/"+tc.name, func(t *testing.T) {
 				state, entries := task15Source(t, kind, tc.elements)

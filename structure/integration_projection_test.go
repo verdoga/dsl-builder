@@ -98,7 +98,36 @@ func TestTask26InstructionPairsAndInlineExerciseInstructionsUseRealConsumers(t *
 		task26Tag(21, 1, model.LineTypeBlockStart, "matching", task26Element(model.ElementTypeContent, "same")),
 		task26Text(22, 21, "item"), task26Line(23, 21, model.LineTypeSeparator, task26Element(model.ElementTypeContent, "---")),
 		task26Text(24, 21, "A"), task26Text(25, 21, "B"), task26End(26, 21),
-	}, "[task(step(instruction,instruction,multifill,instruction,ordering,singleChoice,multipleChoice,matching))]")
+	}, "[task(step(instruction,instruction,multifill,instruction,ordering,singleChoice,multipleChoice,instruction,matching))]")
+	standalone := task26Binding(t, bindings, 3, lesson.NodeInstruction, pages)
+	if len(standalone.Entries) != 1 {
+		t.Fatal("standalone instruction merged with exercise instruction")
+	}
+	for _, pair := range []struct {
+		line    int
+		kind    lesson.NodeType
+		numbers []int
+	}{
+		{4, lesson.NodeMultifill, []int{4, 5, 6, 7}},
+		{8, lesson.NodeOrdering, []int{8, 9, 10, 11}},
+		{21, lesson.NodeMatching, []int{21, 22, 23, 24, 25, 26}},
+	} {
+		instruction := task26Binding(t, bindings, pair.line, lesson.NodeInstruction, pages)
+		exercise := task26Binding(t, bindings, pair.line, pair.kind, pages)
+		if instruction.Page != exercise.Page || len(instruction.NodePath) != len(exercise.NodePath) ||
+			!slices.Equal(instruction.NodePath[:len(instruction.NodePath)-1], exercise.NodePath[:len(exercise.NodePath)-1]) ||
+			instruction.NodePath[len(instruction.NodePath)-1]+1 != exercise.NodePath[len(exercise.NodePath)-1] {
+			t.Fatalf("%s instruction is not the immediately preceding sibling", pair.kind)
+		}
+		if !slices.Equal(instruction.NodePath[:len(instruction.NodePath)-1], standalone.NodePath[:len(standalone.NodePath)-1]) ||
+			instruction.Node(pages) == standalone.Node(pages) || instruction.Entries[0] == standalone.Entries[0] ||
+			instruction.Entries[0] != exercise.Entries[0] || instruction.Entries[0].Parent != standalone.Entries[0].Parent {
+			t.Fatalf("%s instruction lost its own declaration or shared parent", pair.kind)
+		}
+		if !slices.Equal(task26Numbers(exercise), pair.numbers) {
+			t.Fatalf("%s full exercise projection=%v", pair.kind, task26Numbers(exercise))
+		}
+	}
 	for _, binding := range bindings {
 		node := binding.Node(pages)
 		switch node.Type {
@@ -109,10 +138,11 @@ func TestTask26InstructionPairsAndInlineExerciseInstructionsUseRealConsumers(t *
 				t.Fatalf("%s: %v", node.Type, problem)
 			}
 			if node.Type == lesson.NodeInstruction {
-				if len(data) != 1 || data[0].Value != "same" {
+				if len(data) != 1 || data[0].Type != lesson.DataText || data[0].Role == nil ||
+					*data[0].Role != lesson.RoleBody || data[0].Value != "same" || len(data[0].Answers) != 0 || data[0].Hint != "" {
 					t.Fatalf("instruction data=%+v", data)
 				}
-				if declaration.Number == 4 || declaration.Number == 8 {
+				if declaration.Number == 4 || declaration.Number == 8 || declaration.Number == 21 {
 					if len(binding.Entries) != 1 || len(lines) != 0 {
 						t.Fatal("synthetic instruction consumed exercise body")
 					}
@@ -125,7 +155,7 @@ func TestTask26InstructionPairsAndInlineExerciseInstructionsUseRealConsumers(t *
 			if problem != nil {
 				t.Fatalf("%s: %v", node.Type, problem)
 			}
-			wantInline := node.Type != lesson.NodeOrdering
+			wantInline := node.Type == lesson.NodeSingleChoice || node.Type == lesson.NodeMultipleChoice
 			gotInline := len(data) > 0 && data[0].Role != nil && *data[0].Role == lesson.RoleInstruction
 			if gotInline != wantInline {
 				t.Fatalf("%s inline instruction=%v", node.Type, gotInline)

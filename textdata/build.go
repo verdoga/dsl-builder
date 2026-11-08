@@ -18,8 +18,9 @@ import (
 // Для instruction из блочного instr в lines включён вложенный hint
 // целиком, включая его декларацию и, при наличии, закрывающую границу.
 // Для task, step, variant, variants и heading lines должен быть пуст.
-// Для instruction из объявления multifill/ordering передаются эта декларация
-// и пустой lines; содержимое упражнения в инструкцию не попадает.
+// Для instruction из объявления multifill/ordering/matching передаются эта
+// декларация и пустой lines; содержимое упражнения в инструкцию не попадает.
+// Сам NodeMatching не поддерживается как тип данных textdata.
 // Для самого multifill декларационный content не является body.
 // Обычные строки text передаются через lines при declaration=nil.
 // Проверка пригодности локального среза — checkInput; далее вызовы
@@ -56,8 +57,9 @@ func Build(kind lesson.NodeType, declaration *model.Line, lines []model.Line, co
 // документ, не проверяет дерево, parser diagnostics, ID и версию контракта.
 // Неподходящая декларация, чужие теги в собственных строках либо передача
 // строк тела для title-only ноды дают CodeInput, а не молчаливую потерю текста.
-// При NodeInstruction разрешены декларации instr, multifill и ordering;
-// у двух последних lines пуст. NodeText с nil принимает только свой текст.
+// При NodeInstruction разрешены декларации instr, multifill, ordering и matching;
+// у трёх последних передаются только декларация и пустой lines.
+// Сам NodeMatching не поддерживается. NodeText с nil принимает только свой текст.
 func checkInput(kind lesson.NodeType, declaration *model.Line, lines []model.Line, context diagnostic.Context) *diagnostic.Error {
 	if err := checkNodeKind(kind, context); err != nil {
 		return err

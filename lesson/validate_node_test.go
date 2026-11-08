@@ -118,7 +118,10 @@ func TestLessonNodeValidationDirectRoles(t *testing.T) {
 		for _, role := range roles {
 			t.Run(string(kind)+"/"+string(role), func(t *testing.T) {
 				allowed := role != "" && role != "BODY" && role != "unknown" && role != RoleItem && role != RoleOption && role != RolePosition
-				if role == RoleInstruction || role == RoleOptions {
+				if role == RoleInstruction {
+					allowed = kind == NodeSingleChoice || kind == NodeMultipleChoice
+				}
+				if role == RoleOptions {
 					allowed = kind == NodeSingleChoice || kind == NodeMultipleChoice || kind == NodeMatching
 				}
 				if role == RolePositions {
@@ -152,7 +155,7 @@ func TestLessonNodeValidationCollectionCounts(t *testing.T) {
 					nodeValidationCheck(t, validateCollectionCounts(kind, duplicate, "/data", c), "/data")
 				})
 			}
-			if kind == NodeSingleChoice || kind == NodeMultipleChoice || kind == NodeMatching {
+			if kind == NodeSingleChoice || kind == NodeMultipleChoice {
 				d := append(slices.Clone(base), nodeValidationData(RoleInstruction, 0))
 				nodeValidationCheck(t, validateCollectionCounts(kind, d, "/data", c))
 				nodeValidationCheck(t, validateCollectionCounts(kind, append(d, d[len(d)-1]), "/data", c), "/data")
@@ -192,19 +195,21 @@ func TestLessonNodeValidationDelegatesData(t *testing.T) {
 	for _, tc := range []struct {
 		kind NodeType
 		role DataRole
-	}{{NodeSingleChoice, RoleOptions}, {NodeOrdering, RolePositions}} {
+	}{{NodeSingleChoice, RoleOptions}, {NodeMultipleChoice, RoleOptions}, {NodeMatching, RoleOptions}, {NodeOrdering, RolePositions}} {
 		for size := 0; size <= 2; size++ {
-			t.Run(fmt.Sprintf("%s/%d", tc.role, size), func(t *testing.T) {
+			t.Run(fmt.Sprintf("%s/%s/%d", tc.kind, tc.role, size), func(t *testing.T) {
 				d := nodeValidationNode(tc.kind).Data
+				index := 0
 				if tc.role == RoleOptions {
 					d[0] = nodeValidationData(tc.role, size)
 				} else {
 					d = append(d, nodeValidationData(tc.role, size))
+					index = len(d) - 1
 				}
 				nodeValidationCheck(t, validateCollectionCounts(tc.kind, d, "/data", c))
 				var want []string
 				if size < 2 {
-					want = []string{fmt.Sprintf("/data/%d/value", len(d)-1)}
+					want = []string{fmt.Sprintf("/data/%d/value", index)}
 				}
 				nodeValidationCheck(t, validateNodeData(tc.kind, d, "/data", c), want...)
 			})

@@ -20,7 +20,7 @@ import (
 
 func TestIntegrationCreateGoldenCompositionAndResources(t *testing.T) {
 	wantPages := []int{1, 1, 2, 3, 3, 1, 1}
-	wantNodes := []int{7, 7, 18, 3, 8, 14, 15}
+	wantNodes := []int{7, 7, 18, 3, 8, 15, 15}
 	var files []*module.File
 	var items []catalog.Item
 	for index := range 7 {
@@ -69,7 +69,7 @@ func TestIntegrationCreateGoldenCompositionAndResources(t *testing.T) {
 		}
 	}
 	integrationTestOrder(t, text, "l001.json", "l002.json", "l003.json", "l004.json", "l005.json", "l006.json", "l007.json")
-	for _, total := range []string{`уроков[^0-9\n]*7\b`, `страниц[^0-9\n]*12\b`, `нод[^0-9\n]*72\b`} {
+	for _, total := range []string{`уроков[^0-9\n]*7\b`, `страниц[^0-9\n]*12\b`, `нод[^0-9\n]*73\b`} {
 		if !regexp.MustCompile("(?i)" + total).MatchString(text) {
 			t.Errorf("missing total %s in:\n%s", total, text)
 		}

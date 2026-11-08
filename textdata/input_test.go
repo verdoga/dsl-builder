@@ -2,6 +2,7 @@ package textdata
 
 import (
 	"encoding/json"
+	"strconv"
 	"strings"
 	"testing"
 	"unicode"
@@ -62,7 +63,7 @@ func inputQADeclaration(tag string, block bool) *model.Line {
 			switch tag {
 			case "text", "note", "alt", "script", "key", "wordlist", "table", "example":
 				add(model.ElementTypeTitle, "Название🙂")
-			case "multifill", "ordering":
+			case "multifill", "ordering", "matching":
 				add(model.ElementTypeContent, "Заполни🙂")
 			}
 		} else {
@@ -160,46 +161,78 @@ func TestInputQADeclarationMapping(t *testing.T) {
 			}
 		})
 	}
-	for _, tag := range []string{"multifill", "ordering"} {
+	for _, tag := range []string{"multifill", "ordering", "matching"} {
 		for _, block := range []bool{false, true} {
-			if err := checkDeclaration(lesson.NodeInstruction, inputQADeclaration(tag, block), inputQAContext()); err != nil {
-				t.Errorf("выделенная инструкция %s block=%v: %v", tag, block, err)
-			}
+			t.Run("instruction/"+tag+"/block="+strconv.FormatBool(block), func(t *testing.T) {
+				declaration := inputQADeclaration(tag, block)
+				before := inputQASnapshot(t, declaration, nil)
+				if err := checkDeclaration(lesson.NodeInstruction, declaration, inputQAContext()); err != nil {
+					t.Fatalf("выделенная инструкция: %v", err)
+				}
+				if before != inputQASnapshot(t, declaration, nil) {
+					t.Fatal("декларация изменена")
+				}
+			})
 		}
 	}
-	for _, tag := range []string{"choice", "multichoice", "matching", "instruction", "answerKey", "wordList", "heading"} {
+	for _, tag := range []string{"choice", "multichoice", "instruction", "answerKey", "wordList", "heading"} {
 		inputQAProblem(t, checkDeclaration(lesson.NodeInstruction, inputQADeclaration(tag, true), inputQAContext()), CodeInput)
 	}
 }
 
 func TestInputQADeclarationNeedsExactlyOneSemanticTag(t *testing.T) {
-	for _, name := range []string{"no-tag", "nil-value", "empty-value", "duplicate-same", "duplicate-other"} {
-		t.Run(name, func(t *testing.T) {
-			declaration := inputQADeclaration("text", false)
-			code := CodeInput
-			switch name {
-			case "no-tag":
-				declaration.Elements = declaration.Elements[1:]
-			case "nil-value":
-				declaration.Elements[0].Value = nil
-				code = "" // Контракт метода не назначает точный код отсутствующему tag.Value.
-			case "empty-value":
-				empty := ""
-				declaration.Elements[0].Value = &empty
-			case "duplicate-same", "duplicate-other":
-				tag := "text"
-				if name == "duplicate-other" {
-					tag = "note"
+	for _, tag := range []string{"text", "matching"} {
+		for _, block := range []bool{false, true} {
+			t.Run(tag+"/block="+strconv.FormatBool(block), func(t *testing.T) {
+				kind := lesson.NodeText
+				if tag == "matching" {
+					kind = lesson.NodeInstruction
 				}
-				raw := "@" + tag
-				start := utf8.RuneCountInString(declaration.Raw) + 2
-				declaration.Raw += " " + raw
-				declaration.Elements = append(declaration.Elements, inputQAElement(model.ElementTypeTag, raw, &tag, start))
-			}
-			before := inputQASnapshot(t, declaration, nil)
-			inputQAProblem(t, checkDeclaration(lesson.NodeText, declaration, inputQAContext()), code)
-			if before != inputQASnapshot(t, declaration, nil) {
-				t.Fatal("ошибочная декларация изменена")
+				for _, name := range []string{"no-tag", "nil-value", "empty-value", "duplicate-same", "duplicate-other"} {
+					t.Run(name, func(t *testing.T) {
+						declaration := inputQADeclaration(tag, block)
+						code := CodeInput
+						switch name {
+						case "no-tag":
+							declaration.Elements = declaration.Elements[1:]
+						case "nil-value":
+							declaration.Elements[0].Value = nil
+							code = "" // Контракт метода не назначает точный код отсутствующему tag.Value.
+						case "empty-value":
+							empty := ""
+							declaration.Elements[0].Value = &empty
+						case "duplicate-same", "duplicate-other":
+							duplicateTag := tag
+							if name == "duplicate-other" {
+								duplicateTag = "note"
+							}
+							raw := "@" + duplicateTag
+							start := utf8.RuneCountInString(declaration.Raw) + 2
+							declaration.Raw += " " + raw
+							declaration.Elements = append(declaration.Elements, inputQAElement(model.ElementTypeTag, raw, &duplicateTag, start))
+						}
+						before := inputQASnapshot(t, declaration, nil)
+						inputQAProblem(t, checkDeclaration(kind, declaration, inputQAContext()), code)
+						if before != inputQASnapshot(t, declaration, nil) {
+							t.Fatal("ошибочная декларация изменена")
+						}
+					})
+				}
+			})
+		}
+	}
+}
+
+func TestInputQAMatchingInstructionNeverReceivesExerciseBody(t *testing.T) {
+	for _, block := range []bool{false, true} {
+		t.Run("block="+strconv.FormatBool(block), func(t *testing.T) {
+			declaration := inputQADeclaration("matching", block)
+			inputQACheckLines(t, lesson.NodeInstruction, declaration, nil, false)
+			inputQACheckLines(t, lesson.NodeInstruction, declaration, []model.Line{}, false)
+			for _, lineType := range []model.LineType{model.LineTypeContent, model.LineTypeBlank, model.LineTypeSeparator} {
+				t.Run(string(lineType), func(t *testing.T) {
+					inputQACheckLines(t, lesson.NodeInstruction, declaration, []model.Line{inputQABody(80, lineType)}, true)
+				})
 			}
 		})
 	}
